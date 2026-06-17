@@ -27,13 +27,13 @@
 ## 🚀 Installation
 
 ```bash
-npx skills add kshanxs/book-writer-skill
+npx skills add https://github.com/kshanxs/book-writer-skill --skill book-writer
 ```
 
 ### Update to latest version
 
 ```bash
-npx skills update kshanxs/book-writer-skill
+npx skills update book-writer
 ```
 
 ---
