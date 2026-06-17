@@ -6,16 +6,16 @@ Update this file whenever a `[NEED RESEARCH]` flag is placed in a chapter or out
 
 ---
 
-## 🔍 Open Research Items
+## Open Research Items
 
 | ID | Chapter | Flag Description | Priority | Source to Check | Status |
 |----|---------|-----------------|----------|-----------------|--------|
-| R-001 | {{TOKEN:Ch X}} | {{TOKEN:e.g., Was the Bosphorus strait navigable in winter 1453?}} | {{TOKEN:High / Medium / Low}} | {{TOKEN:e.g., Ottoman naval records, historian Runciman}} | 🔴 Open |
-| R-002 | {{TOKEN:Ch X}} | {{TOKEN:...}} | {{TOKEN:...}} | {{TOKEN:...}} | 🔴 Open |
+| R-001 | {{TOKEN:Ch X}} | {{TOKEN:e.g., Was the Bosphorus strait navigable in winter 1453?}} | {{TOKEN:High / Medium / Low}} | {{TOKEN:e.g., Ottoman naval records, historian Runciman}} | Open |
+| R-002 | {{TOKEN:Ch X}} | {{TOKEN:...}} | {{TOKEN:...}} | {{TOKEN:...}} | Open |
 
 ---
 
-## ✅ Resolved Research Items
+## Resolved Research Items
 
 | ID | Chapter | Question | Answer / Decision | Source |
 |----|---------|----------|-------------------|--------|
@@ -23,7 +23,7 @@ Update this file whenever a `[NEED RESEARCH]` flag is placed in a chapter or out
 
 ---
 
-## 🏷️ Flag Usage in Chapters
+## Flag Usage in Chapters
 
 When writing or reviewing chapters, mark unverified facts inline with:
 
@@ -35,5 +35,5 @@ Then immediately log it in the table above with a new ID. Do not leave flags in 
 
 ---
 
-## 📝 Integration Notes for the AI
+## Integration Notes for the AI
 *Before compiling the final manuscript, scan all chapter files for `[NEED RESEARCH]` tags and cross-reference against this tracker. All items must be either Resolved (green) or flagged with an explicit creative decision before the manuscript is considered complete.*

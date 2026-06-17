@@ -1,17 +1,17 @@
 ---
 name: book-writer
 description: |
-  Comprehensive book writing assistant and memory maintainer. Use when tasked with:
-  - Writing books, novels, fiction, non-fiction, or any long-form manuscript
-  - Creating characters, outlining chapters, building worlds
-  - Drafting, reviewing, or revising chapters
-  - Writing children's books, picture books, rhyming stories, or songs for ages 2–9
-  - "initialize memory bank", "update memory bank", "start a new book", "let's start building"
-  - Planning book structure (MVB, short book, full book, literary novel, picture book)
-  - Checking continuity or consistency across chapters
-  - Any request involving book chapters, manuscripts, or story development
+ Comprehensive book writing assistant and memory maintainer. Use when tasked with:
+ - Writing books, novels, fiction, non-fiction, or any long-form manuscript
+ - Creating characters, outlining chapters, building worlds
+ - Drafting, reviewing, or revising chapters
+ - Writing children's books, picture books, rhyming stories, or songs for ages 2–9
+ - "initialize memory bank", "update memory bank", "start a new book", "let's start building"
+ - Planning book structure (MVB, short book, full book, literary novel, picture book)
+ - Checking continuity or consistency across chapters
+ - Any request involving book chapters, manuscripts, or story development
 
-  Provides specialized guidelines to write like a master author while maintaining an automated book memory bank to preserve context across sessions. Includes children's book writing, parallel chapter workflows, and multi-genre support.
+ Provides specialized guidelines to write like a master author while maintaining an automated book memory bank to preserve context across sessions. Includes children's book writing, parallel chapter workflows, and multi-genre support.
 ---
 
 # Book Writer
@@ -38,6 +38,7 @@ This skill has many reference files. Do NOT pre-load them all. Use **lazy loadin
 | `references/spinoff_guide.md` | Only for spinoff projects |
 | `references/opening_chapter_checklist.md` | Only when reviewing Chapter 1 |
 | `references/query_letter_guide.md` | Only when user asks for blurb, synopsis, or query letter |
+| `references/popscience_history_rules.md` | Writing or reviewing popular-science, technical history, or narrative non-fiction |
 | `Core/world_gita.md` (or `tech_gita.md`) | Reading world technology, magic, or lore rules |
 | Template files | Only when generating the specific document |
 
@@ -111,10 +112,10 @@ When multiple chapters need drafting or reviewing:
 After all chapters are drafted, reviewed, and continuity-checked:
 1. Scan all chapter files for `[NEED RESEARCH]` flags and cross-reference against `Research/research_tracker.md`. All open items must be resolved or explicitly flagged before the manuscript is finalized.
 2. Present a final verification summary listing all created files:
-   - Foundation files (Characters, Worldbuilding, Synopsis, Timeline, Conflict, Style)
-   - Chapter outlines and chapter titles guide
-   - Drafted and reviewed chapters
-   - Continuity diagnostic report
+ - Foundation files (Characters, Worldbuilding, Synopsis, Timeline, Conflict, Style)
+ - Chapter outlines and chapter titles guide
+ - Drafted and reviewed chapters
+ - Continuity diagnostic report
 3. Suggest next steps (address continuity issues, refine chapters, compile manuscript).
 4. Offer ongoing help: revise chapters, brainstorm scenes, refine arcs.
 
@@ -123,9 +124,9 @@ When the user mentions "spinoff", "companion book", "same world, different story
 1. **Read `references/spinoff_guide.md` in full** before doing anything else.
 2. Run the **Spinoff Forge** — the lightweight onboarding conversation defined in that file. Ask one question at a time; everything is skippable.
 3. After approval, **initialize the spinoff directory structure** inside the parent project root:
-   - Create `<spinoff-name>/book-memory-bank/` with Core and Style subdirectories
-   - Fork or create memory bank files per the Inheritance Model in `references/spinoff_guide.md`
-   - Copy shared characters and world sections from the parent's `world_and_characters.md`, marked with `[FROM: ParentTitle]`
+ - Create `<spinoff-name>/book-memory-bank/` with Core and Style subdirectories
+ - Fork or create memory bank files per the Inheritance Model in `references/spinoff_guide.md`
+ - Copy shared characters and world sections from the parent's `world_and_characters.md`, marked with `[FROM: ParentTitle]`
 4. At the start of every subsequent spinoff session, read the spinoff's memory bank **and** the parent's `world_and_characters.md`.
 5. After every spinoff chapter, run the **Cross-Reference Protocol** to flag potential canon conflicts before saving.
 

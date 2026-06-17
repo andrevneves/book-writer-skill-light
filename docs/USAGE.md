@@ -1,4 +1,4 @@
-# 📖 Book Writer Skill — Usage Guide
+# Book Writer Skill — Usage Guide
 
 > You don't need to memorize any commands. Just talk naturally. This guide shows you what's possible and exactly what the conversation looks like at every stage.
 
@@ -34,16 +34,16 @@ When you start a new book, the AI runs **The Story Forge**: a short setup conver
 ```
 What genre best fits your book?
 
- 1. Literary Fiction       6. Thriller / Suspense
- 2. Historical Fiction      7. Horror
- 3. Narrative History       8. Romance
- 4. Fantasy (4a–4d)         9. Adventure / Action
- 5. Science Fiction        10. Mystery / Detective
-                           11. Biographical / Memoir
-                           12. Young Adult (YA)
-                           13. Children's / Middle Grade
-                           14. Short Story Collection
-                           15. Other — describe it
+ 1. Literary Fiction 6. Thriller / Suspense
+ 2. Historical Fiction 7. Horror
+ 3. Narrative History 8. Romance
+ 4. Fantasy (4a–4d) 9. Adventure / Action
+ 5. Science Fiction 10. Mystery / Detective
+ 11. Biographical / Memoir
+ 12. Young Adult (YA)
+ 13. Children's / Middle Grade
+ 14. Short Story Collection
+ 15. Other — describe it
 ```
 
 **You:** *"2 — Historical Fiction."*
@@ -68,23 +68,23 @@ What genre best fits your book?
 ```
 Here's your project brief:
 
-Title:    (working title TBD)
-Author:   Shubhanshu
-Genre:    Historical Fiction
+Title: (working title TBD)
+Author: Shubhanshu
+Genre: Historical Fiction
 
-Premise:  Rise of the Maratha Empire through Bajirao I
-Lead:     Bajirao — appointed Peshwa at 19, tactical genius
+Premise: Rise of the Maratha Empire through Bajirao I
+Lead: Bajirao — appointed Peshwa at 19, tactical genius
 Language: Marathi (dialogue)
-Style:    William Dalrymple
+Style: William Dalrymple
 Chapters: ~12
-GitHub:   Not set
+GitHub: Not set
 
 Ready to initialize? Say yes — or tell me anything to change.
 ```
 
 **You:** *"Yes."*
 
-> ✅ AI initializes the memory bank, fills all Core files, and generates a `README.md` in your project root.
+> AI initializes the memory bank, fills all Core files, and generates a `README.md` in your project root.
 
 ---
 
@@ -100,7 +100,7 @@ Ready to initialize? Say yes — or tell me anything to change.
 
 **You:** *"Private."*
 
-> ✅ Initializes. Draft import skips any questions already answered by the file.
+> Initializes. Draft import skips any questions already answered by the file.
 
 ---
 
@@ -111,7 +111,7 @@ Ready to initialize? Say yes — or tell me anything to change.
 "Skip all questions."
 ```
 
-> ✅ AI initializes immediately with no questions. Fill in the memory bank any time by just telling the AI.
+> AI initializes immediately with no questions. Fill in the memory bank any time by just telling the AI.
 
 ---
 
@@ -133,7 +133,7 @@ After initialization, develop any character through conversation:
 
 **You:** *"Yes."*
 
-> ✅ `world_and_characters.md` updated — Nizam-ul-Mulk entry added with role, historical background, and psychological profile.
+> `world_and_characters.md` updated — Nizam-ul-Mulk entry added with role, historical background, and psychological profile.
 
 ---
 
@@ -221,7 +221,7 @@ The AI reads the scene's register and chooses automatically. But you can always 
 
 **AI:** *[reads Chapter 5 in full]*
 
-> ✅ **Book Memory — Updates after Chapter 5:**
+> **Book Memory — Updates after Chapter 5:**
 > - `world_and_characters.md` — Nizam-ul-Mulk: Chapter 5 developments added
 > - `activeContext.md` — current position: end of Chapter 5; next chapter: Delhi march
 > - `progress.md` — Chapter 5 marked complete
@@ -237,7 +237,7 @@ The AI reads the scene's register and chooses automatically. But you can always 
 
 **You:** *"Yes, fix it."*
 
-> ✅ Chapter_02.md corrected. Memory bank note added.
+> Chapter_02.md corrected. Memory bank note added.
 
 ---
 
@@ -333,13 +333,13 @@ During any chapter review, the AI evaluates the pacing wave:
 > ```
 > TENSION MAP — Chapter 7: The River Crossing
 >
-> | Scene | Brief Description         | Score | Note                    |
+> | Scene | Brief Description | Score | Note |
 > |-------|--------------------------|-------|-------------------------|
-> | 1     | Camp at dawn             |   3   | Grounding beat — good   |
-> | 2     | Confrontation with scout |   7   | Escalates well          |
-> | 3     | Crossing begins          |   8   | High — sustains tension |
-> | 4     | Ambush                   |  10   | Peak — strong           |
-> | 5     | Retreat to shore         |   4   | Needed reaction beat ✓  |
+> | 1 | Camp at dawn | 3 | Grounding beat — good |
+> | 2 | Confrontation with scout | 7 | Escalates well |
+> | 3 | Crossing begins | 8 | High — sustains tension |
+> | 4 | Ambush | 10 | Peak — strong |
+> | 5 | Retreat to shore | 4 | Needed reaction beat |
 >
 > Pacing verdict: Good wave shape. The peak at scene 4 is earned.
 > Recommendations: Scene 3 could be lightened slightly to give the ambush more contrast.
@@ -428,16 +428,16 @@ Once the manuscript is complete, generate all submission assets from your memory
 ```
 Continuity Diagnostic Report — Generated: Feb 2026
 
-✓ Timeline consistent across Chapters 1–8
-✓ Character behavior aligned with profiles
+ Timeline consistent across Chapters 1–8
+ Character behavior aligned with profiles
 
-⚠ Chapter 5, Scene 2: Bajirao is called "Peshwa Bajirao"
-  but scene is set in 1717, before his 1720 appointment.
-  → Question: Should this be corrected to "Bajirao"?
+ Chapter 5, Scene 2: Bajirao is called "Peshwa Bajirao"
+ but scene is set in 1717, before his 1720 appointment.
+ → Question: Should this be corrected to "Bajirao"?
 
-⚠ Chapter 7: Nizam-ul-Mulk references the Palkhed battle,
-  which hasn't happened yet in the timeline.
-  → Question: Is this foreshadowing, or a continuity slip?
+ Chapter 7: Nizam-ul-Mulk references the Palkhed battle,
+ which hasn't happened yet in the timeline.
+ → Question: Is this foreshadowing, or a continuity slip?
 ```
 
 > Report saved to `Research/continuity_diagnostic_report.md`. Issues are framed as questions — you decide what needs fixing.
@@ -451,13 +451,13 @@ The AI maintains context files in `book-memory-bank/` — it reads them at the s
 ```
 book-memory-bank/
 ├── Core/
-│   ├── projectbrief.md         ← concept & goals
-│   ├── story_structure.md      ← themes, arcs, narrative patterns
-│   ├── world_and_characters.md ← all characters, locations, world rules
-│   ├── activeContext.md        ← current session focus
-│   └── progress.md             ← chapter completion tracking
+│ ├── projectbrief.md ← concept & goals
+│ ├── story_structure.md ← themes, arcs, narrative patterns
+│ ├── world_and_characters.md ← all characters, locations, world rules
+│ ├── activeContext.md ← current session focus
+│ └── progress.md ← chapter completion tracking
 └── Style/
-    └── style_guide.md          ← prose voice, tone, stylistic rules
+ └── style_guide.md ← prose voice, tone, stylistic rules
 ```
 
 ---

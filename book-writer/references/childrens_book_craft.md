@@ -202,7 +202,7 @@ Kindness & empathy, courage & bravery, honesty & integrity, friendship & loyalty
 
 ## DO / DON'T Quick-Scan
 
-### DO ✅
+### DO
 - Read your work aloud multiple times
 - Test rhythm by clapping or stomping along
 - Use strong, vivid verbs
@@ -213,7 +213,7 @@ Kindness & empathy, courage & bravery, honesty & integrity, friendship & loyalty
 - Respect young readers' intelligence
 - Build in re-read value
 
-### DON'T ❌
+### DON'T
 - Force rhymes with awkward inversions
 - Use words kids can't relate to
 - Be preachy or didactic

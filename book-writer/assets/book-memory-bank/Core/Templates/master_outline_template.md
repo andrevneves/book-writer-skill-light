@@ -55,7 +55,7 @@ This document provides an overarching structure for your entire book. It serves 
 ### Part 1: [Title]
 **Chapters**: [Chapter range, e.g., 1-7]
 **Purpose**: [What this section accomplishes in the story]
-**Key Events**: 
+**Key Events**:
 - [Major event 1]
 - [Major event 2]
 - [Major event 3]
@@ -65,7 +65,7 @@ This document provides an overarching structure for your entire book. It serves 
 ### Part 2: [Title]
 **Chapters**: [Chapter range]
 **Purpose**: [What this section accomplishes in the story]
-**Key Events**: 
+**Key Events**:
 - [Major event 1]
 - [Major event 2]
 - [Major event 3]
@@ -75,7 +75,7 @@ This document provides an overarching structure for your entire book. It serves 
 ### Part 3: [Title]
 **Chapters**: [Chapter range]
 **Purpose**: [What this section accomplishes in the story]
-**Key Events**: 
+**Key Events**:
 - [Major event 1]
 - [Major event 2]
 - [Major event 3]
@@ -85,7 +85,7 @@ This document provides an overarching structure for your entire book. It serves 
 ### Part 4: [Title] (if applicable)
 **Chapters**: [Chapter range]
 **Purpose**: [What this section accomplishes in the story]
-**Key Events**: 
+**Key Events**:
 - [Major event 1]
 - [Major event 2]
 - [Major event 3]

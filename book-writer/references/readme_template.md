@@ -1,6 +1,6 @@
 # README Template — Book Writer Skill
 
-This template is used by the AI to generate a `README.md` in the user's book project root immediately after initialization. 
+This template is used by the AI to generate a `README.md` in the user's book project root immediately after initialization.
 
 **Instructions for the AI:**
 1. Read all `{{TOKEN}}` placeholders below
@@ -31,7 +31,7 @@ This template is used by the AI to generate a `README.md` in the user's book pro
 </div>
 
 <!-- PRIVATE REPO NOTE: add this line below badges if visibility = private -->
-<!-- > ⚠️ *This repository is private. Update badge URLs above if you publish publicly.* -->
+<!-- > *This repository is private. Update badge URLs above if you publish publicly.* -->
 
 ---
 
@@ -66,13 +66,13 @@ Remove this table entirely if scope is TBD -->
 
 ```
 {{PROJECT_ROOT_NAME}}/
-├── Chapters/               # Finished literary chapters
+├── Chapters/ # Finished literary chapters
 ├── Outlines/
-│   └── Master_Outline.md   # Full story structure and chapter notes
-├── book-memory-bank/       # AI writing memory bank (context continuity)
-│   ├── Core/               # Project brief, story structure, characters, progress
-│   └── Style/              # Style guide and voice conventions
-└── .agents/                # Book-writer skill and AI agent configuration
+│ └── Master_Outline.md # Full story structure and chapter notes
+├── book-memory-bank/ # AI writing memory bank (context continuity)
+│ ├── Core/ # Project brief, story structure, characters, progress
+│ └── Style/ # Style guide and voice conventions
+└── .agents/ # Book-writer skill and AI agent configuration
 ```
 
 ---
@@ -117,10 +117,10 @@ If historical genre: Historical claims are hedged where evidence is uncertain. [
 {{PROGRESS_TABLE_ROWS}}
 
 <!-- PROGRESS_TABLE_ROWS: generate one row per chapter/component.
-Start with all chapters as 📝 Not started. AI updates this table on each chapter write.
+Start with all chapters as Not started. AI updates this table on each chapter write.
 Format:
 | {{CHAPTER_NAME}} | {{STATUS_EMOJI}} {{STATUS_TEXT}} |
-Status options: ✅ Complete / 📝 Draft / ❌ Not yet written -->
+Status options: Complete / Draft / Not yet written -->
 
 ---
 
@@ -156,7 +156,7 @@ This book is actively being written. The repository serves as the living manuscr
 
 | Token | Source |
 |---|---|
-| `{{BOOK_EMOJI}}` | AI picks based on genre (⚔️ historical/war, 🌌 sci-fi, 🔮 fantasy, 🕵️ thriller, ❤️ romance, 📖 literary) |
+| `{{BOOK_EMOJI}}` | AI picks based on genre ( historical/war, sci-fi, fantasy, thriller, romance, literary) |
 | `{{BOOK_TITLE}}` | Gate Step 2 or draft import |
 | `{{BOOK_TAGLINE}}` | AI generates from premise; 8–12 words |
 | `{{REPO_URL}}` | Gate Step 7; use `#` if private, omit block if no GitHub |
@@ -171,6 +171,6 @@ This book is actively being written. The repository serves as the living manuscr
 | `{{FIGURES_TABLE_ROWS}}` | Gate Step 5 characters; include life dates if historical |
 | `{{KEY_EVENTS_LIST}}` | Historical events or plot beats from gate/draft |
 | `{{WRITING_APPROACH_PARAGRAPH}}` | Gate Step 6 style reference + historical genre note |
-| `{{PROGRESS_TABLE_ROWS}}` | One row per chapter, all start as ❌ Not yet written |
+| `{{PROGRESS_TABLE_ROWS}}` | One row per chapter, all start as Not yet written |
 | `{{SOURCES_SECTION}}` | Gate Step 1 draft sources or user-mentioned sources |
 | `{{START_DATE}}` | Current month + year at time of initialization |

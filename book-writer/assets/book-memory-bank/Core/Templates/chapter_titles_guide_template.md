@@ -1,21 +1,21 @@
 # {{BOOK_TITLE}} — Chapter Titles: Meaning & Story Connection
 
 <!--
-  TEMPLATE INSTRUCTIONS:
-  - Replace all {{TOKENS}} with actual content from the project.
-  - Use the STRUCTURE that matches your project type:
-    1. FLAT CHAPTERS → Use this file as-is (no parts).
-    2. SINGLE BOOK WITH PARTS → Duplicate the Part section for each part.
-    3. MULTI-BOOK PROJECT → Wrap parts inside Book sections (see bottom of template).
-  - Delete unused structural sections and this comment block when done.
+ TEMPLATE INSTRUCTIONS:
+ - Replace all {{TOKENS}} with actual content from the project.
+ - Use the STRUCTURE that matches your project type:
+ 1. FLAT CHAPTERS → Use this file as-is (no parts).
+ 2. SINGLE BOOK WITH PARTS → Duplicate the Part section for each part.
+ 3. MULTI-BOOK PROJECT → Wrap parts inside Book sections (see bottom of template).
+ - Delete unused structural sections and this comment block when done.
 -->
 
 ---
 
 <!-- ═══════════════════════════════════════════════════════════════
-     STRUCTURE 1: FLAT CHAPTERS (no parts)
-     Use this when the book has no part divisions.
-     ═══════════════════════════════════════════════════════════════ -->
+ STRUCTURE 1: FLAT CHAPTERS (no parts)
+ Use this when the book has no part divisions.
+ ═══════════════════════════════════════════════════════════════ -->
 
 | # | Title | Meaning | Story Connection |
 |---|-------|---------|-----------------|
@@ -34,10 +34,10 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     STRUCTURE 2: SINGLE BOOK WITH PARTS
-     Duplicate the Part section below for each part in your book.
-     Delete Structure 1 above if using this layout.
-     ═══════════════════════════════════════════════════════════════ -->
+ STRUCTURE 2: SINGLE BOOK WITH PARTS
+ Duplicate the Part section below for each part in your book.
+ Delete Structure 1 above if using this layout.
+ ═══════════════════════════════════════════════════════════════ -->
 
 <!--
 ## PART I: {{PART_NAME}} ({{time period or theme}})
@@ -73,11 +73,11 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     STRUCTURE 3: MULTI-BOOK PROJECT
-     Use this when working on a series or multi-book project.
-     Delete Structures 1 and 2 above if using this layout.
-     Replace the top-level heading with the series name.
-     ═══════════════════════════════════════════════════════════════ -->
+ STRUCTURE 3: MULTI-BOOK PROJECT
+ Use this when working on a series or multi-book project.
+ Delete Structures 1 and 2 above if using this layout.
+ Replace the top-level heading with the series name.
+ ═══════════════════════════════════════════════════════════════ -->
 
 <!--
 # {{SERIES_NAME}} — Chapter Titles Guide
@@ -123,13 +123,13 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     COLUMN GUIDELINES
-     ═══════════════════════════════════════════════════════════════
-     
-     #                → Chapter number (bold), or Prologue/Epilogue/Interlude
-     Title            → Chapter title in italics, or (Untitled) if unnamed
-     Meaning          → Layered meaning — symbolism, dual meanings, wordplay,
-                        cultural references. Explain ALL layers.
-     Story Connection → What actually happens and how the title ties to events,
-                        character arcs, and turning points. Be specific.
-     ═══════════════════════════════════════════════════════════════ -->
+ COLUMN GUIDELINES
+ ═══════════════════════════════════════════════════════════════
+
+ # → Chapter number (bold), or Prologue/Epilogue/Interlude
+ Title → Chapter title in italics, or (Untitled) if unnamed
+ Meaning → Layered meaning — symbolism, dual meanings, wordplay,
+ cultural references. Explain ALL layers.
+ Story Connection → What actually happens and how the title ties to events,
+ character arcs, and turning points. Be specific.
+ ═══════════════════════════════════════════════════════════════ -->

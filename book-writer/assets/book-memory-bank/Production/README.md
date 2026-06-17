@@ -5,12 +5,12 @@ This directory contains resources and tools for the book production process, inc
 ## Structure
 
 - **AI_Generation/** - Templates and prompts for AI-assisted content generation
-  - `cover_prompts.md` - Instructions for creating book covers with AI tools
+ - `cover_prompts.md` - Instructions for creating book covers with AI tools
 
 - **Scripts/** - Automation tools for manuscript preparation
-  - `combine_chapters.ps1` - PowerShell script to assemble all chapters into a single document  
-  - `generate_docx.bat` - Batch script to convert markdown to properly formatted Word document
-  - `prepare_word_template.ps1` - PowerShell script to configure Word document formatting
+ - `combine_chapters.ps1` - PowerShell script to assemble all chapters into a single document
+ - `generate_docx.bat` - Batch script to convert markdown to properly formatted Word document
+ - `prepare_word_template.ps1` - PowerShell script to configure Word document formatting
 
 ## Usage
 
@@ -20,7 +20,7 @@ The `AI_Generation/cover_prompts.md` file provides structured prompts for genera
 
 Example:
 ```
-I want to generate a book cover for my [genre] novel titled "[TITLE]." 
+I want to generate a book cover for my [genre] novel titled "[TITLE]."
 The story involves [brief description of main elements].
 The mood is [describe the emotional tone and atmosphere].
 ```
@@ -36,19 +36,19 @@ Run generate_docx.bat to run the other scripts, which will create the Word file 
 The scripts in the Scripts directory automate the process of preparing your manuscript for publication:
 
 1. **Combine Chapters**:
-   ```powershell
-   .\combine_chapters.ps1 -ChapterDir "..\Chapters" -OutputPath "..\Manuscript\COMBINED.md"
-   ```
+ ```powershell
+ .\combine_chapters.ps1 -ChapterDir "..\Chapters" -OutputPath "..\Manuscript\COMBINED.md"
+ ```
 
 2. **Generate Word Document**:
-   ```batch
-   generate_docx.bat "..\Manuscript\COMBINED.md" "..\Manuscript\BOOK.docx"
-   ```
+ ```batch
+ generate_docx.bat "..\Manuscript\COMBINED.md" "..\Manuscript\BOOK.docx"
+ ```
 
 3. **Prepare Word Template**:
-   ```powershell
-   .\prepare_word_template.ps1 -TemplateFile "reference.docx" -OutputFile "..\Manuscript\template.docx"
-   ```
+ ```powershell
+ .\prepare_word_template.ps1 -TemplateFile "reference.docx" -OutputFile "..\Manuscript\template.docx"
+ ```
 
 ## Integration with Memory Bank
 

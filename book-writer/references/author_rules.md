@@ -43,18 +43,18 @@ Punctuation must serve readability and rhythm — it should feel invisible to th
 
 - **Narrative Voice:** Literary but cinematic. Keep it emotionally taut but never melodramatic.
 - **Readability First (Clarity Standard):** Prose should read like a story, not a thesis. Follow a high-readability standard:
-  - One idea per sentence. If a sentence has multiple clauses doing different work, split it.
-  - Common words over rare ones (e.g., *walked* over *traversed*, *broke* over *fractured*).
-  - Short sentences for action/movement; longer sentences for reflection (but never convoluted).
-  - No over-explanation of normal elements. Show, don't explain.
+ - One idea per sentence. If a sentence has multiple clauses doing different work, split it.
+ - Common words over rare ones (e.g., *walked* over *traversed*, *broke* over *fractured*).
+ - Short sentences for action/movement; longer sentences for reflection (but never convoluted).
+ - No over-explanation of normal elements. Show, don't explain.
 - **Narrator Warmth:** The narrator has a voice — warm, observational, occasionally wry. Not invisible. It can set a scene with emotional texture and observe what a character won't admit, but it must never editorialize, lecture, or explain emotions.
 - **POV Shifts:** Strict third-person limited. Shift POV only between chapters or with a clean scene break (`---`). No head-hopping within a paragraph or scene.
 - **Internal Monologue:** Weave thoughts directly into the narrative prose. Do NOT italicize internal monologue; the reader should feel the character's mind seamlessly.
 - **Action vs. Emotion:** In action scenes, use short, visceral sentences that focus on physical instinct. In emotional scenes, show restraint—let silence, subtext, and small gestures carry the weight. What characters don't say matters more.
 - **Name Usage Conventions:**
-  - **First Introduction:** Use the character's full name to ground their presence and establish identity clearly.
-  - **Subsequent References:** Transition immediately to first name only or pronouns to keep the narrative flow smooth.
-  - **Professional Titles:** Use professional titles (Dr., Officer, etc.) only in strictly formal or system contexts. Avoid titles in domestic, personal, or family medical contexts where they feel clinically detached or cause confusion.
+ - **First Introduction:** Use the character's full name to ground their presence and establish identity clearly.
+ - **Subsequent References:** Transition immediately to first name only or pronouns to keep the narrative flow smooth.
+ - **Professional Titles:** Use professional titles (Dr., Officer, etc.) only in strictly formal or system contexts. Avoid titles in domestic, personal, or family medical contexts where they feel clinically detached or cause confusion.
 
 ## 4. General Formatting
 
@@ -149,7 +149,7 @@ A deliberate shift in how a character is named signals something to the reader:
 4. **A character stripping a title is characterization, not a mistake** — write it, and ensure the reader feels what it means.
 5. **Consistency within a scene** — once an address register is established for a character within a scene, don't shift it without reason.
 6. **Record in memory bank** — for each major figure, note their common address variants in `world_and_characters.md`:
-   - Full canonical title
-   - Shortened forms used by allies
-   - Forms used by antagonists
-   - Narrator's default register
+ - Full canonical title
+ - Shortened forms used by allies
+ - Forms used by antagonists
+ - Narrator's default register

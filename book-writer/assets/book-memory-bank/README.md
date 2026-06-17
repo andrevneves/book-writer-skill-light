@@ -16,103 +16,103 @@ The Book Memory Bank is designed to solve a key challenge when writing books wit
 ## Getting Started
 
 1. **Set up the Project Structure**:
-   - Copy the book-memory-bank folder to your project directory
-   - Create .clinerules directory in the root with content from custom_instructions.md
-   - Inside of .clinerules directory, copy the memory-bank.md from this directory to that one
-   - Inside of .clinerules directory, copy the author-rules.md from this directory to that one
+ - Copy the book-memory-bank folder to your project directory
+ - Create .clinerules directory in the root with content from custom_instructions.md
+ - Inside of .clinerules directory, copy the memory-bank.md from this directory to that one
+ - Inside of .clinerules directory, copy the author-rules.md from this directory to that one
 
 2. **Configure AI Assistant**:
-   - Copy the contents of custom_instructions.md to your LLM's custom instructions
-   - Ensure file paths in custom instructions include "book-memory-bank/" prefix
-   - Open VSCode in your main project directory
+ - Copy the contents of custom_instructions.md to your LLM's custom instructions
+ - Ensure file paths in custom instructions include "book-memory-bank/" prefix
+ - Open VSCode in your main project directory
 
 3. **Start Your Project**:
-   - Begin in Plan Mode to establish basic story elements   
-   - Describe what you want to write. Make the first line meaningful, as that's what will show up in Clines history. 
-   - Add detail - at any level you want. You can start with a basic description and then iterate - or add as much detail as you want. This might include main character(s), 1st or 3rd perspective, tone, plot points, locations, et al.  It's recommend to set the over all style of the book. For example, "Write this book in the style of Ernest Hemingway" - or "Write this book with a style of minimalist and direct, using simple language, short sentences, and subtle implication to convey deep meaning through action and dialogue" (which somewhat equates to how Hemingway wrote)
-   - Answer any questions given to you.
-   - Enter in the prompt "initialize memory bank". This will get the memory bank read 
+ - Begin in Plan Mode to establish basic story elements
+ - Describe what you want to write. Make the first line meaningful, as that's what will show up in Clines history.
+ - Add detail - at any level you want. You can start with a basic description and then iterate - or add as much detail as you want. This might include main character(s), 1st or 3rd perspective, tone, plot points, locations, et al. It's recommend to set the over all style of the book. For example, "Write this book in the style of Ernest Hemingway" - or "Write this book with a style of minimalist and direct, using simple language, short sentences, and subtle implication to convey deep meaning through action and dialogue" (which somewhat equates to how Hemingway wrote)
+ - Answer any questions given to you.
+ - Enter in the prompt "initialize memory bank". This will get the memory bank read
 
 4. **Writing Process**:
-   - Once you are ready to start writing the book, writing to Act mode.
-   - It will likely write some. 
-   - Tell Cline to "update memory bank".  This should fully create the memory bank files - characters, locations, plots, etc.  
-   - As for the master outline to be written. Review and feedback changes (if needed)
-   - Once the master outline is how you want it, "update memory bank". This will make sure to your start with a updated memory bank
-   - You can iterate how you want at this point. The pattern that seems to work the best:
-      1.  Ask to "Write chapter 1 outline" (or just "Write the next chapter outline).
-      2.  Review and feedback changes
-      3.  Ask to "Write chapter 1" (or just "Write the next chapter).
-      4.  Review and feedback changes
-      5.  Update memory bank
-      6.  Repeat until the book is complete
-   - It's recommend to read and feedback on each chapter as they are written - you can always make major chnages later (by prompting for it!), but it will take a while and can be error-prone
-   - Periodically review all memoiry bank files - if you see a problem, enter a prompt to correct   
+ - Once you are ready to start writing the book, writing to Act mode.
+ - It will likely write some.
+ - Tell Cline to "update memory bank". This should fully create the memory bank files - characters, locations, plots, etc.
+ - As for the master outline to be written. Review and feedback changes (if needed)
+ - Once the master outline is how you want it, "update memory bank". This will make sure to your start with a updated memory bank
+ - You can iterate how you want at this point. The pattern that seems to work the best:
+ 1. Ask to "Write chapter 1 outline" (or just "Write the next chapter outline).
+ 2. Review and feedback changes
+ 3. Ask to "Write chapter 1" (or just "Write the next chapter).
+ 4. Review and feedback changes
+ 5. Update memory bank
+ 6. Repeat until the book is complete
+ - It's recommend to read and feedback on each chapter as they are written - you can always make major chnages later (by prompting for it!), but it will take a while and can be error-prone
+ - Periodically review all memoiry bank files - if you see a problem, enter a prompt to correct
 
 5. **Publishing Preparation**:
-   - Run the automation scripts in the Production/Scripts directory to assemble and format your manuscript   
+ - Run the automation scripts in the Production/Scripts directory to assemble and format your manuscript
 
 ## Complete Project Structure
 
 The recommended project structure separates the memory bank (metadata and context) from the actual book content:
 
 ```
-YourBookProject/              # Root project directory
-├── .clinerules                # Cline rules
-├── └── book-memory-bank.md    # Cline rules for book-memory
-├── └── author-rules.md        # Cline rules to behave like a human author
-├── Chapters/                  # ACTUAL chapter files
-│   └── Chapter01.md
-│   └── Chapter02.md
-├── Outlines/                  # ACTUAL outlines
-│   ├── Master_Outline.md
-│   └── Chapter_Outlines/
-│       └── Chapter01_Outline.md
-|── AI Generation/             # ACTUAL AI Generation
-│   ├── cover_prompts.md       # ACTUAL cover prompts   
-└── book-memory-bank/          # Memory bank files (context only)
-    ├── README.md              # Memory bank documentation (this file)   
-    |── system_prompt.md       # Suggested system prompt - in Cline, go to Settings and paste the content of that into "Custom Prompt" 
-    ├── custom_instructions.md  # AI assistant instructions     
-    │
-    ├── Core/                   # Core story documentation
-    │   ├── projectbrief.md     # Core project definition
-    │   ├── story_structure.md  # Story purpose, positioning and narrative patterns
-    │   ├── world_and_characters.md # Worldbuilding elements and character profiles
-    │   ├── activeContext.md    # Current work status
-    │   └── progress.md         # Completion tracking
-    │
-    ├── Core/Templates/         # Template files for new content
-    │   ├── README.md           # Guide to using templates
-    │   ├── master_outline_template.md  # Story structure template
-    │   └── chapter_outline_template.md # Chapter planning template
-    │
-    ├── Style/                  # Writing guidelines
-    │   └── style_guide.md
-    │
-    └── Production/             # Book production resources
-        ├── README.md           # Guide to using production tools
-        │
-        ├── AI_Generation/      # AI prompt templates
-        │   └── cover_prompts.md # Instructions for AI cover generation
-        │
-        │
-        └── Scripts/            # Automation tools
-            ├── combine_chapters.ps1 # Merge chapters into one document (Windows)
-            ├── combine_chapters.sh  # Merge chapters into one document (Mac/Linux)
-            ├── generate_docx.bat    # Create Word document (Windows)
-            ├── generate_docx.sh     # Create Word document (Mac/Linux)
-            └── prepare_word_template.ps1 # Setup Word formatting
+YourBookProject/ # Root project directory
+├── .clinerules # Cline rules
+├── └── book-memory-bank.md # Cline rules for book-memory
+├── └── author-rules.md # Cline rules to behave like a human author
+├── Chapters/ # ACTUAL chapter files
+│ └── Chapter01.md
+│ └── Chapter02.md
+├── Outlines/ # ACTUAL outlines
+│ ├── Master_Outline.md
+│ └── Chapter_Outlines/
+│ └── Chapter01_Outline.md
+|── AI Generation/ # ACTUAL AI Generation
+│ ├── cover_prompts.md # ACTUAL cover prompts
+└── book-memory-bank/ # Memory bank files (context only)
+ ├── README.md # Memory bank documentation (this file)
+ |── system_prompt.md # Suggested system prompt - in Cline, go to Settings and paste the content of that into "Custom Prompt"
+ ├── custom_instructions.md # AI assistant instructions
+ │
+ ├── Core/ # Core story documentation
+ │ ├── projectbrief.md # Core project definition
+ │ ├── story_structure.md # Story purpose, positioning and narrative patterns
+ │ ├── world_and_characters.md # Worldbuilding elements and character profiles
+ │ ├── activeContext.md # Current work status
+ │ └── progress.md # Completion tracking
+ │
+ ├── Core/Templates/ # Template files for new content
+ │ ├── README.md # Guide to using templates
+ │ ├── master_outline_template.md # Story structure template
+ │ └── chapter_outline_template.md # Chapter planning template
+ │
+ ├── Style/ # Writing guidelines
+ │ └── style_guide.md
+ │
+ └── Production/ # Book production resources
+ ├── README.md # Guide to using production tools
+ │
+ ├── AI_Generation/ # AI prompt templates
+ │ └── cover_prompts.md # Instructions for AI cover generation
+ │
+ │
+ └── Scripts/ # Automation tools
+ ├── combine_chapters.ps1 # Merge chapters into one document (Windows)
+ ├── combine_chapters.sh # Merge chapters into one document (Mac/Linux)
+ ├── generate_docx.bat # Create Word document (Windows)
+ ├── generate_docx.sh # Create Word document (Mac/Linux)
+ └── prepare_word_template.ps1 # Setup Word formatting
 ```
 
 ### Key Distinction
 
 1. **Memory Bank** (book-memory-bank/): Contains metadata and context that helps AI maintain understanding
-   - Templates, guidelines, and information ABOUT your book (not the book itself)
+ - Templates, guidelines, and information ABOUT your book (not the book itself)
 
 2. **Book Content** (project root): The actual manuscript and planning documents
-   - Chapters/ - Your actual chapter content
-   - Outlines/ - Your actual planning documents
+ - Chapters/ - Your actual chapter content
+ - Outlines/ - Your actual planning documents
 
 ## Core Files
 
@@ -148,7 +148,7 @@ With specially crafted prompts, you can trigger automatic memory bank updates fo
 
 ### Basic full update
 
-Most of the time you will just ask to update memory bank - this should pick up all changes and update the correct files.  If this is not working, you can use the other Automatic Content Analysis Prompts - the most used will be update:
+Most of the time you will just ask to update memory bank - this should pick up all changes and update the correct files. If this is not working, you can use the other Automatic Content Analysis Prompts - the most used will be update:
 
 ```
 
@@ -159,7 +159,7 @@ update memory bank
 
 #### For Completed Chapters:
 ```
-I've just completed Chapter 5: The Revelation. 
+I've just completed Chapter 5: The Revelation.
 
 Please:
 1. Read the entire chapter content

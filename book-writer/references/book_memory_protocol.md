@@ -25,19 +25,19 @@ When reading user-authored files (chapters, outlines, notes) to extract informat
 The Book Memory Bank consists of core files and specialized files, all in Markdown format. Files build upon each other in this hierarchical structure:
 
 flowchart TD
-  PB[book-memory-bank/Core/projectbrief.md] --> SS[book-memory-bank/Core/story_structure.md]
-  PB --> WC[book-memory-bank/Core/world_and_characters.md]
-  PB --> WG[book-memory-bank/Core/world_gita.md]
-  PB --> SG[book-memory-bank/Style/style_guide.md]
-  PB --> MO[Outlines/Master_Outline.md]
-  MO --> ACO[Outlines/Chapter_Outlines/]
-  SS --> AC[book-memory-bank/Core/activeContext.md]
-  WC --> AC
-  WG --> AC
-  MO --> AC
-  ACO --> AC
-  SG --> AC
-  AC --> P[book-memory-bank/Core/progress.md]
+ PB[book-memory-bank/Core/projectbrief.md] --> SS[book-memory-bank/Core/story_structure.md]
+ PB --> WC[book-memory-bank/Core/world_and_characters.md]
+ PB --> WG[book-memory-bank/Core/world_gita.md]
+ PB --> SG[book-memory-bank/Style/style_guide.md]
+ PB --> MO[Outlines/Master_Outline.md]
+ MO --> ACO[Outlines/Chapter_Outlines/]
+ SS --> AC[book-memory-bank/Core/activeContext.md]
+ WC --> AC
+ WG --> AC
+ MO --> AC
+ ACO --> AC
+ SG --> AC
+ AC --> P[book-memory-bank/Core/progress.md]
 
 ## Directory Structure and File Locations
 
@@ -60,23 +60,23 @@ When creating new chapter files or outlines, I will always place them in the app
 ## Core and Specialized Files
 
 Core files:
-  - book-memory-bank/Core/projectbrief.md (foundation)
-  - book-memory-bank/Core/story_structure.md (purpose and narrative patterns)
-  - book-memory-bank/Core/world_and_characters.md (setting and character profiles)
-  - book-memory-bank/Core/world_gita.md (optional world tech/magic/lore bible)
-  - book-memory-bank/Core/activeContext.md (current status)
-  - book-memory-bank/Core/progress.md (completion tracker)
+ - book-memory-bank/Core/projectbrief.md (foundation)
+ - book-memory-bank/Core/story_structure.md (purpose and narrative patterns)
+ - book-memory-bank/Core/world_and_characters.md (setting and character profiles)
+ - book-memory-bank/Core/world_gita.md (optional world tech/magic/lore bible)
+ - book-memory-bank/Core/activeContext.md (current status)
+ - book-memory-bank/Core/progress.md (completion tracker)
 
 Specialized files:
-  - Outlines/Master_Outline.md (actual master outline)
-  - Outlines/Chapter_Outlines/ (actual chapter outlines)
-  - book-memory-bank/Style/style_guide.md
-  - book-memory-bank/Core/Templates/ (templates and references)
+ - Outlines/Master_Outline.md (actual master outline)
+ - Outlines/Chapter_Outlines/ (actual chapter outlines)
+ - book-memory-bank/Style/style_guide.md
+ - book-memory-bank/Core/Templates/ (templates and references)
 
 ## Workflow in Plan and Act Modes
 
 ### All modes
-1. If the memory bank files have not been created yet, do so. While each file has a suggested template, you are free - and encouraged - to improve as you see fit. 
+1. If the memory bank files have not been created yet, do so. While each file has a suggested template, you are free - and encouraged - to improve as you see fit.
 2. Before writing anything, you will always use style_guide.md, story_structure.md, and world_and_characters.md
 
 ### Plan Mode
@@ -97,48 +97,48 @@ Specialized files:
 Automatically maintain the memory bank using the following protocol:
 
 1. After every chapter completion or significant content addition:
-   - Read the chapter content entirely from Chapters/ChapterXX.md or relevant source
-   - Identify ALL new information about characters, world, plot, themes, and style
-   - Conduct a SYSTEMATIC review of EVERY relevant memory bank file
-   - Directly update ALL memory bank files with relevant information
-   - Make any updates to the master outline that are needed
-   - Provide a summary of updates made, writing "Book Memory" as the first line
+ - Read the chapter content entirely from Chapters/ChapterXX.md or relevant source
+ - Identify ALL new information about characters, world, plot, themes, and style
+ - Conduct a SYSTEMATIC review of EVERY relevant memory bank file
+ - Directly update ALL memory bank files with relevant information
+ - Make any updates to the master outline that are needed
+ - Provide a summary of updates made, writing "Book Memory" as the first line
 
 2. File Interdependencies and Update Chain:
-   - When ANY story element changes, check ALL potentially affected files
-   - Character changes → Update world_and_characters.md AND activeContext.md
-   - Setting changes → Update world_and_characters.md AND activeContext.md
-   - Plot changes → Update master_outline.md AND activeContext.md AND relevant character sections
-   - Theme/narrative development → Update story_structure.md AND activeContext.md
+ - When ANY story element changes, check ALL potentially affected files
+ - Character changes → Update world_and_characters.md AND activeContext.md
+ - Setting changes → Update world_and_characters.md AND activeContext.md
+ - Plot changes → Update master_outline.md AND activeContext.md AND relevant character sections
+ - Theme/narrative development → Update story_structure.md AND activeContext.md
 
 3. For character updates (CRITICAL - world_and_characters.md MUST be updated):
-   - New characters: Add complete profile to world_and_characters.md with full background, role, and function
-   - Existing characters: Update traits, relationships, goals, and arc progression in their character profiles
-   - Character development sections: Add "Chapter X Developments" sections to existing character profiles
-   - Character connections: Update ALL related characters' relationship sections
-   - Speech patterns: Update dialogue examples and voice notes as characters evolve
-   - Physical descriptions: Add any new physical details or mannerisms revealed
-   - Psychological profiles: Update motivations, fears, and internal conflicts as they develop
-   - Track character locations and timeline position in activeContext.md
-   - Historical timeline: Update with new character backstory information revealed
+ - New characters: Add complete profile to world_and_characters.md with full background, role, and function
+ - Existing characters: Update traits, relationships, goals, and arc progression in their character profiles
+ - Character development sections: Add "Chapter X Developments" sections to existing character profiles
+ - Character connections: Update ALL related characters' relationship sections
+ - Speech patterns: Update dialogue examples and voice notes as characters evolve
+ - Physical descriptions: Add any new physical details or mannerisms revealed
+ - Psychological profiles: Update motivations, fears, and internal conflicts as they develop
+ - Track character locations and timeline position in activeContext.md
+ - Historical timeline: Update with new character backstory information revealed
 
 4. For world building updates:
-   - New locations/settings: Add to Core/world_and_characters.md with full details
-   - New concepts/systems/technology: Document in Core/world_gita.md (or tech_gita.md) if the project uses one, otherwise in world_and_characters.md
-   - Historical/cultural references: Connect to existing world elements
-   - For ANY world element, note how it affects story themes in story_structure.md
+ - New locations/settings: Add to Core/world_and_characters.md with full details
+ - New concepts/systems/technology: Document in Core/world_gita.md (or tech_gita.md) if the project uses one, otherwise in world_and_characters.md
+ - Historical/cultural references: Connect to existing world elements
+ - For ANY world element, note how it affects story themes in story_structure.md
 
 5. For plot developments:
-   - Update master_outline.md with new/modified plot points
-   - Record foreshadowing elements and their intended payoffs
-   - Track character arc alignment with plot progression
-   - Update Core/activeContext.md with current plot position and upcoming pivots
+ - Update master_outline.md with new/modified plot points
+ - Record foreshadowing elements and their intended payoffs
+ - Track character arc alignment with plot progression
+ - Update Core/activeContext.md with current plot position and upcoming pivots
 
 6. For project status:
-   - Update Core/activeContext.md with current focus
-   - Update Core/progress.md with completion percentage and next steps
-   - Track ALL recent changes across ALL memory bank files
-   - Note ANY potential consistency issues or questions
+ - Update Core/activeContext.md with current focus
+ - Update Core/progress.md with completion percentage and next steps
+ - Track ALL recent changes across ALL memory bank files
+ - Note ANY potential consistency issues or questions
 
 ## Memory Update Triggers and Comprehensive Approach
 
@@ -171,14 +171,14 @@ When updating memory bank files:
 ## Comprehensive Update Checklist
 
 For EVERY major update, check EACH of these files for needed updates:
-- ☐ book-memory-bank/Core/projectbrief.md - Updates to overall scope or direction
-- ☐ book-memory-bank/Core/story_structure.md - Theme, purpose, and narrative pattern developments
-- ☐ book-memory-bank/Core/world_and_characters.md - World building elements and character developments
-- ☐ book-memory-bank/Core/world_gita.md (or tech_gita.md) - Updates to technology, magic, or lore (if used)
-- ☐ Outlines/Master_Outline.md - Plot changes or confirmations
-- ☐ book-memory-bank/Style/style_guide.md - Stylistic choices emerging
-- ☐ book-memory-bank/Core/activeContext.md - ALWAYS updated with current status
-- ☐ book-memory-bank/Core/progress.md - Updated completion status
+- book-memory-bank/Core/projectbrief.md - Updates to overall scope or direction
+- book-memory-bank/Core/story_structure.md - Theme, purpose, and narrative pattern developments
+- book-memory-bank/Core/world_and_characters.md - World building elements and character developments
+- book-memory-bank/Core/world_gita.md (or tech_gita.md) - Updates to technology, magic, or lore (if used)
+- Outlines/Master_Outline.md - Plot changes or confirmations
+- book-memory-bank/Style/style_guide.md - Stylistic choices emerging
+- book-memory-bank/Core/activeContext.md - ALWAYS updated with current status
+- book-memory-bank/Core/progress.md - Updated completion status
 
 ## File Size Management: When to Split Memory Bank Files
 
@@ -197,8 +197,8 @@ Split by **concern**, not by character. The recommended split is:
 
 ```
 book-memory-bank/Core/
-  world_and_characters.md    ← characters + brief world overview (always loaded)
-  world_lore.md              ← deep lore: timelines, tech specs, factions, geography (loaded on demand)
+ world_and_characters.md ← characters + brief world overview (always loaded)
+ world_lore.md ← deep lore: timelines, tech specs, factions, geography (loaded on demand)
 ```
 
 - `world_and_characters.md` remains the always-loaded file every session.
@@ -242,27 +242,27 @@ When triggered, the AI performs a systematic cross-chapter consistency check and
 ### Process
 
 1. **Load all files:**
-   - All chapter files in `Chapters/`
-   - `book-memory-bank/Core/world_and_characters.md`
-   - `book-memory-bank/Core/story_structure.md`
-   - `Outlines/Master_Outline.md`
-   - `book-memory-bank/Core/activeContext.md`
-   - `book-memory-bank/Style/style_guide.md`
+ - All chapter files in `Chapters/`
+ - `book-memory-bank/Core/world_and_characters.md`
+ - `book-memory-bank/Core/story_structure.md`
+ - `Outlines/Master_Outline.md`
+ - `book-memory-bank/Core/activeContext.md`
+ - `book-memory-bank/Style/style_guide.md`
 
 2. **Check for inconsistencies across:**
-   - **Timeline** — Event order, time compression/expansion, day/night logic, date accuracy
-   - **Character behavior** — Personality consistency, emotional jumps, knowledge continuity (does a character know something they shouldn't yet?)
-   - **Worldbuilding** — Rule violations, setting inconsistencies, physical geography errors
-   - **Emotional continuity** — Sudden tone shifts, repeated emotional beats, regression without cause
-   - **Thematic elements** — Accidental dilution or contradiction of core themes
-   - **Title/Honorific accuracy** — (Historical genres) Titles applied before they were conferred
+ - **Timeline** — Event order, time compression/expansion, day/night logic, date accuracy
+ - **Character behavior** — Personality consistency, emotional jumps, knowledge continuity (does a character know something they shouldn't yet?)
+ - **Worldbuilding** — Rule violations, setting inconsistencies, physical geography errors
+ - **Emotional continuity** — Sudden tone shifts, repeated emotional beats, regression without cause
+ - **Thematic elements** — Accidental dilution or contradiction of core themes
+ - **Title/Honorific accuracy** — (Historical genres) Titles applied before they were conferred
 
 3. **Detection rules:**
-   - Observe without interfering
-   - Flag inconsistencies, not stylistic preferences
-   - Respect intentional ambiguity
-   - Never impose interpretation
-   - Preserve author's authority over meaning
+ - Observe without interfering
+ - Flag inconsistencies, not stylistic preferences
+ - Respect intentional ambiguity
+ - Never impose interpretation
+ - Preserve author's authority over meaning
 
 4. **Save diagnostic report** to `Research/continuity_diagnostic_report.md`:
 
@@ -305,12 +305,12 @@ Scope: Chapters [range checked]
 ```
 
 5. **Output rules:**
-   - Use neutral, observational language
-   - Reference exact chapter and section
-   - Offer questions instead of conclusions
-   - DO NOT propose rewrites
-   - DO NOT change tone or language
-   - DO NOT resolve ambiguity for the author
+ - Use neutral, observational language
+ - Reference exact chapter and section
+ - Offer questions instead of conclusions
+ - DO NOT propose rewrites
+ - DO NOT change tone or language
+ - DO NOT resolve ambiguity for the author
 
 **After creating report:**
 > "Continuity check complete. Report saved to Research/continuity_diagnostic_report.md. Found [N] potential issues for your review. These are questions, not problems — you decide what needs addressing."
@@ -325,23 +325,23 @@ For spinoff projects, the memory bank lives inside the spinoff's own subdirector
 
 ```
 <project-root>/
-  book-memory-bank/                    ← parent (read-only in spinoff sessions)
-  <spinoff-name>/
-    book-memory-bank/
-      Core/
-        projectbrief.md                ← FRESH
-        story_structure.md             ← FRESH
-        world_and_characters.md        ← FORKED (inherited + new sections)
-        activeContext.md               ← FRESH
-        progress.md                    ← FRESH
-      Style/
-        style_guide.md                 ← FORKED or FRESH
-    Chapters/
-    Outlines/
-      Chapter_Outlines/
-      Master_Outline.md
-    Research/
-    Manuscript/
+ book-memory-bank/ ← parent (read-only in spinoff sessions)
+ <spinoff-name>/
+ book-memory-bank/
+ Core/
+ projectbrief.md ← FRESH
+ story_structure.md ← FRESH
+ world_and_characters.md ← FORKED (inherited + new sections)
+ activeContext.md ← FRESH
+ progress.md ← FRESH
+ Style/
+ style_guide.md ← FORKED or FRESH
+ Chapters/
+ Outlines/
+ Chapter_Outlines/
+ Master_Outline.md
+ Research/
+ Manuscript/
 ```
 
 ### Session Reading Protocol
@@ -364,7 +364,7 @@ At the start of every spinoff session:
 
 After every spinoff chapter:
 1. Check for **contradictions** with the parent's `world_and_characters.md`. If found, flag before saving:
-   > *"⚠️ Canon Alert: [Character/fact] in this chapter may conflict with the parent project. Review before finalizing."*
+ > *" Canon Alert: [Character/fact] in this chapter may conflict with the parent project. Review before finalizing."*
 2. Check if any spinoff event **adds new canon** (new world facts, character fates). If yes, note in the spinoff's `activeContext.md`:
 
 ```markdown
@@ -377,12 +377,12 @@ After every spinoff chapter:
 ### Comprehensive Update Checklist (Spinoff)
 
 For every spinoff chapter or outline completion:
-- ☐ `<spinoff-name>/book-memory-bank/Core/projectbrief.md`
-- ☐ `<spinoff-name>/book-memory-bank/Core/story_structure.md`
-- ☐ `<spinoff-name>/book-memory-bank/Core/world_and_characters.md`
-- ☐ `<spinoff-name>/book-memory-bank/Core/world_gita.md` (or `tech_gita.md` if spinoff-specific)
-- ☐ `<spinoff-name>/Outlines/Master_Outline.md`
-- ☐ `<spinoff-name>/book-memory-bank/Style/style_guide.md`
-- ☐ `<spinoff-name>/book-memory-bank/Core/activeContext.md` — ALWAYS updated
-- ☐ `<spinoff-name>/book-memory-bank/Core/progress.md`
-- ☐ Spinoff's `activeContext.md` **Proposed Parent Canon Additions** section
+- `<spinoff-name>/book-memory-bank/Core/projectbrief.md`
+- `<spinoff-name>/book-memory-bank/Core/story_structure.md`
+- `<spinoff-name>/book-memory-bank/Core/world_and_characters.md`
+- `<spinoff-name>/book-memory-bank/Core/world_gita.md` (or `tech_gita.md` if spinoff-specific)
+- `<spinoff-name>/Outlines/Master_Outline.md`
+- `<spinoff-name>/book-memory-bank/Style/style_guide.md`
+- `<spinoff-name>/book-memory-bank/Core/activeContext.md` — ALWAYS updated
+- `<spinoff-name>/book-memory-bank/Core/progress.md`
+- Spinoff's `activeContext.md` **Proposed Parent Canon Additions** section

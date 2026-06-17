@@ -6,7 +6,7 @@ Run this after drafting Chapter 1, before proceeding to Chapter 2.
 
 ---
 
-## 🎯 The Reader Promise Test
+## The Reader Promise Test
 
 The first chapter makes an implicit contract with the reader about what kind of book this is. Check:
 
@@ -18,7 +18,7 @@ The first chapter makes an implicit contract with the reader about what kind of 
 
 ---
 
-## 🪝 The Hook Check
+## The Hook Check
 
 - [ ] **Line 1 earns its place** — it does not start with weather, waking up, or description
 - [ ] **Page 1 ends with a pull** — something that makes not reading page 2 feel uncomfortable
@@ -26,7 +26,7 @@ The first chapter makes an implicit contract with the reader about what kind of 
 
 ---
 
-## 👤 Protagonist Establishment
+## Protagonist Establishment
 
 - [ ] **We understand who this person is** from their actions and speech, not from description
 - [ ] **Their dominant desire or wound is implied** — not stated outright, but felt
@@ -35,7 +35,7 @@ The first chapter makes an implicit contract with the reader about what kind of 
 
 ---
 
-## 🔗 Setup for Payoffs
+## Setup for Payoffs
 
 - [ ] **Any foreshadowed element can be paid off** — nothing introduced that cannot eventually matter
 - [ ] **No chekhov's gun left uncocked** — if a detail is planted, it must have a purpose
@@ -43,7 +43,7 @@ The first chapter makes an implicit contract with the reader about what kind of 
 
 ---
 
-## 🗣️ Exposition & Worldbuilding
+## Exposition & Worldbuilding
 
 - [ ] **No information dump in the first 3 pages** — setting, world, and history are delivered through action
 - [ ] **Character backstory is implied, not explained** — what the character notices tells us who they are
@@ -51,7 +51,7 @@ The first chapter makes an implicit contract with the reader about what kind of 
 
 ---
 
-## ✅ Final Gate
+## Final Gate
 
 Before passing Chapter 1:
 - [ ] Read the first and last lines aloud. Do they feel like the same book?

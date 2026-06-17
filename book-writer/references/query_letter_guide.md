@@ -6,7 +6,7 @@ Use after the manuscript is complete and revised.
 
 ---
 
-## 📋 Back-Cover Blurb (150–200 words)
+## Back-Cover Blurb (150–200 words)
 
 **Formula:** Hook → Character + World → Stakes → Question
 
@@ -29,7 +29,7 @@ Use after the manuscript is complete and revised.
 
 ---
 
-## 📄 1-Page Synopsis (500–700 words)
+## 1-Page Synopsis (500–700 words)
 
 A synopsis tells the full story including the ending. Agents require this.
 
@@ -53,7 +53,7 @@ A synopsis tells the full story including the ending. Agents require this.
 
 ---
 
-## 📬 Query Letter (250–350 words)
+## Query Letter (250–350 words)
 
 **Structure:**
 
@@ -81,7 +81,7 @@ Example: "[TITLE] is a [WORD COUNT] [GENRE] in the tradition of [COMP TITLE 1] a
 
 ---
 
-## 🔖 Logline (25–30 words)
+## Logline (25–30 words)
 
 A logline distills the entire book into one sentence. Used for pitches, social media, and personal clarity.
 
@@ -91,5 +91,5 @@ A logline distills the entire book into one sentence. Used for pitches, social m
 
 ---
 
-## 📝 Integration Notes for the AI
+## Integration Notes for the AI
 *When the user says "write a query letter", "generate a blurb", "write a synopsis", or "create a logline", read `Core/Synopsis.md`, `Core/Characters.md`, and `Core/projectbrief.md` first, then follow the template for the requested format. Do not invent plot points not in the memory bank. Each output should feel like it was written by the author, not a generic AI — match the established tone from `Style/style_guide.md`.*

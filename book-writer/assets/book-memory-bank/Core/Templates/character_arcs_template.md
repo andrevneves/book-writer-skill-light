@@ -4,7 +4,7 @@
 
 ---
 
-## 👤 Character: {{TOKEN:Character Name}}
+## Character: {{TOKEN:Character Name}}
 
 ### The Baseline
 - **The internal lie they believe:** {{TOKEN:e.g., I must do everything alone to be safe}}
@@ -22,7 +22,7 @@
 
 ---
 
-## 👤 Character: {{TOKEN:Character Name 2}}
+## Character: {{TOKEN:Character Name 2}}
 
 ### The Baseline
 - **The internal lie they believe:** {{TOKEN:...}}
@@ -38,5 +38,5 @@
 
 ---
 
-## 📝 Integration Notes for the AI
+## Integration Notes for the AI
 *When outlining or drafting a chapter, refer to this matrix to ensure the character's emotional state exactly matches their progression point. Do not let them learn the "truth" too early, and do not let them forget a paradigm shift in the next chapter.*

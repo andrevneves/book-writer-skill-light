@@ -4,7 +4,7 @@
 
 ---
 
-## 🧭 Core Themes
+## Core Themes
 
 *Identify the 1–3 central thematic questions or arguments the book explores. Update Status as the book develops.*
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 🕊️ Motifs & Symbols Matrix
+## Motifs & Symbols Matrix
 
 *Track recurring physical objects, weather patterns, colors, phrases, or actions that hold symbolic weight. Copy the template block below for each motif in the story — there is no limit.*
 
@@ -26,8 +26,8 @@
 - **First Appearance:** Ch {{TOKEN:N}} — {{TOKEN:Describe context briefly}}
 - **Active in Chapters:** {{TOKEN:e.g., Ch 1, 3, 7, 12 — list all chapters where it appears}}
 - **Progression / Evolution:**
-  - Ch {{TOKEN:Y}} — {{TOKEN:How it changes or returns with new meaning}}
-  - Ch {{TOKEN:Z}} — {{TOKEN:How it changes or returns with new meaning}}
+ - Ch {{TOKEN:Y}} — {{TOKEN:How it changes or returns with new meaning}}
+ - Ch {{TOKEN:Z}} — {{TOKEN:How it changes or returns with new meaning}}
 - **Ultimate Payoff:** {{TOKEN:How the motif resolves or climaxes by the end}}
 
 ---
@@ -36,6 +36,6 @@
 
 ---
 
-## 📝 Integration Notes for the AI
+## Integration Notes for the AI
 
 *Before drafting any chapter, scan the "Active in Chapters" field to know which motifs should be woven into this scene. Reference this file alongside `world_and_characters.md` and `style_guide.md`. Do NOT over-explain the symbolism to the reader — let the recurrence do the work. Update "Active in Chapters" after each chapter is drafted.*

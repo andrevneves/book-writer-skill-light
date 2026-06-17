@@ -36,5 +36,5 @@ Use one card per scene. Store scene cards inside the relevant chapter outline fi
 
 ---
 
-## 📝 Integration Notes for the AI
+## Integration Notes for the AI
 *Read scene cards before drafting their chapter. Do NOT add new scene goals or outcomes not specified unless the outline explicitly marks a beat as flexible. Each scene should exit differently than it entered — POV character's emotional state must shift.*

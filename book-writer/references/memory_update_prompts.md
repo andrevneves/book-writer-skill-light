@@ -4,7 +4,7 @@ This document provides ready-to-use prompts that instruct the AI to automaticall
 
 ## Automatic Content Analysis Prompts
 
-### 
+###
 
 In theory, after major updates (new outline or chapter), the various changes should be updated in the the correct memory bank files. This does not alway work. You can instead use this manual prompt.
 Most of the time you will just ask to update memory bank - this should pick up all changes and update the correct files. If this is not working, you can use the other Automatic Content Analysis Prompts.
@@ -16,7 +16,7 @@ update memory bank
 ### After Completing a Chapter
 
 ```
-I've just completed Chapter [X]: [Chapter Title]. 
+I've just completed Chapter [X]: [Chapter Title].
 
 Please:
 1. Read the entire chapter content
@@ -144,12 +144,12 @@ We've introduced a new character named [Name]. Please:
 
 1. Create or update the character profile in Core/world_and_characters.md
 2. Include all established information:
-   - Physical description
-   - Personality traits
-   - Background/history
-   - Relationships with other characters
-   - Goals and motivations
-   - Role in the story
+ - Physical description
+ - Personality traits
+ - Background/history
+ - Relationships with other characters
+ - Goals and motivations
+ - Role in the story
 
 3. Update any relevant files that reference this character
 4. Update Core/activeContext.md to include this character in the current focus
@@ -161,11 +161,11 @@ We've introduced a new character named [Name]. Please:
 We've expanded the world-building with new information about [element]. Please:
 
 1. Update Core/world_and_characters.md with details about:
-   - [Element name]
-   - Description and characteristics
-   - Rules/limitations
-   - Significance to the story
-   - Relationships to other world elements
+ - [Element name]
+ - Description and characteristics
+ - Rules/limitations
+ - Significance to the story
+ - Relationships to other world elements
 
 2. Ensure consistent cross-referencing with related elements
 3. Update any character profiles that interact with this element

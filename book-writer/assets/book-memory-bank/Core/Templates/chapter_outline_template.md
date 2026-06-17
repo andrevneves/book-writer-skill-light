@@ -15,38 +15,38 @@
 
 ## Key Plot Points
 
-1. **Opening scene**: 
-   - [Description of how the chapter begins]
-   - [Specific details or character actions]
-   - [Initial conflict or tension introduced]
-   
+1. **Opening scene**:
+ - [Description of how the chapter begins]
+ - [Specific details or character actions]
+ - [Initial conflict or tension introduced]
+
 2. **Development**:
-   - [How the situation progresses]
-   - [New information revealed]
-   - [Character interactions]
-   - [Complications that arise]
+ - [How the situation progresses]
+ - [New information revealed]
+ - [Character interactions]
+ - [Complications that arise]
 
 3. **Midpoint turn**:
-   - [A shift, revelation, or complication that changes direction]
-   - [Character reactions to this change]
-   - [Raising of stakes or introduction of new problem]
+ - [A shift, revelation, or complication that changes direction]
+ - [Character reactions to this change]
+ - [Raising of stakes or introduction of new problem]
 
 4. **Escalation**:
-   - [How tension increases]
-   - [Further complications]
-   - [Character decisions under pressure]
-   - [Movement toward climax]
+ - [How tension increases]
+ - [Further complications]
+ - [Character decisions under pressure]
+ - [Movement toward climax]
 
 5. **Chapter climax**:
-   - [The most intense moment or decision in the chapter]
-   - [Character actions/reactions]
-   - [Immediate consequences]
+ - [The most intense moment or decision in the chapter]
+ - [Character actions/reactions]
+ - [Immediate consequences]
 
 6. **Resolution/Hook**:
-   - [How the chapter concludes]
-   - [Unresolved questions]
-   - [Setup for next chapter]
-   - [Emotional state of character(s) at end]
+ - [How the chapter concludes]
+ - [Unresolved questions]
+ - [Setup for next chapter]
+ - [Emotional state of character(s) at end]
 
 ## Character Development
 

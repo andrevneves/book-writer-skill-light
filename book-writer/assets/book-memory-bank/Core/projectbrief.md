@@ -23,7 +23,7 @@ This document serves as the foundation for your book project. It defines the cor
 
 **Target Word Count**: [Expected word count, e.g., 80,000-90,000 words]
 
-**Target Audience**: 
+**Target Audience**:
 - Primary: [Main demographic]
 - Secondary: [Additional potential readers]
 

@@ -91,11 +91,20 @@ Use this checklist after drafting a chapter (or set of chapters) to ensure quali
 - [ ] Disputed facts are flagged with the approach taken
 - [ ] Cultural customs and language are period-appropriate
 
+## Popular Science & Tech History (if applicable)
+
+- [ ] Past tense is used for narrative history/biography, and present tense for explaining abstract logical rules or algorithmic principles.
+- [ ] Technical concepts are visual and explained via analogy; no raw math equations or code snippets are present.
+- [ ] Biographical detail is woven into the narrative rather than presented as isolated info-dumps.
+- [ ] Technical explanations avoid retroactive anachronisms (e.g., no modern concepts used to describe historical papers before their time).
+- [ ] Quotes from original research papers are formatted as blockquotes and integrated smoothly.
+- [ ] Focus remains on human struggle, collaborative breakthroughs, and scientific atmosphere rather than pure dry engineering.
+
 ---
 
 ## Quick-Scan: DO / DON'T
 
-### ✅ DO
+### DO
 - Read your work aloud before finalizing
 - Use strong, vivid verbs over weak verb + adverb combinations
 - Show emotions through actions, not labels
@@ -107,7 +116,7 @@ Use this checklist after drafting a chapter (or set of chapters) to ensure quali
 - Build patiently to conclusions
 - Maintain consistent terminology for key concepts
 
-### ❌ DON'T
+### DON'T
 - Use clichés unless intentionally subverted
 - Write walls of text without paragraph breaks
 - Force rhymes or wordplay that sacrifices clarity
@@ -136,10 +145,10 @@ TENSION MAP — Chapter [X]: [Title]
 
 | Scene | Brief Description | Tension Score | Note |
 |-------|-------------------|---------------|------|
-| 1     | [e.g., Arrival at the fort] | 4 | Grounding beat — good |
-| 2     | [e.g., Confrontation with guard] | 7 | Escalates well |
-| 3     | [e.g., Retreat and regrouping] | 2 | Needed reaction beat |
-| 4     | [e.g., Discovery of betrayal] | 9 | Peak — strong |
+| 1 | [e.g., Arrival at the fort] | 4 | Grounding beat — good |
+| 2 | [e.g., Confrontation with guard] | 7 | Escalates well |
+| 3 | [e.g., Retreat and regrouping] | 2 | Needed reaction beat |
+| 4 | [e.g., Discovery of betrayal] | 9 | Peak — strong |
 
 Pacing verdict: [1–2 sentences on the overall wave shape and whether it works]
 Recommendations: [Specific scenes to tighten or expand, if any]
@@ -171,7 +180,7 @@ When the AI reviews a chapter, it should focus on these areas in order:
 
 ## Specialized Revision Passes
 
-When requested, the AI can execute highly focused revision passes on a chapter instead of a general review. 
+When requested, the AI can execute highly focused revision passes on a chapter instead of a general review.
 
 ### 1. Dialogue Pass
 - **Focus:** Subtext, distinct character voices, and removing clunky exposition.
@@ -179,12 +188,12 @@ When requested, the AI can execute highly focused revision passes on a chapter i
 
 ### 2. Sensory Pass
 - **Focus:** Smell, texture, sound, taste, and visceral physical sensations.
-- **Goal:** Elevate a "flat" setting into a fully three-dimensional, immersive environment. 
+- **Goal:** Elevate a "flat" setting into a fully three-dimensional, immersive environment.
 
 ### 3. Prose Polish Pass
 - **Focus:** Sentence rhythm, eliminating weak verb-adverb combos, and tightening phrasing.
 - **Goal:** Make the prose invisible and highly impactful, strictly enforcing the grammar/punctuation rules.
 
 ### 4. Tension & Pacing Pass
-- **Focus:** Sentence length and structural pacing. 
+- **Focus:** Sentence length and structural pacing.
 - **Goal:** Make action scenes shorter and more visceral; give emotional scenes more breathing room and silence.

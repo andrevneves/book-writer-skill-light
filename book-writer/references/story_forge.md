@@ -90,39 +90,39 @@ Present the following menu and ask the user to pick one (or describe their own):
 
 ```
 FICTION
-  1.  Literary Fiction          — character-driven, prose-focused, realistic
-  2.  Historical Fiction        — real era, may blend real + invented figures
-  3.  Narrative History         — non-fiction storytelling of real events
-  4.  Fantasy                   — magic, mythological, or secondary world
-      4a. Epic / High Fantasy
-      4b. Mythological / Folk Fantasy
-      4c. Dark Fantasy
-      4d. Historical Fantasy     — real era + fantastical elements
-  5.  Science Fiction
-      5a. Hard Sci-Fi            — grounded in science
-      5b. Space Opera            — sweeping interstellar scope
-      5c. Dystopian / Post-Apoc
-      5d. Cyberpunk / Biopunk
-  6.  Thriller / Suspense
-      6a. Political Thriller
-      6b. Spy / Espionage
-      6c. Crime / Noir
-      6d. Psychological Thriller
-  7.  Horror
-      7a. Gothic Horror
-      7b. Folk / Cosmic Horror
-      7c. Psychological Horror
-  8.  Romance
-      8a. Contemporary Romance
-      8b. Historical Romance
-      8c. Paranormal Romance
-  9.  Adventure / Action
-  10. Mystery / Detective
-  11. Biographical / Memoir      — real person's life, first or third person
-  12. Young Adult (YA)          — any genre, YA lens
-  13. Children's / Middle Grade
-  14. Short Story Collection
-  15. Other — describe it
+ 1. Literary Fiction — character-driven, prose-focused, realistic
+ 2. Historical Fiction — real era, may blend real + invented figures
+ 3. Narrative History — non-fiction storytelling of real events
+ 4. Fantasy — magic, mythological, or secondary world
+ 4a. Epic / High Fantasy
+ 4b. Mythological / Folk Fantasy
+ 4c. Dark Fantasy
+ 4d. Historical Fantasy — real era + fantastical elements
+ 5. Science Fiction
+ 5a. Hard Sci-Fi — grounded in science
+ 5b. Space Opera — sweeping interstellar scope
+ 5c. Dystopian / Post-Apoc
+ 5d. Cyberpunk / Biopunk
+ 6. Thriller / Suspense
+ 6a. Political Thriller
+ 6b. Spy / Espionage
+ 6c. Crime / Noir
+ 6d. Psychological Thriller
+ 7. Horror
+ 7a. Gothic Horror
+ 7b. Folk / Cosmic Horror
+ 7c. Psychological Horror
+ 8. Romance
+ 8a. Contemporary Romance
+ 8b. Historical Romance
+ 8c. Paranormal Romance
+ 9. Adventure / Action
+ 10. Mystery / Detective
+ 11. Biographical / Memoir — real person's life, first or third person
+ 12. Young Adult (YA) — any genre, YA lens
+ 13. Children's / Middle Grade
+ 14. Short Story Collection
+ 15. Other — describe it
 ```
 
 Accept any answer — a number, a genre name, a mix (e.g., "historical fantasy"), or a free description.
@@ -177,11 +177,11 @@ Only ask if the user hasn't already described their structure:
 > "Do you have a narrative structure in mind? Pick one or describe your own — or say 'skip':"
 
 ```
-1. Three-Act Structure     — Setup → Confrontation → Resolution
-2. Hero's Journey          — Ordinary World → Call → Ordeal → Return
-3. Literary Arc            — Character-driven, subtle progression, internal journey
-4. Multi-Timeline          — Parallel timelines, converging narratives
-5. Episodic                — Loosely connected chapters around a theme
+1. Three-Act Structure — Setup → Confrontation → Resolution
+2. Hero's Journey — Ordinary World → Call → Ordeal → Return
+3. Literary Arc — Character-driven, subtle progression, internal journey
+4. Multi-Timeline — Parallel timelines, converging narratives
+5. Episodic — Loosely connected chapters around a theme
 6. Other — describe it
 ```
 
@@ -250,7 +250,7 @@ On approval → run Workflow 1 initialization (copy memory bank, fill Core files
 - All dates, names, battle outcomes, and biographical facts default to historically recorded values.
 - If the user wants a fictional element (invented character, altered timeline, fictitious event), they prefix it with `[FICTION]` in conversation or in their draft. The AI accepts it, marks it as `[FICTION]` in the memory bank, and never treats it as historical fact.
 - When encountering gaps or disputed facts, the AI flags them:
-  > *"The exact date of X is uncertain in the sources. Shall I use the most commonly cited date, or mark it as approximate?"*
+ > *"The exact date of X is uncertain in the sources. Shall I use the most commonly cited date, or mark it as approximate?"*
 - Historical accuracy applies to: names, dates of birth/death, battles, political events, titles, geographic names, and genealogy.
 - It does **not** constrain: prose style, dialogue, interiority, or narrative framing — those are the author's creative domain.
 
@@ -284,8 +284,8 @@ The AI applies the correct form of address based on where the narrative currentl
 ### [Figure Name]
 - Birth name: ...
 - Title Timeline:
-  - [Date/Event]: received title "..."; address changes to "..."
-  - [Date/Event]: received title "..."; address changes to "..."
+ - [Date/Event]: received title "..."; address changes to "..."
+ - [Date/Event]: received title "..."; address changes to "..."
 - Current address in narrative (as of chapter X): ...
 ```
 

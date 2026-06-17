@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✦ book-writer — Features & Reference ✦
+# book-writer — Features & Reference
 
 **v2.0** · *Complete feature list, command reference, and skill architecture*
 
@@ -8,94 +8,94 @@
 
 ---
 
-## ✨ Full Feature List
+## Full Feature List
 
 <table>
 <tr>
 <td width="50%">
 
-### 📖 Writing Engine
+### Writing Engine
 | | |
 |---|---|
-| ✍️ **Master Author Voice** | Literary prose, cinematic dialogue, genre-aware style |
-| 🎭 **15+ Genre Options** | Literary, Fantasy, Sci-Fi, Historical, Thriller, Horror, Romance, YA, Children's |
-| 📏 **Book Size Planning** | MVB (15–20K) · Short (25–40K) · Full (50–80K) · Novel (60–100K) |
-| 📝 **Chapter Craft** | 6 opening/closing formulas, structure templates, engagement techniques |
-| 🛡️ **Anti-AI Writing** | Hype test, voice authenticity, DO/DON'T quick-scan |
-| 🗣️ **Multi-Language Dialogue** | Hinglish, Hindi, Marathi, French, Spanish, Italian, German |
+| **Master Author Voice** | Literary prose, cinematic dialogue, genre-aware style |
+| **15+ Genre Options** | Literary, Fantasy, Sci-Fi, Historical, Thriller, Horror, Romance, YA, Children's |
+| **Book Size Planning** | MVB (15–20K) · Short (25–40K) · Full (50–80K) · Novel (60–100K) |
+| **Chapter Craft** | 6 opening/closing formulas, structure templates, engagement techniques |
+| **Anti-AI Writing** | Hype test, voice authenticity, DO/DON'T quick-scan |
+| **Multi-Language Dialogue** | Hinglish, Hindi, Marathi, French, Spanish, Italian, German |
 
 </td>
 <td width="50%">
 
-### 🧠 Story Memory
+### Story Memory
 | | |
 |---|---|
-| 💾 **Book Memory Bank** | Persistent Markdown files — characters, plot, world, progress |
-| 🔄 **Auto Updates** | Memory stays current after every chapter — zero manual work |
-| 🔍 **Continuity Diagnostics** | Cross-chapter consistency checks with diagnostic reports |
-| 🏛️ **Historical Authenticity** | Verified dates, titles, events, title-timeline rules |
-| 📄 **Draft Import** | Paste existing notes — AI skips questions already answered |
-| 📜 **Auto GitHub README** | Generates polished project README on initialization |
-| 📖 **Story Gitas** | Domain-specific ultimate truth docs (`lore_gita.md`, `tech_gita.md`) |
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🧒 Children's Books
-| | |
-|---|---|
-| 📚 **Age-Based Guidelines** | Tailored rules for ages 2–3, 4–5, 6–7, 8–9 |
-| 🎵 **Rhyming & Meter** | Perfect rhyme schemes, meter analysis, read-aloud testing |
-| 🎨 **Illustration Notes** | Per-page visual descriptions for artists |
-| 🔤 **Phonics & Vocabulary** | Sight words, CVC words, vocabulary building |
-| 💡 **Values & Lessons** | Natural moral integration — show, don't preach |
-| 📖 **Book Types** | Picture books, songs/poems, series, non-rhyming stories |
-
-</td>
-<td width="50%">
-
-### ⚡ New Workflows
-| | |
-|---|---|
-| 📊 **Pacing Blueprint** | Book-level structural grid with tension curve before drafting |
-| 🗒️ **Scene Card** | Atomic Goal–Conflict–Outcome–Aftermath per scene |
-| 🔬 **Research Tracker** | Structured `[NEED RESEARCH]` log prevents unverified facts shipping |
-| 💬 **Beta Reader Log** | Chapter-by-chapter feedback tracking with status and actions |
-| 💬 **Publishing Toolkit** | Generate blurb, synopsis, query letter, logline from memory bank |
+| **Book Memory Bank** | Persistent Markdown files — characters, plot, world, progress |
+| **Auto Updates** | Memory stays current after every chapter — zero manual work |
+| **Continuity Diagnostics** | Cross-chapter consistency checks with diagnostic reports |
+| **Historical Authenticity** | Verified dates, titles, events, title-timeline rules |
+| **Draft Import** | Paste existing notes — AI skips questions already answered |
+| **Auto GitHub README** | Generates polished project README on initialization |
+| **Story Gitas** | Domain-specific ultimate truth docs (`lore_gita.md`, `tech_gita.md`) |
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 👤 Story Building
+### Children's Books
 | | |
 |---|---|
-| 🧬 **Character Arc Matrix** | Chapter-by-chapter progression of lies and emotion |
-| 🌍 **Worldbuilding Tables** | 10-category world profiles with sensory details |
-| ⚔️ **Conflict Mapping** | External, internal, thematic conflicts with stakes |
-| 📋 **Synopsis & Timeline** | Full narrative beats + chronological event tracking |
-| 🎭 **Thematic Tracker** | Matrix for tracking core themes and recurring motifs |
-| 🎯 **Emotional Core** | North Star identification — the truth your story explores |
-| 📦 **Compilation** | Auto-combine all chapters into manuscript |
+| **Age-Based Guidelines** | Tailored rules for ages 2–3, 4–5, 6–7, 8–9 |
+| **Rhyming & Meter** | Perfect rhyme schemes, meter analysis, read-aloud testing |
+| **Illustration Notes** | Per-page visual descriptions for artists |
+| **Phonics & Vocabulary** | Sight words, CVC words, vocabulary building |
+| **Values & Lessons** | Natural moral integration — show, don't preach |
+| **Book Types** | Picture books, songs/poems, series, non-rhyming stories |
 
 </td>
 <td width="50%">
 
-### 🔬 Quality Control
+### New Workflows
 | | |
 |---|---|
-| ✅ **Revision Checklists** | Story, prose, voice, characters, continuity gates |
-| 🧒 **Children's Checklist** | Rhyme, meter, age-appropriateness, engagement |
-| 📊 **Scene Tension Mapping** | 1-10 scoring system evaluating structural pacing |
-| 🎯 **Specialized Passes** | Dedicated Dialogue, Sensory, Prose Polish, Tension passes |
-| 📖 **Opening Chapter Checklist** | Extra scrutiny for Chapter 1: hook, promise, exposition |
-| 🔍 **Continuity Reports** | Question-based diagnostic — flags, never imposes |
-| 🏛️ **Title-Timeline Rule** | Correct historical address based on scene date |
-| 🎭 **Contextual Address** | Different characters use different titles for same figure |
-| 🏷️ **`[FICTION]` Marking** | Explicit tagging of invented historical elements |
+| **Pacing Blueprint** | Book-level structural grid with tension curve before drafting |
+| **Scene Card** | Atomic Goal–Conflict–Outcome–Aftermath per scene |
+| **Research Tracker** | Structured `[NEED RESEARCH]` log prevents unverified facts shipping |
+| **Beta Reader Log** | Chapter-by-chapter feedback tracking with status and actions |
+| **Publishing Toolkit** | Generate blurb, synopsis, query letter, logline from memory bank |
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### Story Building
+| | |
+|---|---|
+| **Character Arc Matrix** | Chapter-by-chapter progression of lies and emotion |
+| **Worldbuilding Tables** | 10-category world profiles with sensory details |
+| **Conflict Mapping** | External, internal, thematic conflicts with stakes |
+| **Synopsis & Timeline** | Full narrative beats + chronological event tracking |
+| **Thematic Tracker** | Matrix for tracking core themes and recurring motifs |
+| **Emotional Core** | North Star identification — the truth your story explores |
+| **Compilation** | Auto-combine all chapters into manuscript |
+
+</td>
+<td width="50%">
+
+### Quality Control
+| | |
+|---|---|
+| **Revision Checklists** | Story, prose, voice, characters, continuity gates |
+| **Children's Checklist** | Rhyme, meter, age-appropriateness, engagement |
+| **Scene Tension Mapping** | 1-10 scoring system evaluating structural pacing |
+| **Specialized Passes** | Dedicated Dialogue, Sensory, Prose Polish, Tension passes |
+| **Opening Chapter Checklist** | Extra scrutiny for Chapter 1: hook, promise, exposition |
+| **Continuity Reports** | Question-based diagnostic — flags, never imposes |
+| **Title-Timeline Rule** | Correct historical address based on scene date |
+| **Contextual Address** | Different characters use different titles for same figure |
+| **`[FICTION]` Marking** | Explicit tagging of invented historical elements |
 
 </td>
 </tr>
@@ -103,7 +103,7 @@
 
 ---
 
-## ⚡ Command Reference
+## Command Reference
 
 | Say this | What happens |
 |---|---|
@@ -131,121 +131,121 @@
 
 ---
 
-## 🏛️ Historical Genres
+## Historical Genres
 
 Activates automatically when you choose a historical genre or mention real figures:
 
-- ✅ All dates, battles, titles, and biographical facts historically verified
-- ✅ Figures addressed by titles they've earned *at the scene's point in time*
-- ✅ Different characters address the same figure differently — context matters
-- ✅ Invented elements accepted when prefixed with `[FICTION]`
+- All dates, battles, titles, and biographical facts historically verified
+- Figures addressed by titles they've earned *at the scene's point in time*
+- Different characters address the same figure differently — context matters
+- Invented elements accepted when prefixed with `[FICTION]`
 
 ---
 
-## 📁 Project Structure After Initialization
+## Project Structure After Initialization
 
 ```
 YourBookProject/
 │
-├── README.md                         ← Auto-generated (GitHub-ready)
+├── README.md ← Auto-generated (GitHub-ready)
 │
-├── Chapters/                         ← Your manuscript
-│   ├── Chapter01.md
-│   ├── Chapter02.md
-│   └── ...
+├── Chapters/ ← Your manuscript
+│ ├── Chapter01.md
+│ ├── Chapter02.md
+│ └── ...
 │
-├── Outlines/                         ← Planning
-│   ├── Master_Outline.md
-│   ├── chapter-titles-guide.md       ← Auto-generated title reference
-│   └── Chapter_Outlines/
+├── Outlines/ ← Planning
+│ ├── Master_Outline.md
+│ ├── chapter-titles-guide.md ← Auto-generated title reference
+│ └── Chapter_Outlines/
 │
-├── Research/                         ← Continuity reports & notes
-│   └── continuity_diagnostic_report.md
+├── Research/ ← Continuity reports & notes
+│ └── continuity_diagnostic_report.md
 │
-├── Manuscript/                       ← Compiled book output
+├── Manuscript/ ← Compiled book output
 │
-└── book-memory-bank/                 ← Auto-maintained by the AI
-    ├── Core/
-    │   ├── projectbrief.md           High-level concept & goals
-    │   ├── story_structure.md        Narrative patterns & themes
-    │   ├── world_and_characters.md   Characters, world, relationships
-    │   ├── activeContext.md          Current session focus
-    │   ├── progress.md              Completion tracking
-    │   └── Templates/               Chapter, outline, titles guide templates
-    └── Style/
-        └── style_guide.md           Voice, tone, language rules
+└── book-memory-bank/ ← Auto-maintained by the AI
+ ├── Core/
+ │ ├── projectbrief.md High-level concept & goals
+ │ ├── story_structure.md Narrative patterns & themes
+ │ ├── world_and_characters.md Characters, world, relationships
+ │ ├── activeContext.md Current session focus
+ │ ├── progress.md Completion tracking
+ │ └── Templates/ Chapter, outline, titles guide templates
+ └── Style/
+ └── style_guide.md Voice, tone, language rules
 ```
 
 ---
 
-## 🔍 Skill Architecture
+## Skill Architecture
 
 ```
-book-writer-skill/          ← Repo root
+book-writer-skill/ ← Repo root
 ├── docs/
-│   ├── USAGE.md            ← Usage guide with examples
-│   └── FEATURES.md         ← This file
-├── book-writer/            ← Skill folder
-│   ├── SKILL.md            ← Core instructions & 9 workflows
-│   ├── references/
-│   │   ├── author_rules.md                     Writing persona & historical rules
-│   │   ├── book_memory_protocol.md             Memory bank architecture & rules
-│   │   ├── memory_update_prompts.md            Update criteria & templates
-│   │   ├── story_forge.md                      Onboarding (15+ genres, North Star)
-│   │   ├── readme_template.md                  Auto-README template
-│   │   ├── chapter_craft.md                    Chapter formulas & engagement
-│   │   ├── revision_checklist.md               Quality gates & DO/DON'T lists
-│   │   ├── character_worldbuilding_tables.md   Profiles, world, conflict tables
-│   │   ├── childrens_book_craft.md             Ages 2–9, rhyming, illustration
-│   │   ├── parallel_workflows.md               Background agent drafting/review
-│   │   ├── punctuation_guide.md                Mark-by-mark punctuation rules
-│   │   ├── spinoff_guide.md                    Spinoff Forge & canon consistency
-│   │   ├── opening_chapter_checklist.md        Chapter 1 dedicated quality gates
-│   │   ├── query_letter_guide.md               Publishing toolkit
-│   │   └── chapter_titles_guide.md             Title → meaning → story connection
-│   └── assets/
-│       └── book-memory-bank/   ← Template directory (copied on init)
-│           └── Core/Templates/
-│               ├── chapter_outline_template.md
-│               ├── master_outline_template.md
-│               ├── chapter_titles_guide_template.md
-│               ├── character_arcs_template.md
-│               ├── themes_and_motifs_template.md
-│               ├── scene_card_template.md
-│               ├── pacing_blueprint_template.md
-│               ├── research_tracker_template.md
-│               └── beta_reader_log_template.md
+│ ├── USAGE.md ← Usage guide with examples
+│ └── FEATURES.md ← This file
+├── book-writer/ ← Skill folder
+│ ├── SKILL.md ← Core instructions & 9 workflows
+│ ├── references/
+│ │ ├── author_rules.md Writing persona & historical rules
+│ │ ├── book_memory_protocol.md Memory bank architecture & rules
+│ │ ├── memory_update_prompts.md Update criteria & templates
+│ │ ├── story_forge.md Onboarding (15+ genres, North Star)
+│ │ ├── readme_template.md Auto-README template
+│ │ ├── chapter_craft.md Chapter formulas & engagement
+│ │ ├── revision_checklist.md Quality gates & DO/DON'T lists
+│ │ ├── character_worldbuilding_tables.md Profiles, world, conflict tables
+│ │ ├── childrens_book_craft.md Ages 2–9, rhyming, illustration
+│ │ ├── parallel_workflows.md Background agent drafting/review
+│ │ ├── punctuation_guide.md Mark-by-mark punctuation rules
+│ │ ├── spinoff_guide.md Spinoff Forge & canon consistency
+│ │ ├── opening_chapter_checklist.md Chapter 1 dedicated quality gates
+│ │ ├── query_letter_guide.md Publishing toolkit
+│ │ └── chapter_titles_guide.md Title → meaning → story connection
+│ └── assets/
+│ └── book-memory-bank/ ← Template directory (copied on init)
+│ └── Core/Templates/
+│ ├── chapter_outline_template.md
+│ ├── master_outline_template.md
+│ ├── chapter_titles_guide_template.md
+│ ├── character_arcs_template.md
+│ ├── themes_and_motifs_template.md
+│ ├── scene_card_template.md
+│ ├── pacing_blueprint_template.md
+│ ├── research_tracker_template.md
+│ └── beta_reader_log_template.md
 ```
 
 ---
 
-## 📝 Changelog
+## Changelog
 
 ### v2.0 — The Full Writing Studio
-- ✦ **Context Efficiency Rule** — Lazy loading table in SKILL.md; never pre-loads all references.
-- ✦ **Scene Card Template** — Atomic scene planning (Goal-Conflict-Outcome-Aftermath).
-- ✦ **Book-Level Pacing Blueprint** — Structural grid and tension curve planned before drafting.
-- ✦ **Opening Chapter Checklist** — Dedicated extra scrutiny: hook, protagonist, reader promise.
-- ✦ **Research Flag Tracker** — Structured `[NEED RESEARCH]` log; open/resolved status tracking.
-- ✦ **Beta Reader Feedback Log** — Chapter-by-chapter external feedback with action items.
-- ✦ **Query Letter & Publishing Toolkit** — Blurb, synopsis, query letter, logline from memory bank.
-- ✦ **Chapter Titles Guide** extracted into its own reference file.
-- ✦ **Character Arc Matrix** — Chapter-by-chapter emotional progression tracking.
-- ✦ **Thematic & Motif Tracker** — Symbolism and motif evolution across chapters.
-- ✦ **Scene Tension Mapping** — Structural pacing evaluation (1–10 scoring) in chapter review.
-- ✦ **Specialized Revision Passes** — Dialogue, Sensory, Prose Polish, and Tension passes.
-- ✦ **Architecture** — `docs/` moved to repo root; SKILL.md trimmed from 194 → 137 lines.
+- **Context Efficiency Rule** — Lazy loading table in SKILL.md; never pre-loads all references.
+- **Scene Card Template** — Atomic scene planning (Goal-Conflict-Outcome-Aftermath).
+- **Book-Level Pacing Blueprint** — Structural grid and tension curve planned before drafting.
+- **Opening Chapter Checklist** — Dedicated extra scrutiny: hook, protagonist, reader promise.
+- **Research Flag Tracker** — Structured `[NEED RESEARCH]` log; open/resolved status tracking.
+- **Beta Reader Feedback Log** — Chapter-by-chapter external feedback with action items.
+- **Query Letter & Publishing Toolkit** — Blurb, synopsis, query letter, logline from memory bank.
+- **Chapter Titles Guide** extracted into its own reference file.
+- **Character Arc Matrix** — Chapter-by-chapter emotional progression tracking.
+- **Thematic & Motif Tracker** — Symbolism and motif evolution across chapters.
+- **Scene Tension Mapping** — Structural pacing evaluation (1–10 scoring) in chapter review.
+- **Specialized Revision Passes** — Dialogue, Sensory, Prose Polish, and Tension passes.
+- **Architecture** — `docs/` moved to repo root; SKILL.md trimmed from 194 → 137 lines.
 
 ### v1.6
-- ✦ **Advanced Prompt Instructions** — Strict Grammar & Punctuation rules (Em dashes, semicolons, Oxford commas).
-- ✦ **Number Formatting Rules** — Clear distinction between prose vs data numbers.
-- ✦ **Enhanced Voice & Tone Rules** — Strict POV shifts and implicit internal monologue rules.
-- ✦ **Spinoff Architecture** — Rules for maintaining canon consistency for spinoffs.
-- ✦ **Story Gitas** — Proactive creation of domain-specific ultimate truth reference docs (`tech_gita.md`, `lore_gita.md`) for complex lore and world-building.
+- **Advanced Prompt Instructions** — Strict Grammar & Punctuation rules (Em dashes, semicolons, Oxford commas).
+- **Number Formatting Rules** — Clear distinction between prose vs data numbers.
+- **Enhanced Voice & Tone Rules** — Strict POV shifts and implicit internal monologue rules.
+- **Spinoff Architecture** — Rules for maintaining canon consistency for spinoffs.
+- **Story Gitas** — Proactive creation of domain-specific ultimate truth reference docs (`tech_gita.md`, `lore_gita.md`) for complex lore and world-building.
 
 ### v1.5
-- ✦ **Children's Book Craft** — Age-based writing, rhyming/meter, illustration notes, phonics, values framework
-- ✦ **Parallel Workflows** — Simultaneous chapter drafting and review via background agents
-- ✦ **Chapter Titles Guide** — Auto-generated title meaning & story connection reference
-- ✦ **Complete & Present** — Final verification summary workflow
-- ✦ **Project Completion Summary** — Checklist of all created files with next steps
+- **Children's Book Craft** — Age-based writing, rhyming/meter, illustration notes, phonics, values framework
+- **Parallel Workflows** — Simultaneous chapter drafting and review via background agents
+- **Chapter Titles Guide** — Auto-generated title meaning & story connection reference
+- **Complete & Present** — Final verification summary workflow
+- **Project Completion Summary** — Checklist of all created files with next steps

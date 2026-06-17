@@ -4,7 +4,7 @@
 
 ---
 
-## 📐 Structural Grid
+## Structural Grid
 
 *Fill in approximate chapter or word-count targets for each major structural beat.*
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 📈 Book-Level Tension Curve
+## Book-Level Tension Curve
 
 *Rate the intended emotional tension of each part of the book (1–10). This should show a wave pattern — not a flat line, not a constant spike.*
 
@@ -37,7 +37,7 @@
 
 ---
 
-## 🎯 Structural Checks
+## Structural Checks
 
 Before writing, verify:
 - [ ] Every major character has an arc that begins and changes visibly by the end
@@ -48,5 +48,5 @@ Before writing, verify:
 
 ---
 
-## 📝 Integration Notes for the AI
+## Integration Notes for the AI
 *Create this blueprint during initialization or outlining, before chapter outlines are written. When outlining individual chapters, cross-check that each chapter's role aligns with its position in this structural grid. If the pacing blueprint and chapter outlines contradict each other, raise it with the author.*

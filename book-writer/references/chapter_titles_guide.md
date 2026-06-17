@@ -13,7 +13,7 @@ The guide adapts its layout based on the project's structure. Pick the matching 
 # [Book Title] — Chapter Titles: Meaning & Story Connection
 
 | # | Title | Meaning | Story Connection |
-|---|-------|---------|-----------------| 
+|---|-------|---------|-----------------|
 | **1** | *[Title]* | [Why this title — symbolism, wordplay, dual meanings] | [What happens, key turning points, how title connects to events] |
 | **2** | *[Title]* | ... | ... |
 [...all chapters]
@@ -33,7 +33,7 @@ The guide adapts its layout based on the project's structure. Pick the matching 
 ## PART I: [PART NAME] ([time period or theme])
 
 | # | Title | Meaning | Story Connection |
-|---|-------|---------|-----------------| 
+|---|-------|---------|-----------------|
 | **Prologue** | *[Title]* | ... | ... |
 | **1** | *[Title]* | ... | ... |
 [...chapters in this part]
@@ -43,7 +43,7 @@ The guide adapts its layout based on the project's structure. Pick the matching 
 ## PART II: [PART NAME] ([time period or theme])
 
 | # | Title | Meaning | Story Connection |
-|---|-------|---------|-----------------| 
+|---|-------|---------|-----------------|
 | **N** | *[Title]* | ... | ... |
 [...chapters in this part]
 
@@ -63,7 +63,7 @@ The guide adapts its layout based on the project's structure. Pick the matching 
 
 ### PART I: [PART NAME]
 | # | Title | Meaning | Story Connection |
-|---|-------|---------|-----------------| 
+|---|-------|---------|-----------------|
 [...chapters]
 
 #### Title Pattern (Book 1)
