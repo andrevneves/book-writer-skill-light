@@ -121,12 +121,15 @@ YourBookProject/
 
 ---
 
-<div align="center">
-
 ## 📄 License
 
-MIT © [Shubhanshu](https://github.com/kshanxs)
+This project is licensed under the [MIT License](LICENSE).
 
-*Built for authors who care about craft.*
+Copyright © 2026 [Shubhanshu](https://github.com/kshanxs). All rights reserved.
 
-</div>
+---
+
+<p align="center">
+  <sub>MIT License &nbsp;•&nbsp; Permission to Modify & Distribute &nbsp;•&nbsp; No Warranty or Liability</sub><br>
+  <sub>Built with passion for authors who care about their craft.</sub>
+</p>
