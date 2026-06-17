@@ -38,6 +38,7 @@ This skill has many reference files. Do NOT pre-load them all. Use **lazy loadin
 | `references/spinoff_guide.md` | Only for spinoff projects |
 | `references/opening_chapter_checklist.md` | Only when reviewing Chapter 1 |
 | `references/query_letter_guide.md` | Only when user asks for blurb, synopsis, or query letter |
+| `Core/world_gita.md` (or `tech_gita.md`) | Reading world technology, magic, or lore rules |
 | Template files | Only when generating the specific document |
 
 **Never load more than 3–4 reference files at once unless explicitly required by the task.**
@@ -51,7 +52,7 @@ When the user asks to start a new book project or "initialize the memory bank", 
 1. Copy the `assets/book-memory-bank/` directory to the root of the user's project workspace.
 2. Read `references/author_rules.md` to adopt the persona and style of a master fiction author.
 3. Help the user establish the foundational elements (concept, style, characters) by discussing the book's plan.
-4. Use `references/character_worldbuilding_tables.md` for structured character profiles and worldbuilding tables when building out characters and settings. Offer to create `character_arcs.md` and `themes_and_motifs.md` using the templates in `assets/book-memory-bank/Core/Templates/`.
+4. Use `references/character_worldbuilding_tables.md` for structured character profiles and worldbuilding tables when building out characters and settings. Offer to create `character_arcs.md`, `themes_and_motifs.md`, or a `world_gita.md` (or `tech_gita.md` / `lore_gita.md` for detailed tech/magic/lore) using the templates in `assets/book-memory-bank/Core/Templates/`.
 5. **Offer the Pacing Blueprint.** Ask if the user wants to pre-plan the book's structural arc now using `assets/book-memory-bank/Core/Templates/pacing_blueprint_template.md`. Save the completed file as `Core/pacing_blueprint.md`. Recommended for novels — skippable for short projects.
 6. Record these elements into the newly created `book-memory-bank/Core/` and `book-memory-bank/Style/` Markdown files.
 7. **Generate the project README.** Read `references/readme_template.md`, fill all `{{TOKEN}}` placeholders using answers from the brainstorming gate and the newly written memory bank files, and write the completed file as `README.md` in the project root. Do not ask the user to review it — just create it silently.

@@ -27,11 +27,13 @@ The Book Memory Bank consists of core files and specialized files, all in Markdo
 flowchart TD
   PB[book-memory-bank/Core/projectbrief.md] --> SS[book-memory-bank/Core/story_structure.md]
   PB --> WC[book-memory-bank/Core/world_and_characters.md]
+  PB --> WG[book-memory-bank/Core/world_gita.md]
   PB --> SG[book-memory-bank/Style/style_guide.md]
   PB --> MO[Outlines/Master_Outline.md]
   MO --> ACO[Outlines/Chapter_Outlines/]
   SS --> AC[book-memory-bank/Core/activeContext.md]
   WC --> AC
+  WG --> AC
   MO --> AC
   ACO --> AC
   SG --> AC
@@ -61,6 +63,7 @@ Core files:
   - book-memory-bank/Core/projectbrief.md (foundation)
   - book-memory-bank/Core/story_structure.md (purpose and narrative patterns)
   - book-memory-bank/Core/world_and_characters.md (setting and character profiles)
+  - book-memory-bank/Core/world_gita.md (optional world tech/magic/lore bible)
   - book-memory-bank/Core/activeContext.md (current status)
   - book-memory-bank/Core/progress.md (completion tracker)
 
@@ -121,7 +124,7 @@ Automatically maintain the memory bank using the following protocol:
 
 4. For world building updates:
    - New locations/settings: Add to Core/world_and_characters.md with full details
-   - New concepts/systems: Document all rules, limitations, and examples
+   - New concepts/systems/technology: Document in Core/world_gita.md (or tech_gita.md) if the project uses one, otherwise in world_and_characters.md
    - Historical/cultural references: Connect to existing world elements
    - For ANY world element, note how it affects story themes in story_structure.md
 
@@ -171,6 +174,7 @@ For EVERY major update, check EACH of these files for needed updates:
 - ☐ book-memory-bank/Core/projectbrief.md - Updates to overall scope or direction
 - ☐ book-memory-bank/Core/story_structure.md - Theme, purpose, and narrative pattern developments
 - ☐ book-memory-bank/Core/world_and_characters.md - World building elements and character developments
+- ☐ book-memory-bank/Core/world_gita.md (or tech_gita.md) - Updates to technology, magic, or lore (if used)
 - ☐ Outlines/Master_Outline.md - Plot changes or confirmations
 - ☐ book-memory-bank/Style/style_guide.md - Stylistic choices emerging
 - ☐ book-memory-bank/Core/activeContext.md - ALWAYS updated with current status
@@ -376,6 +380,7 @@ For every spinoff chapter or outline completion:
 - ☐ `<spinoff-name>/book-memory-bank/Core/projectbrief.md`
 - ☐ `<spinoff-name>/book-memory-bank/Core/story_structure.md`
 - ☐ `<spinoff-name>/book-memory-bank/Core/world_and_characters.md`
+- ☐ `<spinoff-name>/book-memory-bank/Core/world_gita.md` (or `tech_gita.md` if spinoff-specific)
 - ☐ `<spinoff-name>/Outlines/Master_Outline.md`
 - ☐ `<spinoff-name>/book-memory-bank/Style/style_guide.md`
 - ☐ `<spinoff-name>/book-memory-bank/Core/activeContext.md` — ALWAYS updated

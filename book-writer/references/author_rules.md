@@ -42,9 +42,19 @@ Punctuation must serve readability and rhythm — it should feel invisible to th
 ## 3. Voice, Tone & Perspective (Third-Person Limited)
 
 - **Narrative Voice:** Literary but cinematic. Keep it emotionally taut but never melodramatic.
+- **Readability First (Clarity Standard):** Prose should read like a story, not a thesis. Follow a high-readability standard:
+  - One idea per sentence. If a sentence has multiple clauses doing different work, split it.
+  - Common words over rare ones (e.g., *walked* over *traversed*, *broke* over *fractured*).
+  - Short sentences for action/movement; longer sentences for reflection (but never convoluted).
+  - No over-explanation of normal elements. Show, don't explain.
+- **Narrator Warmth:** The narrator has a voice — warm, observational, occasionally wry. Not invisible. It can set a scene with emotional texture and observe what a character won't admit, but it must never editorialize, lecture, or explain emotions.
 - **POV Shifts:** Strict third-person limited. Shift POV only between chapters or with a clean scene break (`---`). No head-hopping within a paragraph or scene.
 - **Internal Monologue:** Weave thoughts directly into the narrative prose. Do NOT italicize internal monologue; the reader should feel the character's mind seamlessly.
 - **Action vs. Emotion:** In action scenes, use short, visceral sentences that focus on physical instinct. In emotional scenes, show restraint—let silence, subtext, and small gestures carry the weight. What characters don't say matters more.
+- **Name Usage Conventions:**
+  - **First Introduction:** Use the character's full name to ground their presence and establish identity clearly.
+  - **Subsequent References:** Transition immediately to first name only or pronouns to keep the narrative flow smooth.
+  - **Professional Titles:** Use professional titles (Dr., Officer, etc.) only in strictly formal or system contexts. Avoid titles in domestic, personal, or family medical contexts where they feel clinically detached or cause confusion.
 
 ## 4. General Formatting
 
@@ -65,9 +75,14 @@ For cultural authenticity (e.g., Hinglish, Hindi, German, Sanskrit), weave local
 
 **Spinoff Rules:** When writing a spinoff of a parent book, follow the inheritance model for memory files. Ensure canon consistency between the parent project and the spinoff by referencing the core world-building and character baselines before introducing divergent arcs.
 
-## 7. Core Reference Documents (Story Gitas)
+## 7. Core Reference Documents (World Gitas / Story Gitas)
 
-**Creation Rule:** If a project involves complex world-building, specialized technology, magic systems, or extensive lore, proactively create a comprehensive reference document (often named `tech_gita.md`, `lore_gita.md`, or similar) in the `Core/` directory.
+**Creation Rule:** If a project involves complex world-building, specialized technology, magic systems, or extensive lore, proactively create a comprehensive reference document (often named `world_gita.md`, `tech_gita.md`, `lore_gita.md`, or similar) in the `Core/` directory using the `world_gita_template.md` template.
+
+**The Tech/Magic Introduction Rule (One-Sentence Context Rule):**
+Every named technology, magic system, or unique world concept gets **exactly one warm sentence** of context on its first appearance in the narrative — enough for the reader to picture it and understand what it does (e.g., *"The fusion-drive — a compact thermal reactor — hummed quietly in the hangar."*).
+- No info-dumps or acronym expansions mid-action. Just name + identity + one clear image.
+- Normal/everyday technology or magic gets no introduction at all. Only unique, named systems get the one-sentence treatment.
 
 **Usage:** This document acts as the ultimate "source of truth" for its specific domain. Use it to log intricate details, limitations, and operational rules to ensure absolute consistency across all chapters. Reference and update it alongside the standard memory bank files.
 

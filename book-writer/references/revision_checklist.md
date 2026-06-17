@@ -18,12 +18,15 @@ Use this checklist after drafting a chapter (or set of chapters) to ensure quali
 ## Prose & Language
 
 - [ ] Natural, fluent language — reads like a skilled human author
+- [ ] Readability First: Sentences are clear, simple, and avoid double-clause density (High Readability Standard)
 - [ ] Varied sentence structure — mix of short, medium, and long
+- [ ] Action matches rhythm: Short, punchy sentences for movement/tension; longer flowing sentences for reflection
 - [ ] Strong verbs — prefer active voice and vivid action words
 - [ ] No redundancy — each sentence earns its place
 - [ ] Rhythm works when read aloud
 - [ ] Dialogue sounds natural — each character has a distinct voice
 - [ ] Exposition is woven in, never dumped
+- [ ] No over-explanation: Lived-in setting details and tech/magic are shown through interaction, not explained
 
 ## Voice & Authenticity
 
@@ -33,6 +36,10 @@ Use this checklist after drafting a chapter (or set of chapters) to ensure quali
 - [ ] Passes the Hype Test: strong content speaks for itself without labels
 - [ ] Emphasis is earned through careful development, not manufactured
 - [ ] Writing sounds like teaching/storytelling, not performing
+- [ ] Narrator Warmth: The narrator observes emotional texture and unspoken subtext without editorializing, lecturing, or explaining emotions
+- [ ] Tech/Magic Introduction Rule: Named technologies/magic systems get exactly one warm sentence of context on first appearance, with no info-dumps or acronym expansions
+- [ ] Name Usage: Character names transition smoothly from full name (first introduction) to first name/pronoun; professional titles are restricted to formal/system contexts
+- [ ] Number formatting matches rules (narrative prose spells out counts/durations/distances; data displays use numerals)
 
 ## Punctuation
 

@@ -10,7 +10,7 @@
 
 <br>
 
-[![Version](https://img.shields.io/badge/version-2.0.1-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
 [![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/kshanxs/book-writer-skill)
 [![License](https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge&labelColor=161b22)](./LICENSE)
 [![Docs](https://img.shields.io/badge/Docs-USAGE.md-f78166?style=for-the-badge&labelColor=161b22)](./docs/USAGE.md)
@@ -106,6 +106,12 @@ YourBookProject/
 ---
 
 ## 📝 Changelog
+
+### v2.1.0 — 2026-06-18
+- **World & Tech Gita (Story Gitas) Template:** Added the new `world_gita_template.md` template file to support deep technology, magic systems, and lore documentation.
+- **Advanced Prose Style Guidelines:** Codified guidelines for Readability First (High Readability Standard), Narrator Warmth, Tech/Magic Introduction Rule (One-Sentence Context Rule), and Character Name/Number conventions in `author_rules.md`.
+- **Integrated Quality Gates:** Updated `revision_checklist.md` with checkpoints to verify readability, warmth, name usage, and tech/magic introductions during chapter reviews.
+- **Protocol & Workflow Updates:** Integrated World Gita files (`world_gita.md`) into the core memory bank flowcharts, update protocols, and review checklists.
 
 ### v2.0.1 — 2026-03-19
 - **Memory Bank File Management:** Added guidance on when to split `world_and_characters.md`. Growing is expected — only split at ~200–300KB, and split by concern (characters vs. deep lore), never by character.
