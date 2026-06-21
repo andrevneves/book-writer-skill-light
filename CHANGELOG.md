@@ -2,6 +2,9 @@
 
 All notable changes to the `book-writer` skill will be documented in this file.
 
+## v2.4.0 — 2026-06-22
+- **Calligraph Sensei Proofreader Synergy:** Integrated support for Calligraph Sensei's new conservative **Proofreading / Correction** mode to allow spelling/grammar checks of sequential drafts without mutating character voices or structural outline tags.
+
 ## v2.3.0 — 2026-06-21
 - **Research Dojo Synergy & Gated Installation:** Enabled modular fact-checking capabilities by dynamically detecting the sibling `Research Dojo` skill.
   - Added dynamic skill detection in `SKILL.md` using `skills-lock.json` to enable a dedicated "Factual Audit Mode".

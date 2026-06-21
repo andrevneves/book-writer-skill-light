@@ -55,6 +55,9 @@ When the user asks to start a new book project or "initialize the memory bank", 
    - If NOT installed, recommend the user install it for factual/claim verification:
      > *"I noticed this is a non-fiction book project. The `research-dojo` skill can help verify historical dates and scientific paper details. Would you like me to install it?"*
      Offer to execute: `npx skills add https://github.com/kshanxs/research-dojo --skill research-dojo` using the `run_command` tool.
+   - **Evaluate Style Companion:** Check if `calligraph-sensei` is installed. If NOT, recommend the user install it for advanced humanization, prose styling, and writing cadence diagnostics:
+     > *"Would you like me to install `calligraph-sensei`? It integrates with Book Writer to polish chapters, enhance sensory language, and vary sentence structures for fiction/non-fiction."*
+     Offer to execute: `npx skills add https://github.com/kshanxs/calligraph-sensei --skill calligraph-sensei` using the `run_command` tool.
 0a. **Run The Story Forge.** Read `references/story_forge.md` in full and follow its instructions. Ask questions one at a time to gather book details. Every question is skippable. If the memory bank Core files already exist, skip this step entirely — just read the memory bank and assist.
 1. Copy the `assets/book-memory-bank/` directory to the root of the user's project workspace.
 2. Read `references/author_rules.md` to adopt the persona and style of a master fiction author.
@@ -97,6 +100,7 @@ When the user asks to review, revise, or polish a chapter:
 3. **If reviewing Chapter 1**, also load `references/opening_chapter_checklist.md` and run its additional gates.
 4. Conduct a **Scene Tension Map** analysis to ensure proper structural pacing.
 5. Review in this order: Language → Emotion → Dialogue → Pacing → Continuity.
+    - **Advanced Stylistic Polish & Proofreading:** If `calligraph-sensei` is installed, delegate the advanced style pass to it using **Creative/Fiction** mode (or General/Academic-Formal depending on book genre) for creative prose adjustments, or use its **Proofreading / Correction** mode for a conservative error-correction pass that leaves the story style and character dialogue voices completely untouched.
 6. Apply revision principles: preserve voice above all, revise gently, clarify emotion without explaining, respect ambiguity.
 7. **Never** introduce new scenes, events, or characters during review. **Never** resolve conflicts the author left open intentionally.
 8. Save revised version and announce changes.
