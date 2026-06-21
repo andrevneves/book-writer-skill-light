@@ -10,7 +10,7 @@
 
 <br>
 
-[![Version](https://img.shields.io/badge/version-2.1.1-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
+[![Version](https://img.shields.io/badge/version-2.2.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
 [![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/kshanxs/book-writer-skill)
 [![License](https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge&labelColor=161b22)](./LICENSE)
 [![Docs](https://img.shields.io/badge/Docs-USAGE.md-f78166?style=for-the-badge&labelColor=161b22)](./docs/USAGE.md)
@@ -76,9 +76,9 @@ The AI guides you through setup one question at a time. Every question is skippa
 |---|---|
 | `"Let's start building a new book"` | Runs The Story Forge onboarding |
 | `"Write chapter 3"` | Reads memory bank, writes the chapter |
-| `"Draft all remaining chapters in parallel"` | Launches background agents |
+| `"Outline all chapters in parallel"` | Launches background agents for chapter outlines |
 | `"Do a Dialogue Pass on chapter 2"` | Focused revision pass on subtext & voice |
-| `"Review all chapters in parallel"` | Parallel review via background agents |
+| `"Review all chapters in parallel"` | Launches background agents to edit/review drafted chapters |
 | `"Write a query letter"` | Generates query letter from memory bank |
 | `"Write a back-cover blurb"` | Generates blurb from memory bank |
 | `"Check continuity"` | Cross-chapter diagnostic report |
@@ -115,7 +115,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for details on all versions and releases.
 
 This project is licensed under the [MIT License](LICENSE).
 
-Copyright © 2026 [Shubhanshu](https://github.com/kshanxs). All rights reserved.
+Copyright © 2026 [Shubhanshu Shukla](https://github.com/kshanxs). All rights reserved.
 
 ---
 

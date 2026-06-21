@@ -127,7 +127,7 @@ For same-world new stories (no shared characters at all), the parent memory bank
 
 | Memory Bank File | Treatment | Rule |
 |---|---|---|
-| `world_and_characters.md` | **Forked** | Copy shared characters and world sections from parent. Append new spinoff-only characters. Mark carried-over sections with `[FROM: ParentTitle]`. |
+| `world_and_characters.md` | **Reference-Based** | Insert relative links pointing directly to the parent's `world_and_characters.md` for shared characters and settings. Do NOT copy parent profiles. Append spinoff-only characters below. |
 | `style_guide.md` | **Forked or Fresh** | Author's choice (Step 5 of Spinoff Forge). Copy parent style or start fresh. |
 | `projectbrief.md` | **Fresh** | New title, premise, protagonist. Reference parent title under "Connected Projects". |
 | `story_structure.md` | **Fresh** | New themes, arcs, emotional core. |
@@ -138,19 +138,17 @@ For same-world new stories (no shared characters at all), the parent memory bank
 
 ### Marking Inherited Content
 
-In the spinoff's `world_and_characters.md`, mark any section copied from the parent clearly:
+In the spinoff's `world_and_characters.md`, reference any character inherited from the parent using a relative Markdown file link pointing to their specific profile section:
 
 ```markdown
 ## [Character Name]
-> *[FROM: Parent Title — inherited profile, last updated Chapter X of parent]*
-
-[Copied profile content here]
+> *Inherited from: [[Parent Character Name]](file:///../book-memory-bank/Core/world_and_characters.md#L[StartLine]-L[EndLine])*
 
 ### Developments in [Spinoff Title]
-[Spinoff-specific updates below]
+[Write ONLY spinoff-specific changes or actions here. Do not copy the base profile.]
 ```
 
-This makes it immediately obvious what is inherited and what evolved in the spinoff.
+This avoids data duplication ("split-brain" syndrome) while allowing the writing agent to read the parent source of truth directly.
 
 ---
 
@@ -188,7 +186,7 @@ On approval of the Spinoff Forge summary:
 
 1. Create the spinoff directory structure inside the project root (see Directory Structure above).
 2. Copy the memory bank asset template into `<spinoff-name>/book-memory-bank/`.
-3. For `world_and_characters.md` — copy inherited sections from the parent, mark with `[FROM: ParentTitle]`, and add new spinoff characters.
+3. For `world_and_characters.md` — construct relative Markdown links pointing directly to the inherited characters and world-building sections inside the parent's `world_and_characters.md` file. Append new spinoff-specific characters below these references.
 4. For `style_guide.md` — copy from parent (if "same") or start fresh (if "different").
 5. Fill `projectbrief.md` with the spinoff's premise, protagonist, and a "Connected Projects" entry pointing to the parent.
 6. Generate a spinoff `README.md` or section in the project README noting the spinoff relationship.

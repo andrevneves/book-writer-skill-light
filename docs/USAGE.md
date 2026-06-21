@@ -492,8 +492,8 @@ A `README.md` is generated in your project root on initialization — title, bad
 | `"Do a Sensory Pass on chapter [N]"` | Immersive detail-focused revision pass |
 | `"Do a Prose Polish on chapter [N]"` | Rhythm and tightening revision pass |
 | `"Do a Tension Pass on chapter [N]"` | Structural pacing revision pass |
-| `"Draft all remaining chapters in parallel"` | Launches background agents |
-| `"Review all chapters in parallel"` | Parallel review via background agents |
+| `"Outline all chapters in parallel"` | Launches background agents for chapter outlines |
+| `"Review all chapters in parallel"` | Launches background agents to edit/review drafted chapters |
 | `"Compile the book"` | AI merges all chapters and saves to `Manuscript/` |
 | `"Update memory bank"` | Full audit and update of all memory files |
 | `"Check continuity"` / `"Run continuity check"` | Cross-chapter consistency diagnostic |

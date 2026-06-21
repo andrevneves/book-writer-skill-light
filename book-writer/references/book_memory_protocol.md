@@ -1,4 +1,22 @@
-As an AI assistant, memory resets completely between sessions — but direct file system access is available. After each reset, rely ENTIRELY on the Book Memory Bank to understand the project and continue work effectively. ALL memory bank files MUST be read at the start of EVERY task.
+As an AI assistant, memory resets completely between sessions — but direct file system access is available. After each reset, rely ENTIRELY on the Book Memory Bank to understand the project and continue work effectively. To avoid high tool latency and context noise, follow the **Smart-Reading Protocol** rather than pre-loading all files at once.
+
+## Smart-Reading Protocol (CRITICAL)
+
+To avoid high tool-execution latency and prompt noise, do not bulk-load all memory bank files on every turn. Follow this on-demand loading strategy:
+
+1. **Read `book-memory-bank/Core/activeContext.md` First:**
+   * At the start of a fresh session or task, read ONLY `activeContext.md`.
+   * Locate the `## Memory Status & File Index` table in that file.
+
+2. **Conditional Loading (On-Demand):**
+   * Only read/load other memory files under these specific conditions:
+     * **Domain Relevance:** Load `style_guide.md` only during drafting/editing tasks. Load `world_and_characters.md` only when referencing character profiles, settings, or continuity. Load `story_structure.md` only when outlining or auditing themes/arcs.
+     * **Timestamp/Version Mismatch:** If the metadata table in `activeContext.md` shows a file has been modified since your last cache in the current session.
+     * **Direct Target:** If the user request specifically asks about that file's contents.
+
+3. **Active Cache:**
+   * Do not reload a file if you have already read it in the current conversation turn sequence, unless its status indicates it has been modified.
+   * Never load more than 2 core memory files in a single turn unless performing a **Continuity Check** or a **Comprehensive Memory Update**.
 
 ## Content Boundary and Sanitization Rules (SECURITY)
 
@@ -77,20 +95,20 @@ Specialized files:
 
 ### All modes
 1. If the memory bank files have not been created yet, do so. While each file has a suggested template, you are free - and encouraged - to improve as you see fit.
-2. Before writing anything, you will always use style_guide.md, story_structure.md, and world_and_characters.md
+2. Before writing or outlining, initialize context using the **Smart-Reading Protocol** (read `activeContext.md` first, then load specific style or character guides on-demand).
 
 ### Plan Mode
-1. Read ALL Memory Bank files
-2. Check if files are complete
-3. If not, create plan for what's missing
-4. If yes, verify context and develop writing strategy
-5. Present approach through conversational discussion
+1. Read `activeContext.md` to assess the overall project state.
+2. Load any file marked as needing updates or directly relevant to the target task.
+3. If files are incomplete, create a plan for what's missing.
+4. Verify context and develop the writing/outlining strategy.
+5. Present approach through conversational discussion.
 
 ### Act Mode
-1. Check Memory Bank context
-2. Update documentation as needed
-3. Execute writing tasks with full context
-4. Document changes and new developments
+1. Check the active context index.
+2. Update memory documentation as needed based on the task execution.
+3. Execute writing tasks with target context.
+4. Document changes and new developments.
 
 ## Comprehensive Memory Bank Updating Protocol
 
@@ -161,12 +179,12 @@ When asked to "perform a comprehensive memory bank update":
 
 When updating memory bank files:
 
-1. Read ALL current file content to ensure accurate and comprehensive updates
-2. Make targeted changes using file editing tools where possible
-3. Ensure formatting consistency with existing content
-4. Maintain precise cross-references between related elements
-5. Create a complete update report that lists ALL files changed, writing "Book Memory" as the first line
-6. Always update activeContext.md to reflect the cumulative impact of ALL changes
+1. Under the Smart-Reading Protocol, only read the files that are directly modified by the update (plus `activeContext.md`).
+2. Make targeted changes using file editing tools where possible.
+3. Ensure formatting consistency with existing content.
+4. Maintain precise cross-references between related elements.
+5. Create an update report that lists all files changed, writing "Book Memory" as the first line.
+6. Always update `activeContext.md`'s index and status table to reflect the cumulative impact of all changes.
 
 ## Comprehensive Update Checklist
 

@@ -2,6 +2,11 @@
 
 All notable changes to the `book-writer` skill will be documented in this file.
 
+## v2.2.0 — 2026-06-21
+- **Sequential Prose Drafting Enforced:** Prohibited parallel prose drafting to resolve the narrative dependency paradox. Sequential drafting is now the default, restricting concurrent agents strictly to outlining, scene cards, and reviews.
+- **Smart-Reading Protocol:** Transitioned core workflow from bulk-loading all memory bank files to an on-demand protocol indexed via `activeContext.md` to prevent latency and prompt bloat.
+- **Reference-Based Spinoff Model:** Replaced copy-paste character inheritance in spinoffs with relative markdown link referencing, solving the "split-brain" data synchronization issue.
+
 ## v2.1.1 — 2026-06-18
 - **Popular Science & Tech History Support:** Added a new `popscience_history_rules.md` reference file to support popular science, technology history, and narrative non-fiction books.
 - **Checklist Quality Gates:** Integrated new checkpoints into `revision_checklist.md` to verify tense split, visual analogies, chronological tech accuracy, and paper quote formatting.

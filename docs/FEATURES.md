@@ -2,7 +2,7 @@
 
 # book-writer — Features & Reference
 
-**v2.0** · *Complete feature list, command reference, and skill architecture*
+**v2.2** · *Complete feature list, command reference, and skill architecture*
 
 </div>
 
@@ -115,10 +115,10 @@
 | `"Build a worldbuilding table"` | Creates 10-category world profile |
 | `"Write chapter 3"` | Reads memory bank, writes the chapter |
 | `"Outline chapter 3"` | Creates chapter outline |
-| `"Draft all remaining chapters in parallel"` | Launches background agents |
+| `"Outline all chapters in parallel"` | Launches background agents for chapter outlines |
 | `"Review chapter 3"` | Structured chapter review & polish |
 | `"Do a Sensory Pass on chapter 3"` | Focused revision for immersive detail |
-| `"Review all chapters in parallel"` | Parallel review via background agents |
+| `"Review all chapters in parallel"` | Launches background agents to edit/review drafted chapters |
 | `"Write a query letter"` | Generates query letter from memory bank |
 | `"Write a back-cover blurb"` | Generates blurb from memory bank |
 | `"Write a 1-page synopsis"` | Full synopsis for agent submissions |
@@ -220,6 +220,21 @@ book-writer-skill/ ← Repo root
 ---
 
 ## Changelog
+
+### v2.2 — Architectural Upgrades
+- **Sequential Prose Drafting Enforced:** Prohibited parallel prose drafting to resolve the narrative dependency paradox. Sequential drafting is now the default, restricting concurrent agents strictly to outlining, scene cards, and reviews.
+- **Smart-Reading Protocol:** Transitioned core workflow from bulk-loading all memory bank files to an on-demand protocol indexed via `activeContext.md` to prevent latency and prompt bloat.
+- **Reference-Based Spinoff Model:** Replaced copy-paste character inheritance in spinoffs with relative markdown link referencing, solving the "split-brain" data synchronization issue.
+
+### v2.1.1 — Popular Science & Tech History Support
+- **Popular Science & Tech History Support:** Added a new `popscience_history_rules.md` reference file to support popular science, technology history, and narrative non-fiction books.
+- **Checklist Quality Gates:** Integrated new checkpoints into `revision_checklist.md` to verify tense split, visual analogies, chronological tech accuracy, and paper quote formatting.
+
+### v2.1.0 — Story Gita Templates & Advanced Guidelines
+- **World & Tech Gita Template:** Added the new `world_gita_template.md` template file to support deep technology, magic systems, and lore documentation.
+- **Advanced Prose Style Guidelines:** Codified guidelines for Readability First, Narrator Warmth, Tech/Magic Introduction Rule, and Character Name/Number conventions in `author_rules.md`.
+- **Integrated Quality Gates:** Updated `revision_checklist.md` with checkpoints to verify readability, warmth, name usage, and tech/magic introductions during chapter reviews.
+- **Protocol & Workflow Updates:** Integrated World Gita files (`world_gita.md`) into the core memory bank flowcharts, update protocols, and review checklists.
 
 ### v2.0 — The Full Writing Studio
 - **Context Efficiency Rule** — Lazy loading table in SKILL.md; never pre-loads all references.

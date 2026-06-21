@@ -60,14 +60,14 @@ When the user asks to start a new book project or "initialize the memory bank", 
 
 ### 2. Writing & Outlining
 When the user asks to outline or write chapters:
-1. Always start by reading ALL memory bank files (`book-memory-bank/Core/`, `book-memory-bank/Style/`, and any existing master outline) to regain context.
+1. **Initialize the Smart-Reading Protocol:** Read `book-memory-bank/Core/activeContext.md` first. Consult its memory status index to check which files have changed, or if it is a fresh session. Only load other files (like characters, worldbuilding, or style guides) if they have been updated or if the task directly targets their specific domain.
 2. Adopt the instructions in `references/author_rules.md` for generating high-quality narrative prose, realistic dialogue, and engaging scenes.
 3. Consult `references/chapter_craft.md` for chapter structure templates, opening/closing formulas, and engagement techniques appropriate to the book type.
 4. **For children's books (ages 2–9):** Also consult `references/childrens_book_craft.md` for age-appropriate vocabulary, rhyming/meter, illustration notes, and educational integration.
 5. Write outlines in the `Outlines/Chapter_Outlines/` directory.
 6. **After all chapter outlines are created**, auto-generate a `chapter-titles-guide.md` inside the `Outlines/` directory (see [Chapter Titles Guide](#chapter-titles-guide) below).
 7. Write chapters in the `Chapters/` directory.
-8. **For multi-chapter drafting**, consult `references/parallel_workflows.md` and offer parallel (background agents) or sequential drafting.
+8. **For multi-chapter workflows**, consult `references/parallel_workflows.md`. Recommend sequential drafting for prose chapters to preserve narrative continuity, and reserve parallel workflows (background agents) strictly for outlining, creating scene cards, and conducting edit/review passes.
 
 ### 3. Compilation
 If the user asks YOU (the AI) to compile or combine the book (rather than running the included scripts themselves):
@@ -102,11 +102,11 @@ When the user asks to "check continuity", "run continuity check", or "check for 
 4. Use question-based language — flag issues, don't impose fixes.
 
 ### 7. Parallel Chapter Drafting & Review
-When multiple chapters need drafting or reviewing:
-1. Consult `references/parallel_workflows.md` for the full workflow.
-2. **Drafting:** Draft Chapter 1 manually for approval, then offer parallel (background agents) or sequential for remaining chapters.
-3. **Review:** After all chapters are drafted, offer parallel or sequential review.
-4. Always ask the user which approach they prefer before launching.
+When multiple chapters need drafting, outlining, or reviewing:
+1. Consult `references/parallel_workflows.md` for the full workflow constraints.
+2. **Drafting:** Prose drafting of sequential narrative chapters must be performed **sequentially** to preserve continuity. Parallel drafting is restricted strictly to non-sequential scene cards or outlining.
+3. **Review:** After chapters are drafted, offer parallel (using background agents) or sequential review and editing.
+4. Always explain the continuity requirements and ask the user for their preferred approach before launching background tasks.
 
 ### 8. Complete & Present
 After all chapters are drafted, reviewed, and continuity-checked:
@@ -125,9 +125,9 @@ When the user mentions "spinoff", "companion book", "same world, different story
 2. Run the **Spinoff Forge** — the lightweight onboarding conversation defined in that file. Ask one question at a time; everything is skippable.
 3. After approval, **initialize the spinoff directory structure** inside the parent project root:
  - Create `<spinoff-name>/book-memory-bank/` with Core and Style subdirectories
- - Fork or create memory bank files per the Inheritance Model in `references/spinoff_guide.md`
- - Copy shared characters and world sections from the parent's `world_and_characters.md`, marked with `[FROM: ParentTitle]`
-4. At the start of every subsequent spinoff session, read the spinoff's memory bank **and** the parent's `world_and_characters.md`.
+ - Set up memory bank files per the reference-based Inheritance Model in `references/spinoff_guide.md`
+ - Link shared characters and world sections from the parent's `world_and_characters.md` using relative Markdown links, rather than duplicating the entire content blocks.
+4. At the start of every subsequent spinoff session, read the spinoff's memory bank files and resolve/read any referenced sections of the parent's `world_and_characters.md` as needed.
 5. After every spinoff chapter, run the **Cross-Reference Protocol** to flag potential canon conflicts before saving.
 
 ## Chapter Titles Guide
