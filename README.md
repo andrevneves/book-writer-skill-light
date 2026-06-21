@@ -10,7 +10,7 @@
 
 <br>
 
-[![Version](https://img.shields.io/badge/version-2.2.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
+[![Version](https://img.shields.io/badge/version-2.3.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
 [![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/kshanxs/book-writer-skill)
 [![License](https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge&labelColor=161b22)](./LICENSE)
 [![Docs](https://img.shields.io/badge/Docs-USAGE.md-f78166?style=for-the-badge&labelColor=161b22)](./docs/USAGE.md)
@@ -102,6 +102,15 @@ YourBookProject/
     ├── Core/                    Characters, world, plot, pacing blueprint
     └── Style/                   Voice, tone, language rules
 ```
+
+---
+
+## 🔬 Research Companion: Research Dojo
+
+For narrative non-fiction, biographies, history, and popular science books, `book-writer` integrates with [Research Dojo](https://github.com/kshanxs/research-dojo) to manage the research-to-drafting lifecycle:
+
+1. **Adversarial Research (Phase 0 — Research Dojo):** Run targeted audits on complex research papers, verify timelines, analyze controversies, and stress-test visual analogies using the Dojo's 7-step process.
+2. **Story Integration (Phase 1 — Book-Writer):** Save your audited findings inside the project's `Research/` directory (e.g. as `Research/dojo_dossier.md`). When you start drafting, `book-writer` automatically detects the dossier and uses it to pre-populate outlines, character arcs, and factual timelines.
 
 ---
 

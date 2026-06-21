@@ -2,6 +2,13 @@
 
 All notable changes to the `book-writer` skill will be documented in this file.
 
+## v2.3.0 — 2026-06-21
+- **Research Dojo Synergy & Gated Installation:** Enabled modular fact-checking capabilities by dynamically detecting the sibling `Research Dojo` skill.
+  - Added dynamic skill detection in `SKILL.md` using `skills-lock.json` to enable a dedicated "Factual Audit Mode".
+  - Implemented boundary conditions separating `book-writer` narrative style guidelines from `research-dojo` adversarial logic.
+  - Added proactive genre checks that prompt the user to install `research-dojo` when starting a non-fiction book format.
+  - Updated the repository `README.md` with instructions on how to run both skills together.
+
 ## v2.2.0 — 2026-06-21
 - **Sequential Prose Drafting Enforced:** Prohibited parallel prose drafting to resolve the narrative dependency paradox. Sequential drafting is now the default, restricting concurrent agents strictly to outlining, scene cards, and reviews.
 - **Smart-Reading Protocol:** Transitioned core workflow from bulk-loading all memory bank files to an on-demand protocol indexed via `activeContext.md` to prevent latency and prompt bloat.
