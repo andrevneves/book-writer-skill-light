@@ -1,0 +1,2 @@
+# Required to run the Skill Creator quick validation script.
+PyYAML==6.0.3
