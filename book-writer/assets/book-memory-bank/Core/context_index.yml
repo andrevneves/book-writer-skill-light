@@ -1,0 +1,104 @@
+version: 1
+updated: YYYY-MM-DD
+
+project:
+  title: "[Book Title]"
+  genre: "[Primary genre]"
+  category: "[Adult/YA/Middle Grade/etc.]"
+  language: "[Primary prose language]"
+  pov: "[POV style]"
+  tense: "[Narrative tense]"
+  premise_capsule: "[1-3 sentences only. Keep full premise in projectbrief.md.]"
+
+current:
+  phase: "[Planning | Drafting | Revising | Editing | Publishing]"
+  focus: "[Current task or chapter]"
+  current_chapter: "[Chapter number/title or blank]"
+  current_scene: "[Scene number/title or blank]"
+  next_step: "[Immediate next action]"
+  blocked_by: []
+
+style_capsule:
+  voice: "[Compact voice note for every drafting turn]"
+  pacing: "[Current pacing preference]"
+  dialogue: "[Dialogue rules that matter now]"
+  must_do:
+    - "[Essential style rule]"
+  avoid:
+    - "[Overused pattern, tonal risk, or banned move]"
+
+active_story_state:
+  timeline_position: "[Where the story currently is]"
+  emotional_state: "[Current emotional pressure]"
+  active_characters:
+    - name: "[Character]"
+      role_now: "[Why they matter in the current work]"
+      load_when: "[When to open world_and_characters.md for this character]"
+  active_locations:
+    - name: "[Location]"
+      role_now: "[Why it matters]"
+      load_when: "[When to open world/lore files]"
+
+continuity_watchlist:
+  - item: "[Question, contradiction risk, or promised payoff]"
+    source: "[Chapter/outline/memory source]"
+    load_when: "[When this should trigger extra reading]"
+
+required_files:
+  draft:
+    - path: "book-memory-bank/Core/context_index.yml"
+      purpose: "Routing and compact project capsule"
+    - path: "book-memory-bank/Style/style_guide.md"
+      purpose: "Load only if style capsule is insufficient"
+  outline:
+    - path: "book-memory-bank/Core/story_structure.md"
+      purpose: "Load when planning or changing structure"
+    - path: "Outlines/Master_Outline.md"
+      purpose: "Load when chapter order or act structure matters"
+  revise:
+    - path: "book-memory-bank/Style/style_guide.md"
+      purpose: "Load only if revision needs full style rules"
+  memory:
+    - path: "book-memory-bank/Core/activeContext.md"
+      purpose: "Always update after substantive changes"
+    - path: "book-memory-bank/Core/context_index.yml"
+      purpose: "Always refresh after substantive changes"
+  continuity:
+    - path: "Chapters/"
+      purpose: "Allowed high-context read for diagnostic reports"
+
+file_index:
+  - path: "book-memory-bank/Core/projectbrief.md"
+    summary: "[Foundation, premise, goals]"
+    load_when: "Project scope, premise, audience, or purpose is unclear"
+    status: "current"
+  - path: "book-memory-bank/Core/story_structure.md"
+    summary: "[Themes, arcs, structure, narrative patterns]"
+    load_when: "Outlining, structural revision, theme/arc audit"
+    status: "current"
+  - path: "book-memory-bank/Core/world_and_characters.md"
+    summary: "[Characters, relationships, locations, world basics]"
+    load_when: "Named character/location continuity is needed"
+    status: "current"
+  - path: "book-memory-bank/Style/style_guide.md"
+    summary: "[Voice, prose rules, formatting conventions]"
+    load_when: "Drafting/revision requires more than style_capsule"
+    status: "current"
+  - path: "book-memory-bank/Core/activeContext.md"
+    summary: "[Current focus, decisions, open questions]"
+    load_when: "Index is stale or task requires recent decisions"
+    status: "current"
+  - path: "book-memory-bank/Core/progress.md"
+    summary: "[Completion tracker and known issues]"
+    load_when: "Progress, schedule, or remaining work is requested"
+    status: "current"
+
+recent_changes:
+  - date: "YYYY-MM-DD"
+    source: "[Chapter/outline/session]"
+    summary: "[What changed]"
+    affected_files: []
+
+open_questions:
+  - question: "[Decision needed]"
+    affects: []

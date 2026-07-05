@@ -1,6 +1,19 @@
 # Active Context
 
-This document tracks the current state of your book project. It should be updated frequently to reflect your current focus, recent changes, and active considerations. This is the file that most directly informs day-to-day work on the project.
+This document tracks the current state of your book project. It should be updated frequently to reflect your current focus, recent changes, and active considerations.
+
+For context loading, read `context_index.yml` first. Use this file for narrative status, decisions, and open questions; keep routing metadata and compact file summaries in `context_index.yml`.
+
+## Context Index Sync
+
+**Index File**: `book-memory-bank/Core/context_index.yml`
+
+**Last Synced**: [YYYY-MM-DD]
+
+**Index Status**: [Current / Needs update]
+
+**Files Changed Since Last Sync**:
+- [None / file path plus short reason]
 
 ## Current Work Focus
 

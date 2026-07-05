@@ -18,22 +18,53 @@ description: |
 
 ## Context Efficiency Rule
 
-**CRITICAL — Read this before loading any files.**
+**CRITICAL - read this before loading any files.**
 
-This skill has many reference files. Do NOT pre-load them all. Use **lazy loading** — only read a reference file when its specific feature is needed:
+Optimize every turn for a small, task-specific context. Markdown remains the source of truth for canon, prose, and style. YAML is only the routing layer that tells you what to read. Do not bulk-load memory bank or reference files.
+
+### Default read order
+
+1. Read `book-memory-bank/Core/context_index.yml` first when it exists.
+2. If `context_index.yml` is missing, read `book-memory-bank/Core/activeContext.md`, then create/update the YAML index from `assets/book-memory-bank/Core/context_index.yml` when practical.
+3. Read the exact target files named by the user (chapter, outline, scene card, note).
+4. Build a short task context pack with `scripts/build_context_pack.py <project-root> --task <draft|outline|revise|memory|continuity> --target <path>` when available. If you cannot run the script, manually follow the same pack shape: project capsule, active task, required files, style capsule, continuity watchlist.
+5. Load only files listed in `required_files` or files directly needed by the task.
+
+### Default loading budget
+
+Per normal turn, load at most:
+- `context_index.yml`
+- `activeContext.md` only if the index is missing, stale, or insufficient
+- target files named by the user
+- 2 core memory files
+- 1 reference file
+
+Exceptions: initialization, comprehensive memory update, continuity diagnostic, spinoff initialization, and full manuscript compilation.
+
+### Task profiles
+
+| Task | Minimal context | Load more only when... |
+|------|-----------------|------------------------|
+| Draft scene/chapter | index, context pack, target outline/scene card, current/previous chapter excerpt, style capsule | a named character, location, lore rule, or unresolved continuity item is not in the pack |
+| Outline | index, project brief summary, story structure summary, existing master outline/adjacent outline | the outline introduces new characters, settings, or structural arcs |
+| Revise/polish | index, target chapter, revision checklist, style capsule, adjacent chapter summary | continuity or character behavior is under review |
+| Memory update | index, changed manuscript/outline, activeContext, files identified by delta | the user explicitly asks for comprehensive audit |
+| Continuity check | all chapters and relevant memory files | this is an allowed high-context task |
+
+### Reference loading
 
 | Only load this file... | When... |
 |------------------------|---------|
-| `references/author_rules.md` | Starting a session, drafting, or reviewing |
-| `references/chapter_craft.md` | Writing or outlining chapters |
+| `references/author_rules.md` | First drafting session, major style reset, or when the style capsule is missing/insufficient |
+| `references/chapter_craft.md` | Planning structure, diagnosing chapter shape, or creating a new chapter outline |
 | `references/revision_checklist.md` | Reviewing or revising chapters |
-| `references/book_memory_protocol.md` | Updating memory bank or running continuity check |
+| `references/book_memory_protocol.md` | Updating memory bank, building context index, or running continuity check |
 | `references/memory_update_prompts.md` | Performing a comprehensive memory audit |
 | `references/story_forge.md` | Only during initialization |
 | `references/readme_template.md` | Only when generating the project README |
 | `references/character_worldbuilding_tables.md` | Building character profiles or worldbuilding tables |
 | `references/childrens_book_craft.md` | Only for children's book projects |
-| `references/parallel_workflows.md` | Only when parallel drafting |
+| `references/parallel_workflows.md` | Only when parallel drafting/reviewing |
 | `references/punctuation_guide.md` | Running a punctuation pass or prose polish |
 | `references/spinoff_guide.md` | Only for spinoff projects |
 | `references/opening_chapter_checklist.md` | Only when reviewing Chapter 1 |
@@ -42,7 +73,7 @@ This skill has many reference files. Do NOT pre-load them all. Use **lazy loadin
 | `Core/world_gita.md` (or `tech_gita.md`) | Reading world technology, magic, or lore rules |
 | Template files | Only when generating the specific document |
 
-**Never load more than 3–4 reference files at once unless explicitly required by the task.**
+Never load more than 3 reference files at once unless an allowed high-context task explicitly requires it.
 
 ## Workflows
 
@@ -65,16 +96,19 @@ When the user asks to start a new book project or "initialize the memory bank", 
 4. Use `references/character_worldbuilding_tables.md` for structured character profiles and worldbuilding tables when building out characters and settings. Offer to create `character_arcs.md`, `themes_and_motifs.md`, or a `world_gita.md` (or `tech_gita.md` / `lore_gita.md` for detailed tech/magic/lore) using the templates in `assets/book-memory-bank/Core/Templates/`.
 5. **Offer the Pacing Blueprint.** Ask if the user wants to pre-plan the book's structural arc now using `assets/book-memory-bank/Core/Templates/pacing_blueprint_template.md`. Save the completed file as `Core/pacing_blueprint.md`. Recommended for novels — skippable for short projects.
 6. Record these elements into the newly created `book-memory-bank/Core/` and `book-memory-bank/Style/` Markdown files.
-7. **Generate the project README.** Read `references/readme_template.md`, fill all `{{TOKEN}}` placeholders using answers from the brainstorming gate and the newly written memory bank files, and write the completed file as `README.md` in the project root. Do not ask the user to review it — just create it silently.
+7. Populate `book-memory-bank/Core/context_index.yml` with the project capsule, current task, file summaries, active characters/locations, and default load rules. Keep it short enough to read every turn.
+8. **Generate the project README.** Read `references/readme_template.md`, fill all `{{TOKEN}}` placeholders using answers from the brainstorming gate and the newly written memory bank files, and write the completed file as `README.md` in the project root. Do not ask the user to review it — just create it silently.
 
 ### 2. Writing & Outlining
 When the user asks to outline or write chapters:
-1. **Initialize the Smart-Reading Protocol:** 
-   - Read `book-memory-bank/Core/activeContext.md` and check `skills-lock.json` in the root.
+1. **Initialize the Smart-Reading Protocol:**
+   - Read `book-memory-bank/Core/context_index.yml` first. If it does not exist, read `activeContext.md` and create the index from the bundled template.
+   - Check `skills-lock.json` in the root.
    - **Dojo Synergy:** If `research-dojo` is installed, enable **Factual Audit Mode**. Scan the project's `Research/` directory for any Dojo audit files (e.g., `dojo_dossier.md` or `paper_audit_[name].md`). Ingest these as primary factual sources and record the active integration status in `activeContext.md`.
-   - Consult the memory status index to check which files have changed, or if it is a fresh session. Only load other files (like characters, worldbuilding, or style guides) if they have been updated or if the task directly targets their specific domain.
-2. Adopt the instructions in `references/author_rules.md` for generating high-quality narrative prose, realistic dialogue, and engaging scenes.
-3. Consult `references/chapter_craft.md` for chapter structure templates, opening/closing formulas, and engagement techniques appropriate to the book type.
+   - Build or manually assemble a context pack before drafting. Prefer `scripts/build_context_pack.py` when available.
+   - Only load other memory files if the index, context pack, or user request directly requires them.
+2. Use the style capsule from `context_index.yml`/context pack for routine drafting. Load `references/author_rules.md` only when the capsule is absent, stale, or insufficient for the requested work.
+3. Consult `references/chapter_craft.md` only for new structure, chapter diagnosis, or outline creation. Do not load it for routine continuation when an outline already exists.
 4. **For children's books (ages 2–9):** Also consult `references/childrens_book_craft.md` for age-appropriate vocabulary, rhyming/meter, illustration notes, and educational integration.
 5. Write outlines in the `Outlines/Chapter_Outlines/` directory.
 6. **After all chapter outlines are created**, auto-generate a `chapter-titles-guide.md` inside the `Outlines/` directory (see [Chapter Titles Guide](#chapter-titles-guide) below).
@@ -90,12 +124,16 @@ If the user asks YOU (the AI) to compile or combine the book (rather than runnin
 ### 4. Memory Updating Protocol (CRITICAL)
 Maintaining the Book Memory Bank is essential for consistency. You must seamlessly and *automatically* update the memory bank whenever substantive writing is done. No scripts or manual user steps should be required.
 1. Consult `references/book_memory_protocol.md` for the strict rules on how and when to update the memory bank files.
-2. Consult `references/memory_update_prompts.md` for specific criteria on what changes should trigger file modifications (e.g., character traits, plot developments, world-building).
-3. If the user explicitly says "update memory bank", perform a comprehensive audit and update across all memory files based on the most recent chapter or outline. Always provide a clear summary of which files were updated and what changed.
+2. First produce a brief delta: changed source, new/changed characters, plot movement, world/lore facts, style discoveries, open questions, and target files to edit.
+3. Consult `references/memory_update_prompts.md` only for a comprehensive audit or when the delta is ambiguous.
+4. Update only files named by the delta plus `activeContext.md` and `context_index.yml`. If the user explicitly says "update memory bank" or asks for a comprehensive audit, broaden the read as described in the protocol.
+5. Always provide a clear summary of which files were updated and what changed.
 
 ### 5. Chapter Review & Revision
 When the user asks to review, revise, or polish a chapter:
-1. Read the chapter draft, its outline, adjacent chapters (for continuity), and all context files (Style, Characters, Worldbuilding).
+1. Read `context_index.yml`, the target chapter draft, its outline if available, and a context pack for the revision task.
+   - Load adjacent chapters as summaries/excerpts first; read full adjacent chapters only when continuity depends on exact beats.
+   - Load Style, Characters, Worldbuilding, or Lore files only when the context pack or review scope names them.
 2. Consult `references/revision_checklist.md` for the quality gates and review focus areas.
 3. **If reviewing Chapter 1**, also load `references/opening_chapter_checklist.md` and run its additional gates.
 4. Conduct a **Scene Tension Map** analysis to ensure proper structural pacing.
