@@ -1,6 +1,10 @@
 # Changelog
 
-All notable changes to the `book-writer` skill will be documented in this file.
+All notable changes to the `book-writer-light` skill will be documented in this file.
+
+## v0.4.0 — 2026-07-05
+- **Fork Rename:** Renamed the Codex skill from `book-writer` to `book-writer-light`.
+- **Fork Documentation:** Documented that Book Writer Light is a fork of [kshanxs/book-writer-skill](https://github.com/kshanxs/book-writer-skill/) for projects that need the original workflow with leaner context loading.
 
 ## v2.4.0 — 2026-06-22
 - **Calligraph Sensei Proofreader Synergy:** Integrated support for Calligraph Sensei's new conservative **Proofreading / Correction** mode to allow spelling/grammar checks of sequential drafts without mutating character voices or structural outline tags.
@@ -8,7 +12,7 @@ All notable changes to the `book-writer` skill will be documented in this file.
 ## v2.3.0 — 2026-06-21
 - **Research Dojo Synergy & Gated Installation:** Enabled modular fact-checking capabilities by dynamically detecting the sibling `Research Dojo` skill.
   - Added dynamic skill detection in `SKILL.md` using `skills-lock.json` to enable a dedicated "Factual Audit Mode".
-  - Implemented boundary conditions separating `book-writer` narrative style guidelines from `research-dojo` adversarial logic.
+  - Implemented boundary conditions separating `book-writer-light` narrative style guidelines from `research-dojo` adversarial logic.
   - Added proactive genre checks that prompt the user to install `research-dojo` when starting a non-fiction book format.
   - Updated the repository `README.md` with instructions on how to run both skills together.
 

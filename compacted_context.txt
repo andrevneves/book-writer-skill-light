@@ -1,9 +1,11 @@
-COMPACTED CONTEXT - book-writer skill
+COMPACTED CONTEXT - book-writer-light skill
 
 Projeto:
-- Repo: /Users/developer/projects/A.I/writing/book-writer
-- Tipo: skill Codex `book-writer`, nao um projeto de livro especifico.
+- Repo: /Users/developer/projects/A.I/writing/book-writer-skill-light
+- Tipo: skill Codex `book-writer-light`, nao um projeto de livro especifico.
 - Objetivo inicial: ajudar escritores a explorar ideias, estruturar livros, escrever como copiloto, manter memoria narrativa persistente e compilar resultados.
+- Origem: fork de https://github.com/kshanxs/book-writer-skill/.
+- Necessidade do fork: manter o fluxo original de escrita e memoria com carregamento de contexto menor, especifico por tarefa e mais barato para turnos comuns.
 
 Direcao principal:
 - Reduzir uso de contexto sem perder maestria de escrita.
@@ -39,21 +41,21 @@ Revelation gates:
 - `Knowledge Ledger` rastreia o que leitor e personagens sabem, suspeitam, entendem errado ou escondem.
 
 Arquivos relevantes alterados nesta fase:
-- SKILL.md
-- assets/book-memory-bank/Core/context_index.yml
-- assets/book-memory-bank/Core/activeContext.md
-- assets/book-memory-bank/Core/Templates/chapter_outline_template.md
-- assets/book-memory-bank/Core/Templates/scene_card_template.md
-- references/book_memory_protocol.md
-- references/memory_update_prompts.md
-- references/revision_checklist.md
+- book-writer-light/SKILL.md
+- book-writer-light/assets/book-memory-bank/Core/context_index.yml
+- book-writer-light/assets/book-memory-bank/Core/activeContext.md
+- book-writer-light/assets/book-memory-bank/Core/Templates/chapter_outline_template.md
+- book-writer-light/assets/book-memory-bank/Core/Templates/scene_card_template.md
+- book-writer-light/references/book_memory_protocol.md
+- book-writer-light/references/memory_update_prompts.md
+- book-writer-light/references/revision_checklist.md
 - CHANGELOG.txt
 - compacted_context.txt
 
 Validacoes desejadas antes de commit:
 - `ruby -e 'require "yaml"; YAML.load_file("assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'`
-- `.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py .`
-- `python3 -B scripts/build_context_pack.py assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200`
+- `.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py book-writer-light`
+- `python3 -B scripts/build_context_pack.py book-writer-light/assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200`
 - `git diff --check`
 
 Preferencias de design consolidadas:

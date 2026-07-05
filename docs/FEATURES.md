@@ -1,14 +1,16 @@
 <div align="center">
 
-# book-writer — Features & Reference
+# book-writer-light — Features & Reference
 
-**v2.2** · *Complete feature list, command reference, and skill architecture*
+**v0.4** · *Context-light feature list, command reference, and skill architecture*
 
 </div>
 
 ---
 
 ## Full Feature List
+
+Book Writer Light is a fork of [kshanxs/book-writer-skill](https://github.com/kshanxs/book-writer-skill/). It keeps the book-writing studio workflow while making the Codex skill identity and docs explicit as `book-writer-light`.
 
 <table>
 <tr>
@@ -181,11 +183,11 @@ YourBookProject/
 ## Skill Architecture
 
 ```
-book-writer-skill/ ← Repo root
+book-writer-skill-light/ ← Repo root
 ├── docs/
 │ ├── USAGE.md ← Usage guide with examples
 │ └── FEATURES.md ← This file
-├── book-writer/ ← Skill folder
+├── book-writer-light/ ← Skill folder
 │ ├── SKILL.md ← Core instructions & 9 workflows
 │ ├── references/
 │ │ ├── author_rules.md Writing persona & historical rules

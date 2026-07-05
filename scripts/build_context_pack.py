@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a compact task context pack for Book Writer projects.
+"""Build a compact task context pack for Book Writer Light projects.
 
 The pack is intentionally small. It includes the routing index, named target
 files, and optional includes, while listing follow-up files instead of reading
@@ -130,7 +130,7 @@ def build_pack(
     max_file_chars: int,
 ) -> str:
     lines: list[str] = [
-        "# Book Writer Context Pack",
+        "# Book Writer Light Context Pack",
         "",
         f"Generated: {dt.datetime.now().isoformat(timespec='seconds')}",
         f"Task: {task}",
@@ -152,7 +152,7 @@ def build_pack(
             [
                 "## Missing Context Index",
                 "",
-                "Create `book-memory-bank/Core/context_index.yml` from the Book Writer template before continuing when practical.",
+                "Create `book-memory-bank/Core/context_index.yml` from the Book Writer Light template before continuing when practical.",
                 "",
             ]
         )
@@ -196,7 +196,7 @@ def build_pack(
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Build a compact Book Writer context pack.")
+    parser = argparse.ArgumentParser(description="Build a compact Book Writer Light context pack.")
     parser.add_argument("project_root", help="Path to the book project root")
     parser.add_argument("--task", choices=TASKS, default="draft", help="Current task profile")
     parser.add_argument("--target", action="append", default=[], help="Target chapter, outline, or note; may be repeated")

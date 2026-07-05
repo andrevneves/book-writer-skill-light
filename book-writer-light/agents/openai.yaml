@@ -1,0 +1,7 @@
+interface:
+  display_name: "Book Writer Light"
+  short_description: "Book writing with lean context loading"
+  default_prompt: "Use $book-writer-light to start, outline, draft, revise, or maintain a book project with a compact memory workflow."
+
+policy:
+  allow_implicit_invocation: true

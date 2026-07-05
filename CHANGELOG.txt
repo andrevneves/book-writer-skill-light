@@ -3,6 +3,13 @@ CHANGELOG
 Formato: Versionamento Semantico (SemVer)
 Ordem: Versoes mais recentes primeiro
 
+## 0.4.0 - 2026-07-05
+
+### Alterado
+- Renomeada a skill Codex de `book-writer` para `book-writer-light`.
+- Documentado que Book Writer Light e um fork de https://github.com/kshanxs/book-writer-skill/.
+- Documentada a necessidade do fork: manter o fluxo de escrita e memoria do projeto original com carregamento de contexto menor e mais especifico por tarefa.
+
 ## 0.3.0 - 2026-07-05
 
 ### Alterado
@@ -28,7 +35,7 @@ Ordem: Versoes mais recentes primeiro
 ## 0.2.0 - 2026-07-05
 
 ### Alterado
-- Otimizado o protocolo de carregamento de contexto da skill `book-writer`.
+- Otimizado o protocolo de carregamento de contexto da skill `book-writer-light`.
 - Adicionado `book-memory-bank/Core/context_index.yml` como indice compacto de roteamento.
 - Adicionado `scripts/build_context_pack.py` para montar pacotes curtos de contexto por tarefa.
 - Atualizados `SKILL.md`, protocolo de memoria, prompts de atualizacao e fluxo de spinoff para evitar leitura ampla desnecessaria.
@@ -37,7 +44,7 @@ Ordem: Versoes mais recentes primeiro
 ## 0.1.0 - 2026-06-23
 
 ### Objetivo Inicial
-- Criar uma skill `book-writer` para ajudar na escrita de livros, romances, nao ficcao e manuscritos longos.
+- Criar uma skill `book-writer-light` para ajudar na escrita de livros, romances, nao ficcao e manuscritos longos.
 - Manter um `book-memory-bank` em Markdown para registrar canon, personagens, mundo, estrutura, estilo, contexto ativo e progresso.
 - Permitir que um agente continue o trabalho entre sessoes lendo os arquivos persistentes do projeto.
 - Apoiar inicializacao de projetos, planejamento, escrita, revisao, continuidade, atualizacao de memoria e compilacao de manuscritos.

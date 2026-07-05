@@ -1,6 +1,8 @@
-# Book Writer Skill — Usage Guide
+# Book Writer Light — Usage Guide
 
 > You don't need to memorize any commands. Just talk naturally. This guide shows you what's possible and exactly what the conversation looks like at every stage.
+
+Book Writer Light is a context-light fork of [kshanxs/book-writer-skill](https://github.com/kshanxs/book-writer-skill/). Use this fork when you want the original book-writing memory-bank workflow with a smaller default context footprint.
 
 ---
 
@@ -545,4 +547,3 @@ Everything this skill can do, at a glance:
 | **Updates** | Auto-triggered after chapters, outlines, or on-demand; comprehensive audit with file-by-file change reports |
 | **Compilation** | Auto-combine chapters into manuscript, cross-platform scripts (bash/PowerShell) |
 | **Documentation** | Auto-generated README with badges, progress tracking, scope table, character list, sources |
-

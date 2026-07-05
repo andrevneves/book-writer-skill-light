@@ -1,4 +1,4 @@
-# README Template — Book Writer Skill
+# README Template — Book Writer Light Skill
 
 This template is used by the AI to generate a `README.md` in the user's book project root immediately after initialization.
 

@@ -2,16 +2,16 @@
 
 <br>
 
-# ✦ book-writer ✦
+# ✦ book-writer-light ✦
 
-### *The Complete AI Writing Studio*
+### *A context-light fork of Book Writer*
 
-*Master-class fiction · Automated story memory · Book-level pacing · Publishing toolkit*
+*Master-class fiction · Automated story memory · Book-level pacing · Lean context loading*
 
 <br>
 
-[![Version](https://img.shields.io/badge/version-2.4.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
-[![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/kshanxs/book-writer-skill)
+[![Version](https://img.shields.io/badge/version-0.4.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
+[![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/andrevneves/book-writer-skill-light)
 [![License](https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge&labelColor=161b22)](./LICENSE)
 [![Docs](https://img.shields.io/badge/Docs-USAGE.md-f78166?style=for-the-badge&labelColor=161b22)](./docs/USAGE.md)
 
@@ -24,16 +24,22 @@
 
 ---
 
+## Fork Notice
+
+Book Writer Light is a fork of [kshanxs/book-writer-skill](https://github.com/kshanxs/book-writer-skill/).
+
+This fork keeps the original book-writing and memory-bank workflow, but renames the Codex skill to `book-writer-light` and prioritizes smaller, task-specific context loading. The fork is necessary for projects where the full Book Writer workflow is useful, but bulk-loading memory-bank and reference material makes ordinary writing turns slower, noisier, or more expensive than needed.
+
 ## 🚀 Installation
 
 ```bash
-npx skills add https://github.com/kshanxs/book-writer-skill --skill book-writer
+npx skills add https://github.com/andrevneves/book-writer-skill-light --skill book-writer-light
 ```
 
 ### Update to latest version
 
 ```bash
-npx skills update book-writer
+npx skills update book-writer-light
 ```
 
 ---
@@ -107,7 +113,7 @@ YourBookProject/
 
 ## 🏛️ Synergistic Companions: Research Dojo & Calligraph Sensei
 
-`book-writer` integrates with specialized companion skills to cover the complete book-writing lifecycle:
+`book-writer-light` integrates with specialized companion skills to cover the complete book-writing lifecycle:
 
 1. **Adversarial Research (Phase 0 — [Research Dojo](https://github.com/kshanxs/research-dojo)):** For narrative non-fiction, biographies, history, and popular science, run audits on complex research papers, verify timelines, and stress-test visual analogies using the Dojo's 7-step process.
 2. **Prose Polishing, Humanising & Proofreading (Phase 1 — Calligraph Sensei):** Install [Calligraph Sensei](https://github.com/kshanxs/calligraph-sensei) to polish your chapters, adjust sentence cadence (burstiness), inject sensory showing language, and perform stylistic audits in **Creative/Fiction** or **Non-fiction** modes, or execute a conservative **Proofreading** pass to fix grammar, spelling, and typos while keeping character dialects and the book's narrative voice completely intact.
