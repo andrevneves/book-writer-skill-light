@@ -21,8 +21,11 @@ I've just completed Chapter [X]: [Chapter Title].
 Please:
 1. Read the entire chapter content
 2. Identify all new information about characters, world elements, and plot developments
-3. Automatically update all relevant memory bank files
-4. Provide a summary of the updates you've made
+3. Create a delta naming which memory bank files need updates and why
+4. Update the affected memory bank files plus Core/context_index.yml
+5. Refresh Core/context_index.yml `previous_context`: compact previous_history_summary, update previous_chapter_summary, unresolved_hooks, character_state_at_start, and character_state_now
+6. Refresh Core/context_index.yml `revelation_gates`: update gate status, satisfied reveal conditions, allowed clues, forbidden leaks, reader knowledge, and character knowledge states
+7. Provide a summary of the updates you've made
 
 Make sure to check for:
 - New or modified character traits, relationships, and motivations
@@ -30,6 +33,8 @@ Make sure to check for:
 - Plot developments, including foreshadowing and setup for future events
 - Changes to character arcs or motivations
 - Updates to the overall completion percentage
+- Character emotional state and factual/revelation state before and after the chapter
+- Protected facts that were seeded, partially revealed, fully revealed, or still withheld
 
 Use your file access capabilities to directly update the memory bank files without requiring me to run any scripts or copy/paste information.
 ```
@@ -42,9 +47,12 @@ I've just completed the outline for Chapter [X]: [Chapter Title].
 Please:
 1. Read the entire outline
 2. Identify planned story elements, characters, and world-building components
-3. Update all relevant memory bank files with this planned information
-4. Mark these elements as "planned" (vs. "established") where appropriate
-5. Provide a summary of the updates you've made
+3. Create a delta naming which memory bank files need updates and why
+4. Update the affected memory bank files plus Core/context_index.yml with this planned information
+5. Populate Core/context_index.yml `previous_context` for the planned chapter, including inherited hooks and character_state_at_start
+6. Populate Core/context_index.yml `revelation_gates` for the planned chapter: reveal_only_after conditions, allowed clues, forbidden leaks, and current_allowed_action
+7. Mark these elements as "planned" (vs. "established") where appropriate
+8. Provide a summary of the updates you've made
 
 Pay special attention to:
 - New characters being introduced
@@ -52,6 +60,7 @@ Pay special attention to:
 - Planned plot developments and their implications
 - Setup elements that will need future payoffs
 - Foreshadowing elements being planted
+- Protected facts the chapter must not reveal yet
 
 Keep track of these planned elements in the memory bank so we maintain consistency as we write the actual chapter.
 ```
@@ -115,8 +124,11 @@ We've made significant progress in the project. Please:
 
 1. Update the Core/progress.md file with the current completion percentage
 2. Update Core/activeContext.md with our current focus
-3. Identify the next sections to work on based on the master outline
-4. Provide a summary of what's been completed and what remains
+3. Update Core/context_index.yml with current focus, next files to load, and compact summaries
+4. Update Core/context_index.yml `previous_context` for the next planned writing task
+5. Update Core/context_index.yml `revelation_gates` for the next planned writing task
+6. Identify the next sections to work on based on the master outline
+7. Provide a summary of what's been completed and what remains
 
 Make these updates directly to the memory bank files using your file access capabilities.
 ```
@@ -132,7 +144,7 @@ Based on the current memory bank state, please provide:
 4. World-building elements that need more development
 5. Suggested next steps for advancing the project
 
-Update Core/activeContext.md with this information for future reference.
+Update Core/activeContext.md and Core/context_index.yml with this information for future reference, including the compact `previous_context` and active `revelation_gates` needed before drafting the next chapter/scene.
 ```
 
 ## Specialized Update Prompts
@@ -152,7 +164,7 @@ We've introduced a new character named [Name]. Please:
  - Role in the story
 
 3. Update any relevant files that reference this character
-4. Update Core/activeContext.md to include this character in the current focus
+4. Update Core/activeContext.md and Core/context_index.yml to include this character in the current focus, including emotional state, factual/revelation state, and any revelation gates affected by what this character knows
 ```
 
 ### World Building Expansion
@@ -169,7 +181,7 @@ We've expanded the world-building with new information about [element]. Please:
 
 2. Ensure consistent cross-referencing with related elements
 3. Update any character profiles that interact with this element
-4. Incorporate this element into the active context
+4. Incorporate this element into Core/activeContext.md and Core/context_index.yml, including any affected previous_context hooks and revelation gates
 ```
 
 ### Plot Development Update
@@ -182,7 +194,7 @@ We've established important plot developments regarding [plot element]. Please:
 3. Update Core/world_and_characters.md for characters affected by these plot points
 4. Update Core/story_structure.md with any narrative implications
 5. Ensure timeline consistency across all memory bank files
-6. Update Core/activeContext.md with the new narrative direction
+6. Update Core/activeContext.md and Core/context_index.yml with the new narrative direction, including previous_context, revelation_gates, and character state changes
 ```
 
 ## Memory Bank Audit Prompts

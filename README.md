@@ -2,16 +2,16 @@
 
 <br>
 
-# ✦ book-writer ✦
+# ✦ book-writer-light ✦
 
-### *The Complete AI Writing Studio*
+### *A context-light fork of Book Writer*
 
-*Master-class fiction · Automated story memory · Book-level pacing · Publishing toolkit*
+*Master-class fiction · Automated story memory · Book-level pacing · Lean context loading*
 
 <br>
 
-[![Version](https://img.shields.io/badge/version-2.4.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
-[![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/kshanxs/book-writer-skill)
+[![Version](https://img.shields.io/badge/version-0.4.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
+[![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/andrevneves/book-writer-skill-light)
 [![License](https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge&labelColor=161b22)](./LICENSE)
 [![Docs](https://img.shields.io/badge/Docs-USAGE.md-f78166?style=for-the-badge&labelColor=161b22)](./docs/USAGE.md)
 
@@ -24,16 +24,82 @@
 
 ---
 
+## Fork Notice
+
+Book Writer Light is a fork of [kshanxs/book-writer-skill](https://github.com/kshanxs/book-writer-skill/).
+
+This fork keeps the original book-writing and memory-bank workflow, but renames the Codex skill to `book-writer-light` and prioritizes smaller, task-specific context loading. The fork is necessary for projects where the full Book Writer workflow is useful, but bulk-loading memory-bank and reference material makes ordinary writing turns slower, noisier, or more expensive than needed.
+
 ## 🚀 Installation
 
+### Codex plugin installation
+
+Book Writer Light is packaged as a Codex plugin. From this repository, install the marketplace locally:
+
 ```bash
-npx skills add https://github.com/kshanxs/book-writer-skill --skill book-writer
+codex plugin marketplace add .
+```
+
+From another machine, install the marketplace from GitHub:
+
+```bash
+codex plugin marketplace add andrevneves/book-writer-skill-light --ref main
+```
+
+Then install the plugin from that marketplace:
+
+```bash
+codex plugin add book-writer-light@book-writer-light
+```
+
+Start a new Codex thread and invoke it explicitly:
+
+```text
+Use $book-writer-light to start a new book project.
+```
+
+### Codex skill-only installation
+
+If you only want the skill folder without the plugin wrapper:
+
+```bash
+npx skills add https://github.com/andrevneves/book-writer-skill-light --skill plugins/book-writer-light/skills/book-writer-light
 ```
 
 ### Update to latest version
 
 ```bash
-npx skills update book-writer
+npx skills update book-writer-light
+```
+
+### Other agents
+
+Other agents do not necessarily consume Codex plugins directly. This repository includes bridge instruction files for common agent conventions:
+
+- `AGENTS.md`
+- `CLAUDE.md`
+- `.github/copilot-instructions.md`
+
+For agents such as Claude, Devin, opencode, Copilot, or similar tools, point the agent at `plugins/book-writer-light/skills/book-writer-light/SKILL.md` and ask it to follow that file for book-writing tasks.
+
+---
+
+## 🧪 Testing
+
+Validate the skill and plugin from the repository root:
+
+```bash
+ruby -e 'require "yaml"; YAML.load_file("plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'
+.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py plugins/book-writer-light/skills/book-writer-light
+python3 -B plugins/book-writer-light/skills/book-writer-light/scripts/build_context_pack.py plugins/book-writer-light/skills/book-writer-light/assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200
+python3 /Users/developer/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py plugins/book-writer-light
+git diff --check
+```
+
+Then run a live smoke test in a fresh project:
+
+```text
+Use $book-writer-light to start a new book project.
 ```
 
 ---
@@ -107,7 +173,7 @@ YourBookProject/
 
 ## 🏛️ Synergistic Companions: Research Dojo & Calligraph Sensei
 
-`book-writer` integrates with specialized companion skills to cover the complete book-writing lifecycle:
+`book-writer-light` integrates with specialized companion skills to cover the complete book-writing lifecycle:
 
 1. **Adversarial Research (Phase 0 — [Research Dojo](https://github.com/kshanxs/research-dojo)):** For narrative non-fiction, biographies, history, and popular science, run audits on complex research papers, verify timelines, and stress-test visual analogies using the Dojo's 7-step process.
 2. **Prose Polishing, Humanising & Proofreading (Phase 1 — Calligraph Sensei):** Install [Calligraph Sensei](https://github.com/kshanxs/calligraph-sensei) to polish your chapters, adjust sentence cadence (burstiness), inject sensory showing language, and perform stylistic audits in **Creative/Fiction** or **Non-fiction** modes, or execute a conservative **Proofreading** pass to fix grammar, spelling, and typos while keeping character dialects and the book's narrative voice completely intact.

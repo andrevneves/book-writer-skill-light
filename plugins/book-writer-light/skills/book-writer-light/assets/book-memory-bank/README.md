@@ -1,6 +1,6 @@
 # Book Memory Bank
 
-A structured documentation system for maintaining context and consistency throughout the book writing process. This memory bank helps writers work with LLM assistants by providing a persistently updated knowledge base that enables a stateless AI to maintain full context across writing sessions.
+A structured documentation system for maintaining context and consistency throughout the book writing process. This memory bank helps writers work with LLM assistants by providing a persistently updated knowledge base plus a compact context index that lets a stateless AI load only the project context needed for the current task.
 
 ## Overview
 
@@ -10,8 +10,9 @@ The Book Memory Bank is designed to solve a key challenge when writing books wit
 2. **Specialized templates** for characters, plot, and world building
 3. **Automation scripts** for manuscript preparation
 4. **Workflow guidelines** for effective AI collaboration
-5. **Custom instructions** for LLM assistants
-6. **Conversational memory updating** that eliminates the need for scripts
+5. **Context routing** through `Core/context_index.yml`
+6. **Custom instructions** for LLM assistants
+7. **Conversational memory updating** that eliminates the need for manual scripts
 
 ## Getting Started
 
@@ -76,6 +77,7 @@ YourBookProject/ # Root project directory
  ├── custom_instructions.md # AI assistant instructions
  │
  ├── Core/ # Core story documentation
+ │ ├── context_index.yml # Compact routing index; read first
  │ ├── projectbrief.md # Core project definition
  │ ├── story_structure.md # Story purpose, positioning and narrative patterns
  │ ├── world_and_characters.md # Worldbuilding elements and character profiles
@@ -116,13 +118,14 @@ YourBookProject/ # Root project directory
 
 ## Core Files
 
-The foundation of the memory bank consists of five core files located in the Core/ directory:
+The foundation of the memory bank consists of six core files located in the Core/ directory:
 
-1. **projectbrief.md** - High-level concept, scope, and goals
-2. **story_structure.md** - Purpose, positioning, reader experience, and narrative techniques
-3. **world_and_characters.md** - Worldbuilding elements, rules, and character profiles
-4. **activeContext.md** - Current work focus and near-term plans
-5. **progress.md** - Project tracking and completion status
+1. **context_index.yml** - Compact routing index read before other memory files
+2. **projectbrief.md** - High-level concept, scope, and goals
+3. **story_structure.md** - Purpose, positioning, reader experience, and narrative techniques
+4. **world_and_characters.md** - Worldbuilding elements, rules, and character profiles
+5. **activeContext.md** - Current work focus and near-term plans
+6. **progress.md** - Project tracking and completion status
 
 These files build upon each other in a hierarchical structure, moving from foundational elements to current status.
 
@@ -136,10 +139,11 @@ Cline can automatically maintain your memory bank by:
 
 1. Reading the latest chapter content
 2. Identifying new information about characters, world, and plot elements
-3. Directly updating all relevant memory bank files
-4. Providing a summary of all changes made
+3. Creating a compact delta of affected files
+4. Directly updating the affected memory bank files plus `context_index.yml`
+5. Providing a summary of all changes made
 
-This approach leverages Cline's file access to completely automate the memory bank maintenance process with minimal user intervention - no scripts needed, just conversation.
+This approach leverages Cline's file access to automate the memory bank maintenance process with minimal user intervention - no manual update process needed, just conversation.
 
 ### Using Memory Bank Update Prompts
 

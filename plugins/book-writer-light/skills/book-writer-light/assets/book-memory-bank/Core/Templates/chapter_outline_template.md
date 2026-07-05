@@ -1,5 +1,43 @@
 # Chapter [Number]: [Title]
 
+## Previous Context
+
+**Previous history summary**: [Rolling compressed history of major events, revelations, irreversible decisions, and active setup the chapter inherits. Keep compact.]
+
+**Previous chapter summary**: [Immediate previous chapter in 1-3 sentences, focused on what this chapter must carry forward.]
+
+**Previous scene summary**: [If this chapter begins inside an ongoing sequence, summarize the immediately preceding scene in 1-3 sentences. Otherwise write N/A.]
+
+**Unresolved hooks**:
+- [Open question, danger, promise, emotional wound, or setup still active]
+
+### Character State at Start
+
+| Character | Emotional state | Factual state / recent events | Revelations known | Current goal / pressure |
+|---|---|---|---|---|
+| [Character] | [What they feel as the chapter opens] | [What happened to them before this chapter] | [What they know, suspect, misunderstand, or hide] | [What they want and what presses on them now] |
+
+### Character State Now / Expected Exit State
+
+| Character | Emotional state | Factual state / events by chapter end | Revelations known by chapter end | New goal / pressure |
+|---|---|---|---|---|
+| [Character] | [What they should feel after this chapter] | [What will have happened to them] | [What they will know, suspect, misunderstand, or hide] | [What changes for the next chapter] |
+
+## Revelation Gates
+
+Use this section to control what the reader and each character may know. Do not reveal a protected fact just because it is useful exposition; reveal only when its gate conditions are satisfied.
+
+| Gate ID | Protected fact | Status entering chapter | Reader may know now? | Reveal only after | Allowed clues in this chapter | Forbidden leaks | Status exiting chapter |
+|---|---|---|---|---|---|---|---|
+| [stable-mystery-id] | [Truth being protected] | [withheld / seeded / partial / revealed] | [No / Suspicion only / Partial / Full] | [Event, action, emotional turn, or clue chain required first] | [Ambiguous clue, motif, contradiction, behavior] | [What must not be stated, implied too clearly, or shown] | [How this chapter changes the gate] |
+
+### Knowledge Ledger
+
+| Character/Reader | Knowledge at chapter start | Evidence gained this chapter | False belief or misdirection | Knowledge at chapter end |
+|---|---|---|---|---|
+| Reader | [What the reader knows/suspects] | [New clues or reveals] | [What the chapter encourages them to misread, if any] | [What the reader is allowed to know after this chapter] |
+| [Character] | [What they know/suspect/misunderstand] | [What they observe or learn] | [Wrong explanation, denial, hidden motive] | [What they know/suspect/misunderstand by chapter end] |
+
 ## Chapter Summary
 [One paragraph overview of the chapter's contents, main events, and significance to the overall story]
 

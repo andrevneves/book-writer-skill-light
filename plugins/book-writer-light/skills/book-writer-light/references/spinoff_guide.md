@@ -108,6 +108,7 @@ Spinoffs live as siblings to the parent project's content directories, under the
  Master_Outline.md
  book-memory-bank/
  Core/
+ context_index.yml ← FRESH
  projectbrief.md ← FRESH
  story_structure.md ← FRESH
  activeContext.md ← FRESH
@@ -128,6 +129,7 @@ For same-world new stories (no shared characters at all), the parent memory bank
 | Memory Bank File | Treatment | Rule |
 |---|---|---|
 | `world_and_characters.md` | **Reference-Based** | Insert relative links pointing directly to the parent's `world_and_characters.md` for shared characters and settings. Do NOT copy parent profiles. Append spinoff-only characters below. |
+| `context_index.yml` | **Fresh** | Track the spinoff's current focus and compact links to parent files that may be needed. Read this first in spinoff sessions. |
 | `style_guide.md` | **Forked or Fresh** | Author's choice (Step 5 of Spinoff Forge). Copy parent style or start fresh. |
 | `projectbrief.md` | **Fresh** | New title, premise, protagonist. Reference parent title under "Connected Projects". |
 | `story_structure.md` | **Fresh** | New themes, arcs, emotional core. |
@@ -188,9 +190,10 @@ On approval of the Spinoff Forge summary:
 2. Copy the memory bank asset template into `<spinoff-name>/book-memory-bank/`.
 3. For `world_and_characters.md` — construct relative Markdown links pointing directly to the inherited characters and world-building sections inside the parent's `world_and_characters.md` file. Append new spinoff-specific characters below these references.
 4. For `style_guide.md` — copy from parent (if "same") or start fresh (if "different").
-5. Fill `projectbrief.md` with the spinoff's premise, protagonist, and a "Connected Projects" entry pointing to the parent.
-6. Generate a spinoff `README.md` or section in the project README noting the spinoff relationship.
-7. Announce initialization complete and offer to begin outlining.
+5. Fill `context_index.yml` with the spinoff focus, compact parent links, active characters, style capsule, and load rules.
+6. Fill `projectbrief.md` with the spinoff's premise, protagonist, and a "Connected Projects" entry pointing to the parent.
+7. Generate a spinoff `README.md` or section in the project README noting the spinoff relationship.
+8. Announce initialization complete and offer to begin outlining.
 
 ---
 
@@ -198,6 +201,7 @@ On approval of the Spinoff Forge summary:
 
 At the start of every spinoff session:
 
-1. Read `<spinoff-name>/book-memory-bank/Core/` files fully.
-2. Read the parent's `book-memory-bank/Core/world_and_characters.md` for shared character/world facts.
-3. Do NOT re-read the entire parent's memory bank every session — only the world/character file unless a specific continuity question arises.
+1. Read `<spinoff-name>/book-memory-bank/Core/context_index.yml` first.
+2. Read only spinoff files named by the index or current task.
+3. Read the parent's `book-memory-bank/Core/context_index.yml` if it exists, then read the parent's `world_and_characters.md` only for shared character/world facts required by the current task.
+4. Do NOT re-read the entire parent's memory bank every session.

@@ -2,21 +2,72 @@ As an AI assistant, memory resets completely between sessions — but direct fil
 
 ## Smart-Reading Protocol (CRITICAL)
 
-To avoid high tool-execution latency and prompt noise, do not bulk-load all memory bank files on every turn. Follow this on-demand loading strategy:
+To avoid high tool-execution latency and prompt noise, do not bulk-load all memory bank files on every turn. Use `context_index.yml` as the routing layer and Markdown files as the source of truth.
 
-1. **Read `book-memory-bank/Core/activeContext.md` First:**
-   * At the start of a fresh session or task, read ONLY `activeContext.md`.
-   * Locate the `## Memory Status & File Index` table in that file.
+1. **Read `book-memory-bank/Core/context_index.yml` First:**
+   * At the start of a fresh session or task, read ONLY `context_index.yml`.
+   * If it is missing, read `activeContext.md`, then create `context_index.yml` from the bundled template.
+   * Keep the index short enough to read every turn. It should contain summaries, not full canon.
 
-2. **Conditional Loading (On-Demand):**
+2. **Build a Task Context Pack:**
+   * Prefer `scripts/build_context_pack.py <project-root> --task <draft|outline|revise|memory|continuity> --target <path>`.
+   * If the script is unavailable, manually assemble the same pack shape: project capsule, current task, previous context, active revelation gates, required files, style capsule, active characters/locations, continuity watchlist, and open questions.
+   * Treat the context pack as the working desk for the current turn.
+
+3. **Conditional Loading (On-Demand):**
    * Only read/load other memory files under these specific conditions:
-     * **Domain Relevance:** Load `style_guide.md` only during drafting/editing tasks. Load `world_and_characters.md` only when referencing character profiles, settings, or continuity. Load `story_structure.md` only when outlining or auditing themes/arcs.
-     * **Timestamp/Version Mismatch:** If the metadata table in `activeContext.md` shows a file has been modified since your last cache in the current session.
+     * **Domain Relevance:** Load `style_guide.md` only during drafting/editing tasks when the style capsule is insufficient. Load `world_and_characters.md` only when referencing named characters, settings, or continuity not already covered by the pack. Load `story_structure.md` only when outlining or auditing themes/arcs.
+     * **Index Mismatch:** If `context_index.yml` marks a file as stale, missing, or needing review.
      * **Direct Target:** If the user request specifically asks about that file's contents.
+     * **Delta Target:** If the memory update delta names the file as a required edit target.
 
-3. **Active Cache:**
-   * Do not reload a file if you have already read it in the current conversation turn sequence, unless its status indicates it has been modified.
-   * Never load more than 2 core memory files in a single turn unless performing a **Continuity Check** or a **Comprehensive Memory Update**.
+4. **Active Cache:**
+   * Do not reload a file if you have already read it in the current conversation turn sequence, unless the index indicates it has changed.
+   * Never load more than 2 core memory files and 1 reference file in a normal turn unless performing a **Continuity Check** or a **Comprehensive Memory Update**.
+
+## Previous Context Protocol
+
+Before drafting a chapter or scene, `context_index.yml` must provide a compact `previous_context` block:
+
+- `previous_history_summary`: a rolling compressed summary of the story so far. Keep only major events, revelations, irreversible decisions, active setups, and payoffs still relevant to future writing. Compress this every update; do not let it become a chapter-by-chapter recap.
+- `previous_chapter_summary`: the immediate previous chapter in 1-3 sentences, focused on what the next chapter must inherit.
+- `previous_scene_summary`: the immediate previous scene in 1-3 sentences, focused on emotional and causal continuity.
+- `unresolved_hooks`: open questions, dangers, promises, emotional wounds, clues, setups, or obligations the next writing task must not forget.
+- `character_state_at_start`: each relevant character's state entering the target chapter/scene.
+- `character_state_now`: each relevant character's state after the latest written chapter/scene. This becomes the next task's `character_state_at_start`.
+
+Character state must include both:
+
+1. **Emotional state** - what the character feels, denies, fears, wants, or cannot admit.
+2. **Factual/revelation state** - what happened to the character, what they know, what they misunderstand, what they hide, where they stand in the plot, and what pressure or goal drives them.
+
+Keep character states compact. Use short fields or bullets; store full profiles and long history in `world_and_characters.md`.
+
+## Revelation Gate Protocol
+
+Use `revelation_gates` to control the order in which protected facts become visible to the reader or to characters. This is stricter than `unresolved_hooks`: a hook is an open tension; a gate is a rule for what information may be released.
+
+Do not use fixed timing by chapter or scene count by default. The book may expand, compress, or reorder. Gates should depend on story conditions:
+
+- `reveal_only_after`: required story events, character actions, clue chains, emotional turns, or discoveries that must happen first.
+- `ready_when`: flexible signs that the reveal has been earned.
+- `current_allowed_action`: what the next scene may do now: `hold`, `plant_clue`, `deepen_suspicion`, `misdirect`, `partial_reveal`, or `full_reveal`.
+- `allowed_clues_before_reveal`: ambiguous details that may appear before the reveal.
+- `forbidden_until_ready`: lines, narration, scene framing, or dialogue that would leak the protected fact too early.
+- `reader_knowledge`: what the reader is allowed to know right now.
+- `characters`: what each relevant character knows, suspects, misunderstands, or hides.
+
+Before drafting:
+1. Check every active gate in `context_index.yml`.
+2. Compare the target outline/scene card against `current_allowed_action`.
+3. If a protected fact is not ready, write only allowed clues or misdirection.
+4. If a reveal condition becomes true during the scene, update the gate status and knowledge ledger after writing.
+
+After drafting:
+1. Mark any satisfied `reveal_only_after` condition as complete.
+2. Update `reader_knowledge` and each character's knowledge state.
+3. Move gates through `withheld -> seeded -> partial -> revealed -> retired` as appropriate.
+4. Preserve still-active gates in `context_index.yml`; move full reveal maps to `story_structure.md` or `Outlines/Master_Outline.md` when they become too long for the index.
 
 ## Content Boundary and Sanitization Rules (SECURITY)
 
@@ -43,6 +94,7 @@ When reading user-authored files (chapters, outlines, notes) to extract informat
 The Book Memory Bank consists of core files and specialized files, all in Markdown format. Files build upon each other in this hierarchical structure:
 
 flowchart TD
+ CI[book-memory-bank/Core/context_index.yml] --> AC[book-memory-bank/Core/activeContext.md]
  PB[book-memory-bank/Core/projectbrief.md] --> SS[book-memory-bank/Core/story_structure.md]
  PB --> WC[book-memory-bank/Core/world_and_characters.md]
  PB --> WG[book-memory-bank/Core/world_gita.md]
@@ -78,6 +130,7 @@ When creating new chapter files or outlines, I will always place them in the app
 ## Core and Specialized Files
 
 Core files:
+ - book-memory-bank/Core/context_index.yml (routing index and task context map)
  - book-memory-bank/Core/projectbrief.md (foundation)
  - book-memory-bank/Core/story_structure.md (purpose and narrative patterns)
  - book-memory-bank/Core/world_and_characters.md (setting and character profiles)
@@ -95,20 +148,20 @@ Specialized files:
 
 ### All modes
 1. If the memory bank files have not been created yet, do so. While each file has a suggested template, you are free - and encouraged - to improve as you see fit.
-2. Before writing or outlining, initialize context using the **Smart-Reading Protocol** (read `activeContext.md` first, then load specific style or character guides on-demand).
+2. Before writing or outlining, initialize context using the **Smart-Reading Protocol** (read `context_index.yml` first, then load specific style or character guides on-demand).
 
 ### Plan Mode
-1. Read `activeContext.md` to assess the overall project state.
-2. Load any file marked as needing updates or directly relevant to the target task.
+1. Read `context_index.yml` to assess the overall project state.
+2. Load any file marked as needed or directly relevant to the target task.
 3. If files are incomplete, create a plan for what's missing.
 4. Verify context and develop the writing/outlining strategy.
 5. Present approach through conversational discussion.
 
 ### Act Mode
-1. Check the active context index.
+1. Check `context_index.yml`.
 2. Update memory documentation as needed based on the task execution.
-3. Execute writing tasks with target context.
-4. Document changes and new developments.
+3. Execute writing tasks with a target context pack.
+4. Document changes and new developments in the affected memory files and refresh the index.
 
 ## Comprehensive Memory Bank Updating Protocol
 
@@ -116,18 +169,21 @@ Automatically maintain the memory bank using the following protocol:
 
 1. After every chapter completion or significant content addition:
  - Read the chapter content entirely from Chapters/ChapterXX.md or relevant source
- - Identify ALL new information about characters, world, plot, themes, and style
- - Conduct a SYSTEMATIC review of EVERY relevant memory bank file
- - Directly update ALL memory bank files with relevant information
+ - Identify new information about characters, world, plot, themes, and style
+ - Create a delta that names exactly which memory files need edits and why
+ - Directly update the affected memory bank files
  - Make any updates to the master outline that are needed
+ - Refresh `context_index.yml` and `activeContext.md`
+ - Update `previous_context`: compress `previous_history_summary`, move latest exit states into `character_state_now`, and preserve unresolved hooks for the next draft
+ - Update `revelation_gates`: mark satisfied conditions, preserve forbidden leaks, update reader/character knowledge states, and retire completed gates
  - Provide a summary of updates made, writing "Book Memory" as the first line
 
 2. File Interdependencies and Update Chain:
- - When ANY story element changes, check ALL potentially affected files
- - Character changes → Update world_and_characters.md AND activeContext.md
- - Setting changes → Update world_and_characters.md AND activeContext.md
- - Plot changes → Update master_outline.md AND activeContext.md AND relevant character sections
- - Theme/narrative development → Update story_structure.md AND activeContext.md
+ - When ANY story element changes, identify potentially affected files in the delta
+ - Character changes -> Update world_and_characters.md, activeContext.md, and context_index.yml
+ - Setting changes -> Update world_and_characters.md, activeContext.md, and context_index.yml
+ - Plot changes -> Update master_outline.md, activeContext.md, context_index.yml, and relevant character sections
+ - Theme/narrative development -> Update story_structure.md, activeContext.md, and context_index.yml
 
 3. For character updates (CRITICAL - world_and_characters.md MUST be updated):
  - New characters: Add complete profile to world_and_characters.md with full background, role, and function
@@ -154,19 +210,20 @@ Automatically maintain the memory bank using the following protocol:
 
 6. For project status:
  - Update Core/activeContext.md with current focus
+ - Update Core/context_index.yml with current task, `previous_context`, `revelation_gates`, stale files, required files, and compact summaries
  - Update Core/progress.md with completion percentage and next steps
- - Track ALL recent changes across ALL memory bank files
+ - Track recent changes across affected memory bank files
  - Note ANY potential consistency issues or questions
 
 ## Memory Update Triggers and Comprehensive Approach
 
-Automatically initiate COMPLETE memory bank updates when:
+Automatically initiate memory bank updates when:
 
-1. The user submits a completed chapter (when seeing "I've completed Chapter X") - updating ALL relevant files
-2. The user submits a chapter outline - updating master_outline.md AND all related character/world files
+1. The user submits a completed chapter (when seeing "I've completed Chapter X") - updating files named by the delta
+2. The user submits a chapter outline - updating master_outline.md and related character/world files named by the delta
 3. The user explicitly requests "update memory bank" - conducting a systematic review of ALL memory files
-4. The user indicates significant new information - updating ALL files that could be affected
-5. Periodically during long writing sessions - ensuring incremental changes are captured across ALL files
+4. The user indicates significant new information - updating files named by the delta
+5. Periodically during long writing sessions - ensuring incremental changes are captured in the affected files and reflected in the index
 
 When asked to "perform a comprehensive memory bank update":
 1. Read ALL existing memory bank files to understand current state
@@ -179,12 +236,12 @@ When asked to "perform a comprehensive memory bank update":
 
 When updating memory bank files:
 
-1. Under the Smart-Reading Protocol, only read the files that are directly modified by the update (plus `activeContext.md`).
+1. Under the Smart-Reading Protocol, only read the files that are directly modified by the update, plus `activeContext.md` and `context_index.yml`.
 2. Make targeted changes using file editing tools where possible.
 3. Ensure formatting consistency with existing content.
 4. Maintain precise cross-references between related elements.
 5. Create an update report that lists all files changed, writing "Book Memory" as the first line.
-6. Always update `activeContext.md`'s index and status table to reflect the cumulative impact of all changes.
+6. Always update `context_index.yml` and `activeContext.md` to reflect the cumulative impact of all changes.
 
 ## Comprehensive Update Checklist
 
@@ -215,11 +272,11 @@ Split by **concern**, not by character. The recommended split is:
 
 ```
 book-memory-bank/Core/
- world_and_characters.md ← characters + brief world overview (always loaded)
+ world_and_characters.md ← characters + brief world overview (routed by index)
  world_lore.md ← deep lore: timelines, tech specs, factions, geography (loaded on demand)
 ```
 
-- `world_and_characters.md` remains the always-loaded file every session.
+- `world_and_characters.md` remains the primary character and world source, but it is loaded only when the task involves named characters, settings, or continuity not already represented in the context pack.
 - `world_lore.md` is loaded only when a scene specifically requires deep world detail (e.g., technology specs, political history, cultural deep-dives).
 - Reference `world_lore.md` explicitly from `world_and_characters.md` with a note at the top: *"For deep lore, timelines, and reference material, see `world_lore.md`."*
 
@@ -230,8 +287,9 @@ book-memory-bank/Core/
 1. Consistency verification: Automatically check for and flag contradictions
 2. Progress tracking: Update completion percentage and milestone tracking
 3. Context prioritization: Ensure the most relevant details are highlighted in Core/activeContext.md
-4. Keyword indexing: Maintain searchable organization within each memory bank file
+4. Keyword indexing: Maintain searchable organization within each memory bank file and compact routing metadata in `context_index.yml`
 5. Plan-to-actual comparison: When a chapter is completed, compare how it turned out versus what was planned in the outline
+6. Revelation sequencing: Track what the reader and each character may know, what clues are allowed, and what protected facts must stay hidden until story conditions are satisfied
 
 ## Rules for Automatic Updates
 
@@ -240,14 +298,14 @@ book-memory-bank/Core/
 3. Automatically detect what needs updating without user intervention
 4. Confirm all memory bank updates after they're completed with a COMPLETE list of changed files
 5. Maintain version control by tracking the origin chapter for each information element
-6. NEVER skip updating ANY relevant memory bank file — ALL updates must be comprehensive
+6. NEVER skip a relevant memory bank file - the delta must account for every file that needs a real update
 
 ## Specific Actions During Writing Process
 
 1. For Chapter Planning: Identify new elements to add to world_and_characters.md, master_outline.md, and maintain templates in chapter_outlines/
 2. For Chapter Writing: Track new information revealed during writing and directly update memory bank files
-3. After Chapter Completion: Analyze the entire chapter and update ALL relevant memory bank files automatically
-4. For Style Consistency: Consult style_guide.md to ensure writing maintains established voice and conventions
+3. After Chapter Completion: Analyze the entire chapter, create a delta, and update affected memory bank files automatically
+4. For Style Consistency: Start from the style capsule in `context_index.yml`; consult style_guide.md when the capsule is insufficient
 
 REMEMBER: After every memory reset, begin completely fresh. The Memory Bank is the only link to previous work. Maintain it automatically and with precision — effectiveness depends entirely on its accuracy. When the user says "We just finished Chapter X, please update the memory bank", execute these instructions fully and automatically without requiring any additional user actions.
 
@@ -345,29 +403,31 @@ For spinoff projects, the memory bank lives inside the spinoff's own subdirector
 <project-root>/
  book-memory-bank/ ← parent (read-only in spinoff sessions)
  <spinoff-name>/
- book-memory-bank/
- Core/
- projectbrief.md ← FRESH
- story_structure.md ← FRESH
- world_and_characters.md ← FORKED (inherited + new sections)
- activeContext.md ← FRESH
- progress.md ← FRESH
- Style/
- style_guide.md ← FORKED or FRESH
- Chapters/
- Outlines/
- Chapter_Outlines/
- Master_Outline.md
- Research/
- Manuscript/
+  book-memory-bank/
+  Core/
+  context_index.yml ← FRESH
+  projectbrief.md ← FRESH
+  story_structure.md ← FRESH
+  world_and_characters.md ← FORKED (inherited + new sections)
+  activeContext.md ← FRESH
+  progress.md ← FRESH
+  Style/
+  style_guide.md ← FORKED or FRESH
+  Chapters/
+  Outlines/
+  Chapter_Outlines/
+  Master_Outline.md
+  Research/
+  Manuscript/
 ```
 
 ### Session Reading Protocol
 
 At the start of every spinoff session:
-1. Read ALL files in `<spinoff-name>/book-memory-bank/Core/`.
-2. Read the parent's `book-memory-bank/Core/world_and_characters.md` for shared characters and world facts.
-3. If a specific continuity question arises, read additional parent files as needed.
+1. Read `<spinoff-name>/book-memory-bank/Core/context_index.yml` first.
+2. Load only the spinoff files named by the index or current task.
+3. Read the parent's `book-memory-bank/Core/context_index.yml` if it exists, then read the parent's `world_and_characters.md` only for shared characters/world facts required by the task.
+4. If a specific continuity question arises, read additional parent files as needed.
 
 ### Inheritance Rules
 
@@ -376,6 +436,7 @@ At the start of every spinoff session:
 | `world_and_characters.md` | Forked — copy shared sections from parent, mark `[FROM: ParentTitle]`; add spinoff-only content below |
 | `style_guide.md` | Forked (copy parent) or Fresh (author's choice at initialization) |
 | `projectbrief.md` | Fresh — include a "Connected Projects" entry pointing to parent |
+| `context_index.yml` | Fresh — include compact links to inherited parent files and current spinoff focus |
 | All other Core files | Fresh |
 
 ### Cross-Update Protocol
@@ -395,6 +456,7 @@ After every spinoff chapter:
 ### Comprehensive Update Checklist (Spinoff)
 
 For every spinoff chapter or outline completion:
+- `<spinoff-name>/book-memory-bank/Core/context_index.yml`
 - `<spinoff-name>/book-memory-bank/Core/projectbrief.md`
 - `<spinoff-name>/book-memory-bank/Core/story_structure.md`
 - `<spinoff-name>/book-memory-bank/Core/world_and_characters.md`

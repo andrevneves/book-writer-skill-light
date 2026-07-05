@@ -1,0 +1,158 @@
+version: 1
+updated: YYYY-MM-DD
+
+project:
+  title: "[Book Title]"
+  genre: "[Primary genre]"
+  category: "[Adult/YA/Middle Grade/etc.]"
+  language: "[Primary prose language]"
+  pov: "[POV style]"
+  tense: "[Narrative tense]"
+  premise_capsule: "[1-3 sentences only. Keep full premise in projectbrief.md.]"
+
+current:
+  phase: "[Planning | Drafting | Revising | Editing | Publishing]"
+  focus: "[Current task or chapter]"
+  current_chapter: "[Chapter number/title or blank]"
+  current_scene: "[Scene number/title or blank]"
+  next_step: "[Immediate next action]"
+  blocked_by: []
+
+previous_context:
+  previous_history_summary: "[Rolling compressed history of major events, revelations, irreversible decisions, and resolved/unresolved setup. Keep compact; move fine detail to memory files.]"
+  previous_chapter_summary: "[Immediate previous chapter in 1-3 sentences, focused on what the next chapter must inherit.]"
+  previous_scene_summary: "[Immediate previous scene in 1-3 sentences, focused on emotional and causal continuity.]"
+  unresolved_hooks:
+    - hook: "[Open question, promise, danger, or setup still active]"
+      source: "[Chapter/scene/outline where it was created]"
+      pressure: "[Why it matters now]"
+  character_state_at_start:
+    "[Character Name]":
+      emotional_state: "[What they feel as the next chapter/scene begins]"
+      factual_state: "[What has happened to them and what they know]"
+      recent_events:
+        - "[Event carried into the next scene/chapter]"
+      revelations_known:
+        - "[Revelation this character knows, suspects, or misunderstands]"
+      current_goal: "[What they want right now]"
+      current_pressure: "[Fear, wound, deadline, relationship strain, or external threat]"
+  character_state_now:
+    "[Character Name]":
+      emotional_state: "[Current emotional state after the latest written scene/chapter]"
+      factual_state: "[Current factual position after the latest written scene/chapter]"
+      recent_events:
+        - "[Latest event that changed this character]"
+      revelations_known:
+        - "[Latest revelation affecting this character]"
+      current_goal: "[What they want after the latest written scene/chapter]"
+      current_pressure: "[What is pressing on them now]"
+
+revelation_gates:
+  active:
+    - id: "[stable-mystery-id]"
+      protected_fact: "[Truth, identity, cause, betrayal, lore rule, or backstory fact that must not leak early]"
+      status: "withheld"
+      reader_knowledge: "[does_not_know | suspects | knows_partial | knows_full | misdirected]"
+      reveal_only_after:
+        - condition: "[Story event, character action, emotional turn, or clue chain that must happen first]"
+          status: "pending"
+      ready_when:
+        - "[Flexible condition that means the story has earned this reveal; avoid fixed chapter numbers unless already locked]"
+      allowed_clues_before_reveal:
+        - "[Ambiguous image, behavior, contradiction, motif, or document fragment allowed before the reveal]"
+      forbidden_until_ready:
+        - "[Statement, narration, dialogue, scene framing, or metadata that would expose the protected fact too early]"
+      characters:
+        "[Character Name]":
+          knowledge_state: "[does_not_know | suspects | knows_partial | knows_full | misunderstands | hides_truth]"
+          evidence_seen:
+            - "[What this character has actually observed]"
+          false_belief: "[Wrong explanation they currently believe, if any]"
+      planned_reveal_delivery: "[Scene, beat, confrontation, discovery, or emotional condition where the reveal should land; keep flexible if structure may change]"
+      current_allowed_action: "[plant_clue | deepen_suspicion | misdirect | partial_reveal | full_reveal | hold]"
+      update_after: "[When this gate should be revisited]"
+
+style_capsule:
+  voice: "[Compact voice note for every drafting turn]"
+  pacing: "[Current pacing preference]"
+  dialogue: "[Dialogue rules that matter now]"
+  must_do:
+    - "[Essential style rule]"
+  avoid:
+    - "[Overused pattern, tonal risk, or banned move]"
+
+active_story_state:
+  timeline_position: "[Where the story currently is]"
+  emotional_state: "[Current emotional pressure]"
+  active_characters:
+    - name: "[Character]"
+      role_now: "[Why they matter in the current work]"
+      load_when: "[When to open world_and_characters.md for this character]"
+  active_locations:
+    - name: "[Location]"
+      role_now: "[Why it matters]"
+      load_when: "[When to open world/lore files]"
+
+continuity_watchlist:
+  - item: "[Question, contradiction risk, or promised payoff]"
+    source: "[Chapter/outline/memory source]"
+    load_when: "[When this should trigger extra reading]"
+
+required_files:
+  draft:
+    - path: "book-memory-bank/Core/context_index.yml"
+      purpose: "Routing and compact project capsule"
+    - path: "book-memory-bank/Style/style_guide.md"
+      purpose: "Load only if style capsule is insufficient"
+  outline:
+    - path: "book-memory-bank/Core/story_structure.md"
+      purpose: "Load when planning or changing structure"
+    - path: "Outlines/Master_Outline.md"
+      purpose: "Load when chapter order or act structure matters"
+  revise:
+    - path: "book-memory-bank/Style/style_guide.md"
+      purpose: "Load only if revision needs full style rules"
+  memory:
+    - path: "book-memory-bank/Core/activeContext.md"
+      purpose: "Always update after substantive changes"
+    - path: "book-memory-bank/Core/context_index.yml"
+      purpose: "Always refresh after substantive changes"
+  continuity:
+    - path: "Chapters/"
+      purpose: "Allowed high-context read for diagnostic reports"
+
+file_index:
+  - path: "book-memory-bank/Core/projectbrief.md"
+    summary: "[Foundation, premise, goals]"
+    load_when: "Project scope, premise, audience, or purpose is unclear"
+    status: "current"
+  - path: "book-memory-bank/Core/story_structure.md"
+    summary: "[Themes, arcs, structure, narrative patterns]"
+    load_when: "Outlining, structural revision, theme/arc audit"
+    status: "current"
+  - path: "book-memory-bank/Core/world_and_characters.md"
+    summary: "[Characters, relationships, locations, world basics]"
+    load_when: "Named character/location continuity is needed"
+    status: "current"
+  - path: "book-memory-bank/Style/style_guide.md"
+    summary: "[Voice, prose rules, formatting conventions]"
+    load_when: "Drafting/revision requires more than style_capsule"
+    status: "current"
+  - path: "book-memory-bank/Core/activeContext.md"
+    summary: "[Current focus, decisions, open questions]"
+    load_when: "Index is stale or task requires recent decisions"
+    status: "current"
+  - path: "book-memory-bank/Core/progress.md"
+    summary: "[Completion tracker and known issues]"
+    load_when: "Progress, schedule, or remaining work is requested"
+    status: "current"
+
+recent_changes:
+  - date: "YYYY-MM-DD"
+    source: "[Chapter/outline/session]"
+    summary: "[What changed]"
+    affected_files: []
+
+open_questions:
+  - question: "[Decision needed]"
+    affects: []
