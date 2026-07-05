@@ -9,6 +9,7 @@ Ordem: Versoes mais recentes primeiro
 - Renomeada a skill Codex de `book-writer` para `book-writer-light`.
 - Documentado que Book Writer Light e um fork de https://github.com/kshanxs/book-writer-skill/.
 - Documentada a necessidade do fork: manter o fluxo de escrita e memoria do projeto original com carregamento de contexto menor e mais especifico por tarefa.
+- Adicionado manifesto de plugin Codex, marketplace local e arquivos de instrucao para agentes externos.
 
 ## 0.3.0 - 2026-07-05
 

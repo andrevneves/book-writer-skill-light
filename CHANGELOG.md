@@ -5,6 +5,7 @@ All notable changes to the `book-writer-light` skill will be documented in this 
 ## v0.4.0 — 2026-07-05
 - **Fork Rename:** Renamed the Codex skill from `book-writer` to `book-writer-light`.
 - **Fork Documentation:** Documented that Book Writer Light is a fork of [kshanxs/book-writer-skill](https://github.com/kshanxs/book-writer-skill/) for projects that need the original workflow with leaner context loading.
+- **Plugin Packaging:** Added a Codex plugin manifest, local marketplace entry, and bridge instruction files for other agent conventions.
 
 ## v2.4.0 — 2026-06-22
 - **Calligraph Sensei Proofreader Synergy:** Integrated support for Calligraph Sensei's new conservative **Proofreading / Correction** mode to allow spelling/grammar checks of sequential drafts without mutating character voices or structural outline tags.

@@ -32,14 +32,68 @@ This fork keeps the original book-writing and memory-bank workflow, but renames 
 
 ## 🚀 Installation
 
+### Codex plugin installation
+
+Book Writer Light is packaged as a Codex plugin. From this repository, install the local marketplace:
+
 ```bash
-npx skills add https://github.com/andrevneves/book-writer-skill-light --skill book-writer-light
+codex plugin marketplace add .
+```
+
+Then install the plugin from that marketplace:
+
+```bash
+codex plugin add book-writer-light@book-writer-light-local
+```
+
+Start a new Codex thread and invoke it explicitly:
+
+```text
+Use $book-writer-light to start a new book project.
+```
+
+### Codex skill-only installation
+
+If you only want the skill folder without the plugin wrapper:
+
+```bash
+npx skills add https://github.com/andrevneves/book-writer-skill-light --skill plugins/book-writer-light/skills/book-writer-light
 ```
 
 ### Update to latest version
 
 ```bash
 npx skills update book-writer-light
+```
+
+### Other agents
+
+Other agents do not necessarily consume Codex plugins directly. This repository includes bridge instruction files for common agent conventions:
+
+- `AGENTS.md`
+- `CLAUDE.md`
+- `.github/copilot-instructions.md`
+
+For agents such as Claude, Devin, opencode, Copilot, or similar tools, point the agent at `plugins/book-writer-light/skills/book-writer-light/SKILL.md` and ask it to follow that file for book-writing tasks.
+
+---
+
+## 🧪 Testing
+
+Validate the skill and plugin from the repository root:
+
+```bash
+ruby -e 'require "yaml"; YAML.load_file("plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'
+.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py plugins/book-writer-light/skills/book-writer-light
+python3 -B plugins/book-writer-light/skills/book-writer-light/scripts/build_context_pack.py plugins/book-writer-light/skills/book-writer-light/assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200
+python3 /Users/developer/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py plugins/book-writer-light
+git diff --check
+```
+
+Then run a live smoke test in a fresh project:
+
+```text
+Use $book-writer-light to start a new book project.
 ```
 
 ---

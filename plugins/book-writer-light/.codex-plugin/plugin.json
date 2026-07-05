@@ -1,0 +1,40 @@
+{
+  "name": "book-writer-light",
+  "version": "0.4.0",
+  "description": "Context-light book writing workflow with memory-bank continuity.",
+  "author": {
+    "name": "Andre Vicente Neves",
+    "email": "neves.andrev@gmail.com",
+    "url": "https://github.com/andrevneves"
+  },
+  "homepage": "https://github.com/andrevneves/book-writer-skill-light",
+  "repository": "https://github.com/andrevneves/book-writer-skill-light",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "books",
+    "fiction",
+    "memory-bank",
+    "codex-skill"
+  ],
+  "skills": "skills",
+  "interface": {
+    "displayName": "Book Writer Light",
+    "shortDescription": "Book writing with lean context loading",
+    "longDescription": "Book Writer Light is a context-light fork of kshanxs/book-writer-skill. It keeps the original book-writing studio and memory-bank workflow while using compact task routing for drafting, outlining, revision, continuity checks, and manuscript maintenance.",
+    "developerName": "Andre Vicente Neves",
+    "category": "Productivity",
+    "capabilities": [
+      "Write",
+      "Review",
+      "Plan"
+    ],
+    "websiteURL": "https://github.com/andrevneves/book-writer-skill-light",
+    "brandColor": "#8957E5",
+    "defaultPrompt": [
+      "Use $book-writer-light to start a new book project.",
+      "Use $book-writer-light to outline my next chapter.",
+      "Use $book-writer-light to check continuity."
+    ]
+  }
+}

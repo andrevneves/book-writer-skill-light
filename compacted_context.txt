@@ -19,7 +19,7 @@ Commits ja feitos:
 
 Mudancas ja implementadas:
 - `context_index.yml` criado como indice compacto lido antes dos arquivos grandes.
-- `build_context_pack.py` criado para montar pacotes curtos por tarefa.
+- `plugins/book-writer-light/skills/book-writer-light/scripts/build_context_pack.py` criado para montar pacotes curtos por tarefa.
 - `requirements.txt` criado com `PyYAML==6.0.3`.
 - `quick_validate.py` passou usando o `.venv` local.
 - `CHANGELOG.txt` criado na raiz, com SemVer em ordem decrescente.
@@ -41,21 +41,21 @@ Revelation gates:
 - `Knowledge Ledger` rastreia o que leitor e personagens sabem, suspeitam, entendem errado ou escondem.
 
 Arquivos relevantes alterados nesta fase:
-- book-writer-light/SKILL.md
-- book-writer-light/assets/book-memory-bank/Core/context_index.yml
-- book-writer-light/assets/book-memory-bank/Core/activeContext.md
-- book-writer-light/assets/book-memory-bank/Core/Templates/chapter_outline_template.md
-- book-writer-light/assets/book-memory-bank/Core/Templates/scene_card_template.md
-- book-writer-light/references/book_memory_protocol.md
-- book-writer-light/references/memory_update_prompts.md
-- book-writer-light/references/revision_checklist.md
+- plugins/book-writer-light/skills/book-writer-light/SKILL.md
+- plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/context_index.yml
+- plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/activeContext.md
+- plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/Templates/chapter_outline_template.md
+- plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/Templates/scene_card_template.md
+- plugins/book-writer-light/skills/book-writer-light/references/book_memory_protocol.md
+- plugins/book-writer-light/skills/book-writer-light/references/memory_update_prompts.md
+- plugins/book-writer-light/skills/book-writer-light/references/revision_checklist.md
 - CHANGELOG.txt
 - compacted_context.txt
 
 Validacoes desejadas antes de commit:
-- `ruby -e 'require "yaml"; YAML.load_file("assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'`
-- `.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py book-writer-light`
-- `python3 -B scripts/build_context_pack.py book-writer-light/assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200`
+- `ruby -e 'require "yaml"; YAML.load_file("plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'`
+- `.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py plugins/book-writer-light/skills/book-writer-light`
+- `python3 -B plugins/book-writer-light/skills/book-writer-light/scripts/build_context_pack.py plugins/book-writer-light/skills/book-writer-light/assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200`
 - `git diff --check`
 
 Preferencias de design consolidadas:

@@ -187,36 +187,42 @@ book-writer-skill-light/ ← Repo root
 ├── docs/
 │ ├── USAGE.md ← Usage guide with examples
 │ └── FEATURES.md ← This file
-├── book-writer-light/ ← Skill folder
-│ ├── SKILL.md ← Core instructions & 9 workflows
-│ ├── references/
-│ │ ├── author_rules.md Writing persona & historical rules
-│ │ ├── book_memory_protocol.md Memory bank architecture & rules
-│ │ ├── memory_update_prompts.md Update criteria & templates
-│ │ ├── story_forge.md Onboarding (15+ genres, North Star)
-│ │ ├── readme_template.md Auto-README template
-│ │ ├── chapter_craft.md Chapter formulas & engagement
-│ │ ├── revision_checklist.md Quality gates & DO/DON'T lists
-│ │ ├── character_worldbuilding_tables.md Profiles, world, conflict tables
-│ │ ├── childrens_book_craft.md Ages 2–9, rhyming, illustration
-│ │ ├── parallel_workflows.md Background agent drafting/review
-│ │ ├── punctuation_guide.md Mark-by-mark punctuation rules
-│ │ ├── spinoff_guide.md Spinoff Forge & canon consistency
-│ │ ├── opening_chapter_checklist.md Chapter 1 dedicated quality gates
-│ │ ├── query_letter_guide.md Publishing toolkit
-│ │ └── chapter_titles_guide.md Title → meaning → story connection
-│ └── assets/
-│ └── book-memory-bank/ ← Template directory (copied on init)
-│ └── Core/Templates/
-│ ├── chapter_outline_template.md
-│ ├── master_outline_template.md
-│ ├── chapter_titles_guide_template.md
-│ ├── character_arcs_template.md
-│ ├── themes_and_motifs_template.md
-│ ├── scene_card_template.md
-│ ├── pacing_blueprint_template.md
-│ ├── research_tracker_template.md
-│ └── beta_reader_log_template.md
+├── plugins/
+│ └── book-writer-light/ ← Plugin folder
+│   ├── .codex-plugin/plugin.json ← Codex plugin manifest
+│   └── skills/
+│     └── book-writer-light/ ← Skill folder
+│       ├── SKILL.md ← Core instructions & 9 workflows
+│       ├── scripts/
+│       │ └── build_context_pack.py ← Compact task context pack helper
+│       ├── references/
+│       │ ├── author_rules.md Writing persona & historical rules
+│       │ ├── book_memory_protocol.md Memory bank architecture & rules
+│       │ ├── memory_update_prompts.md Update criteria & templates
+│       │ ├── story_forge.md Onboarding (15+ genres, North Star)
+│       │ ├── readme_template.md Auto-README template
+│       │ ├── chapter_craft.md Chapter formulas & engagement
+│       │ ├── revision_checklist.md Quality gates & DO/DON'T lists
+│       │ ├── character_worldbuilding_tables.md Profiles, world, conflict tables
+│       │ ├── childrens_book_craft.md Ages 2–9, rhyming, illustration
+│       │ ├── parallel_workflows.md Background agent drafting/review
+│       │ ├── punctuation_guide.md Mark-by-mark punctuation rules
+│       │ ├── spinoff_guide.md Spinoff Forge & canon consistency
+│       │ ├── opening_chapter_checklist.md Chapter 1 dedicated quality gates
+│       │ ├── query_letter_guide.md Publishing toolkit
+│       │ └── chapter_titles_guide.md Title → meaning → story connection
+│       └── assets/
+│         └── book-memory-bank/ ← Template directory (copied on init)
+│           └── Core/Templates/
+│             ├── chapter_outline_template.md
+│             ├── master_outline_template.md
+│             ├── chapter_titles_guide_template.md
+│             ├── character_arcs_template.md
+│             ├── themes_and_motifs_template.md
+│             ├── scene_card_template.md
+│             ├── pacing_blueprint_template.md
+│             ├── research_tracker_template.md
+│             └── beta_reader_log_template.md
 ```
 
 ---
