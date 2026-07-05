@@ -11,7 +11,7 @@ To avoid high tool-execution latency and prompt noise, do not bulk-load all memo
 
 2. **Build a Task Context Pack:**
    * Prefer `scripts/build_context_pack.py <project-root> --task <draft|outline|revise|memory|continuity> --target <path>`.
-   * If the script is unavailable, manually assemble the same pack shape: project capsule, current task, required files, style capsule, active characters/locations, continuity watchlist, and open questions.
+   * If the script is unavailable, manually assemble the same pack shape: project capsule, current task, previous context, active revelation gates, required files, style capsule, active characters/locations, continuity watchlist, and open questions.
    * Treat the context pack as the working desk for the current turn.
 
 3. **Conditional Loading (On-Demand):**
@@ -24,6 +24,50 @@ To avoid high tool-execution latency and prompt noise, do not bulk-load all memo
 4. **Active Cache:**
    * Do not reload a file if you have already read it in the current conversation turn sequence, unless the index indicates it has changed.
    * Never load more than 2 core memory files and 1 reference file in a normal turn unless performing a **Continuity Check** or a **Comprehensive Memory Update**.
+
+## Previous Context Protocol
+
+Before drafting a chapter or scene, `context_index.yml` must provide a compact `previous_context` block:
+
+- `previous_history_summary`: a rolling compressed summary of the story so far. Keep only major events, revelations, irreversible decisions, active setups, and payoffs still relevant to future writing. Compress this every update; do not let it become a chapter-by-chapter recap.
+- `previous_chapter_summary`: the immediate previous chapter in 1-3 sentences, focused on what the next chapter must inherit.
+- `previous_scene_summary`: the immediate previous scene in 1-3 sentences, focused on emotional and causal continuity.
+- `unresolved_hooks`: open questions, dangers, promises, emotional wounds, clues, setups, or obligations the next writing task must not forget.
+- `character_state_at_start`: each relevant character's state entering the target chapter/scene.
+- `character_state_now`: each relevant character's state after the latest written chapter/scene. This becomes the next task's `character_state_at_start`.
+
+Character state must include both:
+
+1. **Emotional state** - what the character feels, denies, fears, wants, or cannot admit.
+2. **Factual/revelation state** - what happened to the character, what they know, what they misunderstand, what they hide, where they stand in the plot, and what pressure or goal drives them.
+
+Keep character states compact. Use short fields or bullets; store full profiles and long history in `world_and_characters.md`.
+
+## Revelation Gate Protocol
+
+Use `revelation_gates` to control the order in which protected facts become visible to the reader or to characters. This is stricter than `unresolved_hooks`: a hook is an open tension; a gate is a rule for what information may be released.
+
+Do not use fixed timing by chapter or scene count by default. The book may expand, compress, or reorder. Gates should depend on story conditions:
+
+- `reveal_only_after`: required story events, character actions, clue chains, emotional turns, or discoveries that must happen first.
+- `ready_when`: flexible signs that the reveal has been earned.
+- `current_allowed_action`: what the next scene may do now: `hold`, `plant_clue`, `deepen_suspicion`, `misdirect`, `partial_reveal`, or `full_reveal`.
+- `allowed_clues_before_reveal`: ambiguous details that may appear before the reveal.
+- `forbidden_until_ready`: lines, narration, scene framing, or dialogue that would leak the protected fact too early.
+- `reader_knowledge`: what the reader is allowed to know right now.
+- `characters`: what each relevant character knows, suspects, misunderstands, or hides.
+
+Before drafting:
+1. Check every active gate in `context_index.yml`.
+2. Compare the target outline/scene card against `current_allowed_action`.
+3. If a protected fact is not ready, write only allowed clues or misdirection.
+4. If a reveal condition becomes true during the scene, update the gate status and knowledge ledger after writing.
+
+After drafting:
+1. Mark any satisfied `reveal_only_after` condition as complete.
+2. Update `reader_knowledge` and each character's knowledge state.
+3. Move gates through `withheld -> seeded -> partial -> revealed -> retired` as appropriate.
+4. Preserve still-active gates in `context_index.yml`; move full reveal maps to `story_structure.md` or `Outlines/Master_Outline.md` when they become too long for the index.
 
 ## Content Boundary and Sanitization Rules (SECURITY)
 
@@ -130,6 +174,8 @@ Automatically maintain the memory bank using the following protocol:
  - Directly update the affected memory bank files
  - Make any updates to the master outline that are needed
  - Refresh `context_index.yml` and `activeContext.md`
+ - Update `previous_context`: compress `previous_history_summary`, move latest exit states into `character_state_now`, and preserve unresolved hooks for the next draft
+ - Update `revelation_gates`: mark satisfied conditions, preserve forbidden leaks, update reader/character knowledge states, and retire completed gates
  - Provide a summary of updates made, writing "Book Memory" as the first line
 
 2. File Interdependencies and Update Chain:
@@ -164,7 +210,7 @@ Automatically maintain the memory bank using the following protocol:
 
 6. For project status:
  - Update Core/activeContext.md with current focus
- - Update Core/context_index.yml with current task, stale files, required files, and compact summaries
+ - Update Core/context_index.yml with current task, `previous_context`, `revelation_gates`, stale files, required files, and compact summaries
  - Update Core/progress.md with completion percentage and next steps
  - Track recent changes across affected memory bank files
  - Note ANY potential consistency issues or questions
@@ -243,6 +289,7 @@ book-memory-bank/Core/
 3. Context prioritization: Ensure the most relevant details are highlighted in Core/activeContext.md
 4. Keyword indexing: Maintain searchable organization within each memory bank file and compact routing metadata in `context_index.yml`
 5. Plan-to-actual comparison: When a chapter is completed, compare how it turned out versus what was planned in the outline
+6. Revelation sequencing: Track what the reader and each character may know, what clues are allowed, and what protected facts must stay hidden until story conditions are satisfied
 
 ## Rules for Automatic Updates
 

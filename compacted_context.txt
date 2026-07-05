@@ -1,0 +1,63 @@
+COMPACTED CONTEXT - book-writer skill
+
+Projeto:
+- Repo: /Users/developer/projects/A.I/writing/book-writer
+- Tipo: skill Codex `book-writer`, nao um projeto de livro especifico.
+- Objetivo inicial: ajudar escritores a explorar ideias, estruturar livros, escrever como copiloto, manter memoria narrativa persistente e compilar resultados.
+
+Direcao principal:
+- Reduzir uso de contexto sem perder maestria de escrita.
+- Markdown continua sendo fonte de verdade para canon, estilo, outlines, capitulos e progresso.
+- YAML virou camada de roteamento compacto.
+- Context packs viraram a mesa curta de trabalho por tarefa.
+
+Commits ja feitos:
+- 4e2dcc2 Optimize book writer context loading
+- e7d4321 Add validation requirements
+
+Mudancas ja implementadas:
+- `context_index.yml` criado como indice compacto lido antes dos arquivos grandes.
+- `build_context_pack.py` criado para montar pacotes curtos por tarefa.
+- `requirements.txt` criado com `PyYAML==6.0.3`.
+- `quick_validate.py` passou usando o `.venv` local.
+- `CHANGELOG.txt` criado na raiz, com SemVer em ordem decrescente.
+
+Previous context:
+- Adicionado bloco `previous_context` em `context_index.yml`.
+- `previous_history_summary` deve ser sempre compactado, mantendo somente eventos principais, revelacoes, decisoes irreversiveis, setups resolvidos/nao resolvidos e hooks ativos.
+- `previous_chapter_summary` guarda o capitulo anterior imediato.
+- `previous_scene_summary` guarda a cena anterior imediata.
+- `unresolved_hooks` guarda promessas narrativas abertas.
+- `character_state_at_start` e `character_state_now` guardam tanto estado emocional quanto estado factual/revelacoes.
+
+Revelation gates:
+- Adicionado sistema `revelation_gates` para controlar sequencia de revelacoes.
+- Nao usar marco fixo por capitulo/cena, porque a historia pode encurtar ou estender.
+- Usar `reveal_only_after`, `ready_when`, `current_allowed_action`, `allowed_clues_before_reveal`, `forbidden_until_ready`, `reader_knowledge` e estados de conhecimento por personagem.
+- `unresolved_hooks` = tensoes/promessas abertas.
+- `revelation_gates` = regras de liberacao de informacao.
+- `Knowledge Ledger` rastreia o que leitor e personagens sabem, suspeitam, entendem errado ou escondem.
+
+Arquivos relevantes alterados nesta fase:
+- SKILL.md
+- assets/book-memory-bank/Core/context_index.yml
+- assets/book-memory-bank/Core/activeContext.md
+- assets/book-memory-bank/Core/Templates/chapter_outline_template.md
+- assets/book-memory-bank/Core/Templates/scene_card_template.md
+- references/book_memory_protocol.md
+- references/memory_update_prompts.md
+- references/revision_checklist.md
+- CHANGELOG.txt
+- compacted_context.txt
+
+Validacoes desejadas antes de commit:
+- `ruby -e 'require "yaml"; YAML.load_file("assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'`
+- `.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py .`
+- `python3 -B scripts/build_context_pack.py assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200`
+- `git diff --check`
+
+Preferencias de design consolidadas:
+- Priorizar contexto minimo e especifico por tarefa.
+- Antes de escrever cena/capitulo, verificar `previous_context` e `revelation_gates`.
+- Depois de escrever, atualizar memoria por delta, refresh de `previous_context`, refresh de `revelation_gates` e estados de conhecimento.
+- Evitar exemplos que parecam canon se nao vierem de arquivos do projeto de livro.

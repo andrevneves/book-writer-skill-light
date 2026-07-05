@@ -27,7 +27,7 @@ Optimize every turn for a small, task-specific context. Markdown remains the sou
 1. Read `book-memory-bank/Core/context_index.yml` first when it exists.
 2. If `context_index.yml` is missing, read `book-memory-bank/Core/activeContext.md`, then create/update the YAML index from `assets/book-memory-bank/Core/context_index.yml` when practical.
 3. Read the exact target files named by the user (chapter, outline, scene card, note).
-4. Build a short task context pack with `scripts/build_context_pack.py <project-root> --task <draft|outline|revise|memory|continuity> --target <path>` when available. If you cannot run the script, manually follow the same pack shape: project capsule, active task, required files, style capsule, continuity watchlist.
+4. Build a short task context pack with `scripts/build_context_pack.py <project-root> --task <draft|outline|revise|memory|continuity> --target <path>` when available. If you cannot run the script, manually follow the same pack shape: project capsule, active task, previous context, active revelation gates, required files, style capsule, continuity watchlist.
 5. Load only files listed in `required_files` or files directly needed by the task.
 
 ### Default loading budget
@@ -45,7 +45,7 @@ Exceptions: initialization, comprehensive memory update, continuity diagnostic, 
 
 | Task | Minimal context | Load more only when... |
 |------|-----------------|------------------------|
-| Draft scene/chapter | index, context pack, target outline/scene card, current/previous chapter excerpt, style capsule | a named character, location, lore rule, or unresolved continuity item is not in the pack |
+| Draft scene/chapter | index, previous_context, active revelation gates, context pack, target outline/scene card, current/previous chapter excerpt, style capsule | a named character, location, lore rule, revelation gate, or unresolved continuity item is not in the pack |
 | Outline | index, project brief summary, story structure summary, existing master outline/adjacent outline | the outline introduces new characters, settings, or structural arcs |
 | Revise/polish | index, target chapter, revision checklist, style capsule, adjacent chapter summary | continuity or character behavior is under review |
 | Memory update | index, changed manuscript/outline, activeContext, files identified by delta | the user explicitly asks for comprehensive audit |
@@ -106,6 +106,9 @@ When the user asks to outline or write chapters:
    - Check `skills-lock.json` in the root.
    - **Dojo Synergy:** If `research-dojo` is installed, enable **Factual Audit Mode**. Scan the project's `Research/` directory for any Dojo audit files (e.g., `dojo_dossier.md` or `paper_audit_[name].md`). Ingest these as primary factual sources and record the active integration status in `activeContext.md`.
    - Build or manually assemble a context pack before drafting. Prefer `scripts/build_context_pack.py` when available.
+   - Before drafting prose, verify `previous_context` in `context_index.yml`: `previous_history_summary`, `previous_chapter_summary`, `previous_scene_summary`, `unresolved_hooks`, `character_state_at_start`, and `character_state_now`.
+   - If `previous_context` is empty or stale, summarize the immediately previous chapter/scene first. Keep `previous_history_summary` compressed to major events, revelations, irreversible decisions, and active setups only.
+   - Verify active `revelation_gates` before drafting. Do not reveal a protected fact unless its `reveal_only_after` / `ready_when` conditions are satisfied. If timing is uncertain, plant only allowed clues, deepen suspicion, or hold.
    - Only load other memory files if the index, context pack, or user request directly requires them.
 2. Use the style capsule from `context_index.yml`/context pack for routine drafting. Load `references/author_rules.md` only when the capsule is absent, stale, or insufficient for the requested work.
 3. Consult `references/chapter_craft.md` only for new structure, chapter diagnosis, or outline creation. Do not load it for routine continuation when an outline already exists.
@@ -126,7 +129,7 @@ Maintaining the Book Memory Bank is essential for consistency. You must seamless
 1. Consult `references/book_memory_protocol.md` for the strict rules on how and when to update the memory bank files.
 2. First produce a brief delta: changed source, new/changed characters, plot movement, world/lore facts, style discoveries, open questions, and target files to edit.
 3. Consult `references/memory_update_prompts.md` only for a comprehensive audit or when the delta is ambiguous.
-4. Update only files named by the delta plus `activeContext.md` and `context_index.yml`. If the user explicitly says "update memory bank" or asks for a comprehensive audit, broaden the read as described in the protocol.
+4. Update only files named by the delta plus `activeContext.md` and `context_index.yml`. Always refresh `previous_context` and `revelation_gates` after substantive scene/chapter writing so the next draft inherits the correct history, hooks, character states, reveal permissions, and knowledge ledger. If the user explicitly says "update memory bank" or asks for a comprehensive audit, broaden the read as described in the protocol.
 5. Always provide a clear summary of which files were updated and what changed.
 
 ### 5. Chapter Review & Revision
@@ -134,6 +137,7 @@ When the user asks to review, revise, or polish a chapter:
 1. Read `context_index.yml`, the target chapter draft, its outline if available, and a context pack for the revision task.
    - Load adjacent chapters as summaries/excerpts first; read full adjacent chapters only when continuity depends on exact beats.
    - Load Style, Characters, Worldbuilding, or Lore files only when the context pack or review scope names them.
+   - Check active `revelation_gates` for information leaks, premature reveals, and character knowledge errors.
 2. Consult `references/revision_checklist.md` for the quality gates and review focus areas.
 3. **If reviewing Chapter 1**, also load `references/opening_chapter_checklist.md` and run its additional gates.
 4. Conduct a **Scene Tension Map** analysis to ensure proper structural pacing.

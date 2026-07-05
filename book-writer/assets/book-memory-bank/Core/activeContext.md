@@ -35,6 +35,41 @@ For context loading, read `context_index.yml` first. Use this file for narrative
 
 **Revisions**: [Areas recently revised or currently being revised]
 
+## Previous Context Snapshot
+
+**Previous History Summary**: [Compressed story-so-far: major events, revelations, irreversible decisions, and active setups only]
+
+**Previous Chapter Summary**: [Immediate previous chapter in 1-3 sentences]
+
+**Previous Scene Summary**: [Immediate previous scene in 1-3 sentences, or N/A]
+
+**Unresolved Hooks**:
+- [Open question, danger, promise, clue, or emotional wound still active]
+
+**Character State at Start**:
+- [Character]: Emotional state; factual/revelation state; current goal/pressure.
+
+**Character State Now**:
+- [Character]: Emotional state; factual/revelation state after latest written scene/chapter; new goal/pressure.
+
+## Revelation Gates Snapshot
+
+**Active Gates**:
+- [Gate ID]: Protected fact; current status; reader knowledge; current allowed action.
+
+**Reveal Conditions**:
+- [Gate ID]: Reveal only after [story event / clue chain / emotional turn / discovery].
+
+**Allowed Clues**:
+- [Gate ID]: [Ambiguous clue, motif, behavior, contradiction, or image allowed now]
+
+**Forbidden Leaks**:
+- [Gate ID]: [Information, narration, dialogue, or framing that must not appear yet]
+
+**Knowledge Ledger**:
+- Reader: [What the reader knows, suspects, misunderstands, or must not know yet]
+- [Character]: [What this character knows, suspects, misunderstands, or hides]
+
 ## Next Steps
 
 **Immediate Plans**: [What you'll work on next]

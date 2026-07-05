@@ -74,6 +74,16 @@ Use this checklist after drafting a chapter (or set of chapters) to ensure quali
 - [ ] Physical geography is consistent (distances, directions, landmarks)
 - [ ] Cultural and period details are accurate
 
+## Revelation Gates & Knowledge Control
+
+- [ ] Protected facts are not revealed before their `reveal_only_after` / `ready_when` conditions are satisfied
+- [ ] Allowed clues stay ambiguous enough to preserve the intended mystery
+- [ ] Forbidden leaks do not appear in narration, dialogue, scene framing, metadata, or exposition
+- [ ] Reader knowledge matches the active `revelation_gates`
+- [ ] Each character's knowledge state is consistent with what they have actually seen, inferred, misunderstood, or hidden
+- [ ] Partial reveals update tension without collapsing the larger mystery
+- [ ] Any full reveal changes the relevant gate status and creates a new consequence, question, or emotional turn
+
 ## Engagement & Reader Experience
 
 - [ ] Would a reader want to turn to the next chapter?
