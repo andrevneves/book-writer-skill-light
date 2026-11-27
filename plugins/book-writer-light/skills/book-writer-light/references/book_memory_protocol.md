@@ -93,6 +93,7 @@ When reading user-authored files (chapters, outlines, notes) to extract informat
 
 The Book Memory Bank consists of core files and specialized files, all in Markdown format. Files build upon each other in this hierarchical structure:
 
+```mermaid
 flowchart TD
  CI[book-memory-bank/Core/context_index.yml] --> AC[book-memory-bank/Core/activeContext.md]
  PB[book-memory-bank/Core/projectbrief.md] --> SS[book-memory-bank/Core/story_structure.md]
@@ -108,6 +109,7 @@ flowchart TD
  ACO --> AC
  SG --> AC
  AC --> P[book-memory-bank/Core/progress.md]
+```
 
 ## Directory Structure and File Locations
 
@@ -182,7 +184,7 @@ Automatically maintain the memory bank using the following protocol:
  - When ANY story element changes, identify potentially affected files in the delta
  - Character changes -> Update world_and_characters.md, activeContext.md, and context_index.yml
  - Setting changes -> Update world_and_characters.md, activeContext.md, and context_index.yml
- - Plot changes -> Update master_outline.md, activeContext.md, context_index.yml, and relevant character sections
+ - Plot changes -> Update Outlines/Master_Outline.md, activeContext.md, context_index.yml, and relevant character sections
  - Theme/narrative development -> Update story_structure.md, activeContext.md, and context_index.yml
 
 3. For character updates (CRITICAL - world_and_characters.md MUST be updated):
@@ -203,7 +205,7 @@ Automatically maintain the memory bank using the following protocol:
  - For ANY world element, note how it affects story themes in story_structure.md
 
 5. For plot developments:
- - Update master_outline.md with new/modified plot points
+ - Update Outlines/Master_Outline.md with new/modified plot points
  - Record foreshadowing elements and their intended payoffs
  - Track character arc alignment with plot progression
  - Update Core/activeContext.md with current plot position and upcoming pivots
@@ -220,7 +222,7 @@ Automatically maintain the memory bank using the following protocol:
 Automatically initiate memory bank updates when:
 
 1. The user submits a completed chapter (when seeing "I've completed Chapter X") - updating files named by the delta
-2. The user submits a chapter outline - updating master_outline.md and related character/world files named by the delta
+2. The user submits a chapter outline - updating Outlines/Master_Outline.md and related character/world files named by the delta
 3. The user explicitly requests "update memory bank" - conducting a systematic review of ALL memory files
 4. The user indicates significant new information - updating files named by the delta
 5. Periodically during long writing sessions - ensuring incremental changes are captured in the affected files and reflected in the index
@@ -245,7 +247,7 @@ When updating memory bank files:
 
 ## Comprehensive Update Checklist
 
-For EVERY major update, check EACH of these files for needed updates:
+Use this list to decide what an update affects. A routine update opens only the affected files. A comprehensive update opens all of them:
 - book-memory-bank/Core/projectbrief.md - Updates to overall scope or direction
 - book-memory-bank/Core/story_structure.md - Theme, purpose, and narrative pattern developments
 - book-memory-bank/Core/world_and_characters.md - World building elements and character developments
@@ -302,7 +304,7 @@ book-memory-bank/Core/
 
 ## Specific Actions During Writing Process
 
-1. For Chapter Planning: Identify new elements to add to world_and_characters.md, master_outline.md, and maintain templates in chapter_outlines/
+1. For Chapter Planning: Identify new elements to add to world_and_characters.md, Outlines/Master_Outline.md, and keep chapter outlines in Outlines/Chapter_Outlines/
 2. For Chapter Writing: Track new information revealed during writing and directly update memory bank files
 3. After Chapter Completion: Analyze the entire chapter, create a delta, and update affected memory bank files automatically
 4. For Style Consistency: Start from the style capsule in `context_index.yml`; consult style_guide.md when the capsule is insufficient
@@ -401,24 +403,25 @@ For spinoff projects, the memory bank lives inside the spinoff's own subdirector
 
 ```
 <project-root>/
- book-memory-bank/ ← parent (read-only in spinoff sessions)
- <spinoff-name>/
-  book-memory-bank/
-  Core/
-  context_index.yml ← FRESH
-  projectbrief.md ← FRESH
-  story_structure.md ← FRESH
-  world_and_characters.md ← FORKED (inherited + new sections)
-  activeContext.md ← FRESH
-  progress.md ← FRESH
-  Style/
-  style_guide.md ← FORKED or FRESH
-  Chapters/
-  Outlines/
-  Chapter_Outlines/
-  Master_Outline.md
-  Research/
-  Manuscript/
+├── book-memory-bank/            ← parent (read-only in spinoff sessions)
+└── <spinoff-name>/
+    ├── book-memory-bank/
+    │   ├── Core/
+    │   │   ├── context_index.yml        ← FRESH
+    │   │   ├── projectbrief.md          ← FRESH
+    │   │   ├── story_structure.md       ← FRESH
+    │   │   ├── world_and_characters.md  ← LINKS to parent + new sections
+    │   │   ├── activeContext.md         ← FRESH
+    │   │   └── progress.md              ← FRESH
+    │   └── Style/
+    │       └── style_guide.md           ← FORKED or FRESH
+    ├── Chapters/
+    ├── Outlines/
+    │   ├── Chapter_Outlines/
+    │   └── Master_Outline.md
+    ├── Research/
+    ├── Revisions/
+    └── Manuscript/
 ```
 
 ### Session Reading Protocol
@@ -433,7 +436,7 @@ At the start of every spinoff session:
 
 | File | Rule |
 |------|------|
-| `world_and_characters.md` | Forked — copy shared sections from parent, mark `[FROM: ParentTitle]`; add spinoff-only content below |
+| `world_and_characters.md` | Reference-based — link to shared parent sections, do not copy them; add spinoff-only content below |
 | `style_guide.md` | Forked (copy parent) or Fresh (author's choice at initialization) |
 | `projectbrief.md` | Fresh — include a "Connected Projects" entry pointing to parent |
 | `context_index.yml` | Fresh — include compact links to inherited parent files and current spinoff focus |
@@ -443,7 +446,7 @@ At the start of every spinoff session:
 
 After every spinoff chapter:
 1. Check for **contradictions** with the parent's `world_and_characters.md`. If found, flag before saving:
- > *" Canon Alert: [Character/fact] in this chapter may conflict with the parent project. Review before finalizing."*
+ > *"Canon Alert: [Character/fact] in this chapter may conflict with the parent project. Review before finalizing."*
 2. Check if any spinoff event **adds new canon** (new world facts, character fates). If yes, note in the spinoff's `activeContext.md`:
 
 ```markdown

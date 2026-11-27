@@ -1,24 +1,14 @@
 <div align="center">
 
-<br>
-
 # ✦ book-writer-light ✦
 
 ### *A context-light fork of Book Writer*
 
 *Master-class fiction · Automated story memory · Book-level pacing · Lean context loading*
 
-<br>
-
-[![Version](https://img.shields.io/badge/version-0.4.0-8957e5?style=for-the-badge&labelColor=161b22)](./docs/FEATURES.md)
-[![Install](https://img.shields.io/badge/⚡_Install-npx_skills_add-0d1117?style=for-the-badge&labelColor=161b22)](https://github.com/andrevneves/book-writer-skill-light)
-[![License](https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge&labelColor=161b22)](./LICENSE)
-[![Docs](https://img.shields.io/badge/Docs-USAGE.md-f78166?style=for-the-badge&labelColor=161b22)](./docs/USAGE.md)
-
-<br>
-
-*Most AI writing tools give you a chapter. This gives you a studio — characters that stay consistent,*
-*plots that don't contradict, worlds that remember their own rules, and a memory bank that never forgets.*
+[![Version](https://img.shields.io/badge/version-0.4.0-8957e5?style=flat-square)](./CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-MIT-2ea043?style=flat-square)](./LICENSE)
+[![Docs](https://img.shields.io/badge/docs-usage_guide-f78166?style=flat-square)](./docs/USAGE.md)
 
 </div>
 
@@ -32,41 +22,11 @@ This fork keeps the original book-writing and memory-bank workflow, but renames 
 
 ## 🚀 Installation
 
-### Codex plugin installation
-
-Book Writer Light is packaged as a Codex plugin. From this repository, install the marketplace locally:
-
 ```bash
-codex plugin marketplace add .
+npx skills add https://github.com/flaviobeck/book-writer-skill-light --skill plugins/book-writer-light/skills/book-writer-light
 ```
 
-From another machine, install the marketplace from GitHub:
-
-```bash
-codex plugin marketplace add andrevneves/book-writer-skill-light --ref main
-```
-
-Then install the plugin from that marketplace:
-
-```bash
-codex plugin add book-writer-light@book-writer-light
-```
-
-Start a new Codex thread and invoke it explicitly:
-
-```text
-Use $book-writer-light to start a new book project.
-```
-
-### Codex skill-only installation
-
-If you only want the skill folder without the plugin wrapper:
-
-```bash
-npx skills add https://github.com/andrevneves/book-writer-skill-light --skill plugins/book-writer-light/skills/book-writer-light
-```
-
-### Update to latest version
+To update later:
 
 ```bash
 npx skills update book-writer-light
@@ -90,9 +50,9 @@ Validate the skill and plugin from the repository root:
 
 ```bash
 ruby -e 'require "yaml"; YAML.load_file("plugins/book-writer-light/skills/book-writer-light/assets/book-memory-bank/Core/context_index.yml"); puts "context_index yaml ok"'
-.venv/bin/python /Users/developer/.codex/skills/.system/skill-creator/scripts/quick_validate.py plugins/book-writer-light/skills/book-writer-light
+python3 <skill-creator>/scripts/quick_validate.py plugins/book-writer-light/skills/book-writer-light
 python3 -B plugins/book-writer-light/skills/book-writer-light/scripts/build_context_pack.py plugins/book-writer-light/skills/book-writer-light/assets --task draft --target book-memory-bank/Core/Templates/scene_card_template.md --max-file-chars 2200
-python3 /Users/developer/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py plugins/book-writer-light
+python3 <plugin-creator>/scripts/validate_plugin.py plugins/book-writer-light
 git diff --check
 ```
 
@@ -102,83 +62,62 @@ Then run a live smoke test in a fresh project:
 Use $book-writer-light to start a new book project.
 ```
 
----
+## 💬 Start writing
 
-## 💬 Quick Start
+Just tell your AI assistant what you want:
 
+```text
+Let's start building a new book
+Write a rhyming picture book about a shy dragon for ages 4-6
+I have some notes already. Here's my outline: ./outline.md
 ```
-"Let's start building a new book"
-"Write a rhyming picture book about a shy dragon for ages 4-6"
-"I have some notes already — here's my outline: ./outline.md"
-```
 
-The AI guides you through setup one question at a time. Every question is skippable.
+It asks one question at a time, and you can skip any of them.
 
-**→ [Full usage guide with examples](./docs/USAGE.md)**
+## ✨ What you get
 
----
+- 🧠 **Lasting memory:** characters, plot, world, and progress carry across sessions.
+- ✍️ **Craft for your genre:** fiction, non-fiction, history, popular science, and children's books.
+- 🗺️ **Story planning:** outlines, pacing blueprints, scene cards, and character arcs.
+- 🔍 **Careful revision:** continuity checks and focused passes, with a backup before every edit.
+- 📦 **Ready to publish:** Word export, blurbs, synopses, query letters, and cover prompts.
 
-## ✨ Highlights
-
-| | |
-|---|---|
-| ✍️ **Master Author Voice** | Literary prose, cinematic dialogue, 15+ genres |
-| 🧠 **Book Memory Bank** | Auto-maintained context — characters, plot, world, progress |
-| 🧬 **Character Arc Matrix** | Chapter-by-chapter emotional progression tracking |
-| 🎭 **Thematic & Motif Tracker** | Core themes + evolving symbols mapped across chapters |
-| 📈 **Pacing Blueprint** | Book-level structural grid with tension curve before drafting |
-| 📊 **Scene Tension Map** | Per-chapter 1–10 pacing analysis with output table |
-| 🔬 **Specialized Revision Passes** | Dialogue, Sensory, Prose Polish, and Tension passes |
-| 📬 **Publishing Toolkit** | Blurb, synopsis, query letter, logline — from your memory bank |
-| 🏛️ **Historical Authenticity** | Title-timeline rules, verified facts, `[FICTION]` marking |
-
-**→ [See all 40+ features and commands](./docs/FEATURES.md)**
-
----
-
-## ⚡ Command Reference
+## 🗣️ Things you can say
 
 | Say this | What happens |
 |---|---|
-| `"Let's start building a new book"` | Runs The Story Forge onboarding |
-| `"Write chapter 3"` | Reads memory bank, writes the chapter |
-| `"Outline all chapters in parallel"` | Launches background agents for chapter outlines |
-| `"Do a Dialogue Pass on chapter 2"` | Focused revision pass on subtext & voice |
-| `"Review all chapters in parallel"` | Launches background agents to edit/review drafted chapters |
-| `"Write a query letter"` | Generates query letter from memory bank |
-| `"Write a back-cover blurb"` | Generates blurb from memory bank |
-| `"Check continuity"` | Cross-chapter diagnostic report |
-| `"Update memory bank"` | Full audit and update |
-| `"Compile the book"` | Merges all chapters into `Manuscript/` |
+| `Write chapter 3` | Drafts the chapter from your book's memory |
+| `Do a Dialogue Pass on chapter 2` | Sharpens subtext and character voices |
+| `Outline all chapters in parallel` | Launches background agents for chapter outlines |
+| `Review all chapters in parallel` | Launches background agents to edit and review drafted chapters |
+| `Check continuity` | Flags contradictions across chapters |
+| `Update memory bank` | Brings the book's memory up to date |
+| `Write a query letter` | Builds a pitch from your story |
+| `Write a back-cover blurb` | Generates a blurb from your memory bank |
+| `Compile the book` | Combines your chapters into one manuscript |
 
 **→ [Full command reference](./docs/FEATURES.md#-command-reference)**
 
 ---
 
-## 📁 Project Structure
+## 📁 Your project
 
-```
-YourBookProject/
-├── README.md                    ← Auto-generated
-├── Chapters/                    ← Manuscript files
-├── Outlines/                    ← Chapter outlines + titles guide
-├── Research/                    ← Continuity reports + research tracker
-├── Manuscript/                  ← Compiled output
-└── book-memory-bank/            ← Auto-maintained by AI
-    ├── Core/                    Characters, world, plot, pacing blueprint
-    └── Style/                   Voice, tone, language rules
+```text
+YourBook/
+├── Chapters/          Your book
+├── Outlines/          Story and chapter plans
+├── Research/          Facts and continuity reports
+├── Revisions/         Automatic backups
+├── Manuscript/        Compiled book
+└── book-memory-bank/  What the AI remembers
 ```
 
 ---
 
-## 🏛️ Synergistic Companions: Research Dojo & Calligraph Sensei
+## 🤝 Companion skills
 
-`book-writer-light` integrates with specialized companion skills to cover the complete book-writing lifecycle:
-
-1. **Adversarial Research (Phase 0 — [Research Dojo](https://github.com/kshanxs/research-dojo)):** For narrative non-fiction, biographies, history, and popular science, run audits on complex research papers, verify timelines, and stress-test visual analogies using the Dojo's 7-step process.
-2. **Prose Polishing, Humanising & Proofreading (Phase 1 — Calligraph Sensei):** Install [Calligraph Sensei](https://github.com/kshanxs/calligraph-sensei) to polish your chapters, adjust sentence cadence (burstiness), inject sensory showing language, and perform stylistic audits in **Creative/Fiction** or **Non-fiction** modes, or execute a conservative **Proofreading** pass to fix grammar, spelling, and typos while keeping character dialects and the book's narrative voice completely intact.
-
----
+- 🔬 **[Research Dojo](https://github.com/kshanxs/skill-dojo/tree/main/skills/research-dojo)** checks facts, dates, and sources for non-fiction.
+- 🖋️ **[Calligraph Sensei](https://github.com/kshanxs/skill-dojo/tree/main/skills/calligraph-sensei)** polishes and proofreads prose while keeping your voice.
 
 ## 📝 Changelog
 
@@ -194,7 +133,6 @@ Copyright © 2026 [Shubhanshu Shukla](https://github.com/kshanxs). All rights re
 
 ---
 
-<p align="center">
-  <sub>MIT License &nbsp;•&nbsp; Permission to Modify & Distribute &nbsp;•&nbsp; No Warranty or Liability</sub><br>
-  <sub>Built with passion for authors who care about their craft.</sub>
-</p>
+<div align="center">
+<sub>MIT License · Made by <a href="https://github.com/kshanxs">Shubhanshu Shukla</a> for authors who care about their craft.</sub>
+</div>
